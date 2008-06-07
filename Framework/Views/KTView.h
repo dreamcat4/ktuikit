@@ -38,6 +38,9 @@
 {
 	KTLayoutManager *			mLayoutManager;
 	NSString *					mLabel;
+	
+	// background & border color are temprary
+	// next step is to add a style manager 
 	NSColor *					mBorderColor;
 	NSColor *					mBackgroundColor;
 	

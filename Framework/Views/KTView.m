@@ -119,7 +119,10 @@
 
 
 #pragma mark -
-#pragma mark Layout
+#pragma mark Layout protocol
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)setViewLayoutManager:(KTLayoutManager*)theLayoutManager
 {
 	if(mLayoutManager != theLayoutManager)
@@ -129,11 +132,17 @@
 	}
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (KTLayoutManager*)viewLayoutManager
 {
 	return mLayoutManager;
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)setFrame:(NSRect)theFrame
 {
 	[super setFrame:theFrame];
@@ -154,21 +163,33 @@
 	}
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (NSRect)frame
 {
 	return [super frame];
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (id<KTViewLayout>)parent
 {
 	return (id<KTViewLayout>)[super superview];
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (NSArray*)children
 {
 	return [super subviews];
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)addSubview:(NSView*)theView
 {
 	[super addSubview:theView];
@@ -178,8 +199,10 @@
 }
 
 #pragma mark -
-#pragma mark Getters & Setters
-
+#pragma mark KTView protocol
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)setLabel:(NSString*)theLabel
 {
 	if(mLabel != theLabel)
@@ -189,11 +212,22 @@
 	}
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (NSString*)label
 {
 	return mLabel;
 }
 
+
+#pragma mark Temporary styles
+// all styles will be kept in a style manager similar
+// to the layout manager
+
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)setBorderColor:(NSColor*)theColor
 {
 	if(mBorderColor != theColor)
@@ -203,11 +237,17 @@
 	}
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (NSColor *)borderColor
 {
 	return mBorderColor;
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (void)setBackgroundColor:(NSColor*)theColor
 {
 	if(mBackgroundColor != theColor)
@@ -217,6 +257,9 @@
 	}
 }
 
+//=========================================================== 
+// - drawRect:
+//===========================================================
 - (NSColor *)backgroundColor
 {
 	return mBackgroundColor;

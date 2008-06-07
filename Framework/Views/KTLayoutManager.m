@@ -32,11 +32,12 @@
 
 #import "KTLayoutManager.h"
 
-#define kKTLayoutManagerWidthTypeKey @"sWidthType"
-#define kKTLayoutManagerHeightTypeKey @"sHeightType"
-#define kKTLayoutManagerHorizontalPositionTypeKey @"sHPosition"
-#define kKTLayoutManagerVerticalPositionTypeKey @"sVPosition"
+#define kKTLayoutManagerWidthTypeKey @"widthType"
+#define kKTLayoutManagerHeightTypeKey @"heightType"
+#define kKTLayoutManagerHorizontalPositionTypeKey @"hosPosition"
+#define kKTLayoutManagerVerticalPositionTypeKey @"vertPosition"
 
+//To Do: finish these constants
 
 @implementation KTLayoutManager
 
@@ -99,11 +100,18 @@
 	return self;
 }
 
+//=========================================================== 
+// - setView:
+//=========================================================== 
 - (void)setView:(id<KTViewLayout>)theView
 {
 	wView = theView;
 }
 
+
+//=========================================================== 
+// - refreshLayout
+//=========================================================== 
 - (void)refreshLayout
 {
 	NSRect aCurrentViewFrame = [wView frame];
@@ -379,41 +387,66 @@
 #pragma mark  
 
 #pragma mark Types
+
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setWidthType:(KTSizeType)theType
 {
 	mWidthType = theType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (KTSizeType)widthType
 {
 	return mWidthType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setHeightType:(KTSizeType)theType
 {
 	mHeightType = theType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (KTSizeType)heightType
 {
 	return mHeightType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setHorizontalPositionType:(KTHorizontalPositionType)thePositionType
 {
 	mHorizontalPositionType = thePositionType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (KTHorizontalPositionType)horizontalPositionType
 {
 	return mHorizontalPositionType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setVerticalPositionType:(KTVerticalPositionType)thePositionType
 {
 	mVerticalPositionType = thePositionType;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (KTVerticalPositionType)verticalPositionType
 {
 	return mVerticalPositionType;
@@ -422,6 +455,9 @@
 
 #pragma mark  
 #pragma mark Values
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMargin:(float)theMargin
 {
 	mMarginTop = theMargin;
@@ -430,6 +466,9 @@
 	mMarginLeft = theMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMarginTop:(float)theTopMargin 
 				right:(float)theRightMargin 
 				bottom:(float)theBottomMargin 
@@ -441,101 +480,161 @@
 	mMarginLeft = theLeftMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMarginTop:(float)theMargin
 {
 	mMarginTop = theMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)marginTop
 {
 	return mMarginTop;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMarginRight:(float)theMargin
 {
 	mMarginRight = theMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)marginRight
 {
 	return mMarginRight;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMarginBottom:(float)theMargin
 {
 	mMarginBottom = theMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)marginBottom
 {
 	return mMarginBottom;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMarginLeft:(float)theMargin
 {
 	mMarginLeft = theMargin;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)marginLeft
 {
 	return mMarginLeft;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setHeightPercentage:(float)thePercentage
 {
 	mHeightPercentage = thePercentage;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)heightPercentage
 {
 	return mHeightPercentage;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setWidthPercentage:(float)thePercentage
 {
 	mWidthPercentage = thePercentage;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)widthPercentage
 {
 	return mWidthPercentage;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMinWidth:(float)theWidth
 {
 	mMinWidth = theWidth;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)minWidth
 {
 	return mMinWidth;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMaxWidth:(float)theWidth
 {
 	mMaxWidth = theWidth;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)maxWidth
 {
 	return mMaxWidth;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMinHeight:(float)theHeight
 {
 	mMinHeight = theHeight;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)minHeight
 {
 	return mMinHeight;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (void)setMaxHeight:(float)theHeight
 {
 	mMaxHeight = theHeight;
 }
 
+//=========================================================== 
+// - setWidthType:
+//=========================================================== 
 - (float)maxHeight
 {
 	return mMaxHeight;

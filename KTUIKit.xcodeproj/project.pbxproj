@@ -258,8 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */,
-				4C9C5D8D0DE9F43400AE6913 /* Controllers */,
 				4C9C5D860DE9F41800AE6913 /* Views */,
+				4C9C5D8D0DE9F43400AE6913 /* Controllers */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
