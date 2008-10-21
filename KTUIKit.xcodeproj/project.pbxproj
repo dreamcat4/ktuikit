@@ -14,7 +14,7 @@
 			);
 			dependencies = (
 				53DF6903067E5B930090B5B0 /* PBXTargetDependency */,
-				53DF6905067E5B930090B5B0 /* PBXTargetDependency */,
+				4C5F005A0E0AD5B400F9A03C /* PBXTargetDependency */,
 			);
 			name = All;
 			productName = All;
@@ -49,26 +49,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C5F00590E0AD5B400F9A03C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = KTUIKitFramework;
+		};
+		4C5F00620E0AD62B00F9A03C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = KTUIKitFramework;
+		};
 		53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
 			remoteInfo = KTUIKit;
-		};
-		53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
-			remoteInfo = KTUIKitFramework;
-		};
-		546DEAEF067F62F70098DCC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
-			remoteInfo = KTUIKitFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,15 +88,15 @@
 		4C9C5D8F0DE9F43400AE6913 /* XSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSViewController.m; sourceTree = "<group>"; };
 		4C9C5D900DE9F43400AE6913 /* XSWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSWindowController.h; sourceTree = "<group>"; };
 		4C9C5D910DE9F43400AE6913 /* XSWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSWindowController.m; sourceTree = "<group>"; };
-		4C9C5DCF0DE9F5D300AE6913 /* XSViewController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XSViewController.classdescription; sourceTree = "<group>"; };
-		4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XSWindowController.classdescription; sourceTree = "<group>"; };
+		4C9C5DCF0DE9F5D300AE6913 /* XSViewController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSViewController.classdescription; path = "Plugin/Class Descriptions/XSViewController.classdescription"; sourceTree = "<group>"; };
+		4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSWindowController.classdescription; path = "Plugin/Class Descriptions/XSWindowController.classdescription"; sourceTree = "<group>"; };
 		4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTUIKit.h; path = ../KTUIKit.h; sourceTree = "<group>"; };
 		4CC1F4060DE940160035CE00 /* KTView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTView.classdescription; path = "Plugin/Class Descriptions/KTView.classdescription"; sourceTree = "<group>"; };
 		4CC1F40D0DE940F70035CE00 /* KTViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewIntegration.m; sourceTree = "<group>"; };
 		4CC1F41B0DE9418F0035CE00 /* KTViewInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTViewInspector.h; sourceTree = "<group>"; };
 		4CC1F41C0DE9418F0035CE00 /* KTViewInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewInspector.m; sourceTree = "<group>"; };
 		4CC1F41E0DE941AC0035CE00 /* KTViewInspector.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = KTViewInspector.nib; path = English.lproj/KTViewInspector.nib; sourceTree = "<group>"; };
-		53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKitFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKitFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; wrapsLines = 0; };
 		53DF68FE067E5B5A0090B5B0 /* KTUIKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTUIKitFramework-Info.plist"; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTUIKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,7 +313,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				546DEAF0067F62F70098DCC4 /* PBXTargetDependency */,
+				4C5F00630E0AD62B00F9A03C /* PBXTargetDependency */,
 			);
 			name = KTUIKit;
 			productInstallPath = "$(HOME)/Developer/Palettes";
@@ -388,20 +388,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C5F005A0E0AD5B400F9A03C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
+			targetProxy = 4C5F00590E0AD5B400F9A03C /* PBXContainerItemProxy */;
+		};
+		4C5F00630E0AD62B00F9A03C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
+			targetProxy = 4C5F00620E0AD62B00F9A03C /* PBXContainerItemProxy */;
+		};
 		53DF6903067E5B930090B5B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1AC9600486D14A00FE50C9 /* KTUIKit */;
 			targetProxy = 53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */;
-		};
-		53DF6905067E5B930090B5B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
-			targetProxy = 53DF6904067E5B930090B5B0 /* PBXContainerItemProxy */;
-		};
-		546DEAF0067F62F70098DCC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
-			targetProxy = 546DEAEF067F62F70098DCC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,9 +420,9 @@
 		C056398008A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
+				COPY_PHASE_STRIP = YES;
+				DEPLOYMENT_LOCATION = NO;
+				DSTROOT = "/tmp/$(PROJECT_NAME).dst";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -433,9 +433,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
 				PRODUCT_NAME = KTUIKitFramework;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -445,6 +445,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DSTROOT = /;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -453,9 +454,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				PRODUCT_NAME = KTUIKitFramework;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};
@@ -534,9 +535,12 @@
 		C056398908A954F8003078D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = "";
 				PRODUCT_NAME = All;
+				SKIP_INSTALL = YES;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
