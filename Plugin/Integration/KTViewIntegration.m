@@ -13,7 +13,9 @@
  #import "KTViewInspector.h"
 
 @implementation KTView ( KTView )
-
+//=========================================================== 
+// - ibPopulateKeyPaths:
+//=========================================================== 
 - (void)ibPopulateKeyPaths:(NSMutableDictionary *)keyPaths 
 {
     [super ibPopulateKeyPaths:keyPaths];
@@ -22,16 +24,22 @@
     [[keyPaths objectForKey:IBAttributeKeyPaths] addObjectsFromArray:[NSArray arrayWithObjects:/* @"MyFirstProperty", @"MySecondProperty",*/ nil]];
 }
 
+//=========================================================== 
+// - ibPopulateAttributeInspectorClasses:
+//=========================================================== 
 - (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes 
 {
     [super ibPopulateAttributeInspectorClasses:classes];
     [classes addObject:[KTViewInspector class]];
 }
 
+//=========================================================== 
+// - drawRect:
+//=========================================================== 
 - (void)drawRect:(NSRect)theRect
 {
 	if([self backgroundColor] == [NSColor clearColor])
-		[[NSColor colorWithDeviceWhite:.8 alpha:.5]set];
+		[[NSColor colorWithDeviceWhite:.7 alpha:.5]set];
 	else
 		[[self backgroundColor] set];
 	[NSBezierPath fillRect:[self bounds]];

@@ -80,60 +80,43 @@ typedef enum
 	KTHorizontalPositionType	mHorizontalPositionType;
 	KTVerticalPositionType		mVerticalPositionType;
 	
-	float						mWidthPercentage;
-	float						mHeightPercentage;
+	CGFloat						mWidthPercentage;
+	CGFloat						mHeightPercentage;
 	
-	float						mMarginLeft;
-	float						mMarginRight;
-	float						mMarginTop;
-	float						mMarginBottom;
+	CGFloat						mMarginLeft;
+	CGFloat						mMarginRight;
+	CGFloat						mMarginTop;
+	CGFloat						mMarginBottom;
 	
-	float						mMinWidth;
-	float						mMaxWidth;
-	float						mMinHeight;
-	float						mMaxHeight;
+	CGFloat						mMinWidth;
+	CGFloat						mMaxWidth;
+	CGFloat						mMinHeight;
+	CGFloat						mMaxHeight;
 }
 
+@property(readwrite,assign) KTSizeType heightType;
+@property(readwrite,assign) KTSizeType widthType;
+@property(readwrite,assign) KTHorizontalPositionType horizontalPositionType;
+@property(readwrite,assign) KTVerticalPositionType verticalPositionType;
+@property(readwrite,assign) CGFloat marginTop;
+@property(readwrite,assign) CGFloat marginBottom;
+@property(readwrite,assign) CGFloat marginLeft;
+@property(readwrite,assign) CGFloat marginRight;
+@property(readwrite,assign) CGFloat heightPercentage;
+@property(readwrite,assign) CGFloat widthPercentage;
+@property(readwrite,assign) CGFloat minWidth;
+@property(readwrite,assign) CGFloat maxWidth;
+@property(readwrite,assign) CGFloat minHeight;
+@property(readwrite,assign) CGFloat maxHeight;
+@property(readwrite,assign) id <KTViewLayout> view;
+
 - (id)initWithView:(id<KTViewLayout>)theView;
-- (void)setView:(id<KTViewLayout>)theView;
-
-- (void)refreshLayout;
-
-- (void)setWidthType:(KTSizeType)theType;
-- (KTSizeType)widthType;
-- (void)setHeightType:(KTSizeType)theType;
-- (KTSizeType)heightType;
-- (void)setHorizontalPositionType:(KTHorizontalPositionType)thePositionType;
-- (KTHorizontalPositionType)horizontalPositionType;
-- (void)setVerticalPositionType:(KTVerticalPositionType)thePositionType;
-- (KTVerticalPositionType)verticalPositionType;
-
 - (void)setMargin:(float)theMargin;
 - (void)setMarginTop:(float)theTopMargin 
 			   right:(float)theRightMargin 
 			  bottom:(float)theBottomMargin 
 				left:(float)theLeftMargin;
-- (void)setMarginTop:(float)theMargin;
-- (float)marginTop;
-- (void)setMarginRight:(float)theMargin;
-- (float)marginRight;
-- (void)setMarginBottom:(float)theMargin;
-- (float)marginBottom;
-- (void)setMarginLeft:(float)theMargin;
-- (float)marginLeft;
-
-- (void)setHeightPercentage:(float)thePercentage;
-- (float)heightPercentage;
-- (void)setWidthPercentage:(float)thePercentage;
-- (float)widthPercentage;
-- (void)setMinWidth:(float)theWidth;
-- (void)setMaxWidth:(float)theWidth;
-- (void)setMinHeight:(float)theHeight;
-- (void)setMaxHeight:(float)theHeight;
-- (float)minWidth;
-- (float)maxWidth;
-- (float)minHeight;
-- (float)maxHeight;
-
+				
+- (void)refreshLayout;
 
 @end

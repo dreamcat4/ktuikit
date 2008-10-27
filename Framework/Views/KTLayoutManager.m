@@ -34,44 +34,61 @@
 
 #define kKTLayoutManagerWidthTypeKey @"widthType"
 #define kKTLayoutManagerHeightTypeKey @"heightType"
-#define kKTLayoutManagerHorizontalPositionTypeKey @"hosPosition"
-#define kKTLayoutManagerVerticalPositionTypeKey @"vertPosition"
+#define kKTLayoutManagerHorizontalPositionTypeKey @"horizontalPositionType"
+#define kKTLayoutManagerVerticalPositionTypeKey @"verticalPositionType"
+#define kKTLayoutManagerMarginTopKey @"marginTop"
+#define kKTLayoutManagerMarginRightKey @"marginRight"
+#define kKTLayoutManagerMarginBottomKey @"marginBottom"
+#define kKTLayoutManagerMarginLeftKey @"marginLeft"
+#define kKTLayoutManagerWidthPercentageKey @"widthPercentage"
+#define kKTLayoutManagerHeightPercentageKey @"heightPercentage"
+#define kKTLayoutManagerMinWidthKey @"minWidth"
+#define kKTLayoutManagerMaxWidthKey @"maxWidth"
+#define kKTLayoutManagerMinHeightKey @"minHeight"
+#define kKTLayoutManagerMaxHeightKey @"maxHeight"
 
-//To Do: finish these constants
+@interface KTLayoutManager (Private)
+
+- (NSArray*)keysForCoding;
+
+@end
 
 @implementation KTLayoutManager
 
+@synthesize widthType = mWidthType;
+@synthesize heightType = mHeightType;
+@synthesize horizontalPositionType = mHorizontalPositionType;
+@synthesize verticalPositionType = mVerticalPositionType;
+@synthesize marginTop = mMarginTop;
+@synthesize marginRight = mMarginRight;
+@synthesize marginBottom = mMarginBottom;
+@synthesize marginLeft = mMarginLeft;
+@synthesize widthPercentage = mWidthPercentage;
+@synthesize heightPercentage = mHeightPercentage;
+@synthesize minWidth = mMinWidth;
+@synthesize maxWidth = mMaxWidth;
+@synthesize minHeight = mMinHeight;
+@synthesize maxHeight = mMaxHeight;
+@synthesize view = wView;
+
+//=========================================================== 
+// - init
+//=========================================================== 
+- (id)init
+{
+	return [self initWithView:nil];
+}
+
+//=========================================================== 
+// - initWithView:
+//=========================================================== 
 - (id)initWithView:(id<KTViewLayout>)theView
 {
 	if(![super init])
 		return nil;
 	wView = theView;
-	mMarginTop = mMarginRight = mMarginBottom = mMarginLeft = 0;
-	mMaxWidth = mMinWidth = mMaxHeight = mMinHeight = 0;
-	mWidthPercentage = mHeightPercentage = 1;
+	mWidthPercentage = mHeightPercentage = 1.0;
 	return self;
-}
-
-//=========================================================== 
-// - encodeWithCoder:
-//=========================================================== 
-- (void)encodeWithCoder:(NSCoder*)theCoder
-{	
-	[theCoder encodeInt:mWidthType forKey:kKTLayoutManagerWidthTypeKey];
-	[theCoder encodeInt:mHeightType forKey:kKTLayoutManagerHeightTypeKey];
-	[theCoder encodeInt:mHorizontalPositionType forKey:kKTLayoutManagerHorizontalPositionTypeKey];
-	[theCoder encodeInt:mVerticalPositionType forKey:kKTLayoutManagerVerticalPositionTypeKey];
-	[theCoder encodeFloat:mMarginTop forKey:@"sMarginTop"];
-	[theCoder encodeFloat:mMarginRight forKey:@"sMarginRight"];
-	[theCoder encodeFloat:mMarginBottom forKey:@"sMarginBottom"];
-	[theCoder encodeFloat:mMarginLeft forKey:@"sMarginLeft"];
-	[theCoder encodeFloat:mWidthPercentage forKey:@"sWidthPercentage"];
-	[theCoder encodeFloat:mHeightPercentage forKey:@"sHeightPercentage"];
-	[theCoder encodeFloat:mMinWidth forKey:@"sMinWidth"];
-	[theCoder encodeFloat:mMaxWidth forKey:@"sMaxWidth"];
-	[theCoder encodeFloat:mMinHeight forKey:@"sMinHeight"];
-	[theCoder encodeFloat:mMaxHeight forKey:@"sMaxHeight"];
-
 }
 
 //=========================================================== 
@@ -79,26 +96,74 @@
 //=========================================================== 
 - (id)initWithCoder:(NSCoder*)theCoder
 {
-	if (![super init])
-		return nil;
-		
-	[self setWidthType:[theCoder decodeIntForKey:kKTLayoutManagerWidthTypeKey]];
-	[self setHeightType:[theCoder decodeIntForKey:kKTLayoutManagerHeightTypeKey]];
-	[self setHorizontalPositionType:[theCoder decodeIntForKey:kKTLayoutManagerHorizontalPositionTypeKey]];
-	[self setVerticalPositionType:[theCoder decodeIntForKey:kKTLayoutManagerVerticalPositionTypeKey]];
-	[self setMarginTop:[theCoder decodeFloatForKey:@"sMarginTop"]];
-	[self setMarginRight:[theCoder decodeFloatForKey:@"sMarginRight"]];
-	[self setMarginBottom:[theCoder decodeFloatForKey:@"sMarginBottom"]];
-	[self setMarginLeft:[theCoder decodeFloatForKey:@"sMarginLeft"]];
-	[self setWidthPercentage:[theCoder decodeFloatForKey:@"sWidthPercentage"]];
-	[self setHeightPercentage:[theCoder decodeFloatForKey:@"sHeightPercentage"]];
-	[self setMinWidth:[theCoder decodeFloatForKey:@"sMinWidth"]];
-	[self setMaxWidth:[theCoder decodeFloatForKey:@"sMaxWidth"]];
-	[self setMinHeight:[theCoder decodeFloatForKey:@"sMinHeight"]];
-	[self setMaxHeight:[theCoder decodeFloatForKey:@"sMaxHeight"]];
+	if ([[self superclass] instancesRespondToSelector:@selector(initWithCoder:)]) {
+		if (![(id)super initWithCoder:theCoder])
+			return nil;
+	}
+	
+	for (NSString *key in [self keysForCoding])
+		[self setValue:[theCoder decodeObjectForKey:key] forKey:key];
 	
 	return self;
 }
+
+//=========================================================== 
+// - encodeWithCoder:
+//=========================================================== 
+- (void)encodeWithCoder:(NSCoder*)theCoder
+{
+	if ([[self superclass] instancesRespondToSelector:@selector(encodeWithCoder:)])
+		[(id)super encodeWithCoder:theCoder];
+	for (NSString *key in [self keysForCoding])
+		[theCoder encodeObject:[self valueForKey:key] forKey:key];
+}
+
+//=========================================================== 
+// - keysForCoding
+//=========================================================== 
+- (NSArray *)keysForCoding
+{
+	return [NSArray arrayWithObjects:kKTLayoutManagerWidthTypeKey,kKTLayoutManagerHeightTypeKey,kKTLayoutManagerHorizontalPositionTypeKey,kKTLayoutManagerVerticalPositionTypeKey,kKTLayoutManagerMarginTopKey,kKTLayoutManagerMarginRightKey,kKTLayoutManagerMarginBottomKey,kKTLayoutManagerMarginLeftKey,kKTLayoutManagerWidthPercentageKey,kKTLayoutManagerHeightPercentageKey,kKTLayoutManagerMinWidthKey,kKTLayoutManagerMaxWidthKey,kKTLayoutManagerMinHeightKey,kKTLayoutManagerMaxHeightKey,nil];
+}
+
+//=========================================================== 
+// - setNilValueForKey:
+//=========================================================== 
+- (void)setNilValueForKey:(NSString *)key;
+{
+	if ([key isEqualToString:kKTLayoutManagerWidthTypeKey])
+		[self setWidthType:KTSizeAbsolute];
+	else if ([key isEqualToString:kKTLayoutManagerHeightTypeKey])
+		[self setHeightType:KTSizeAbsolute];
+	else if ([key isEqualToString:kKTLayoutManagerHorizontalPositionTypeKey])
+		[self setHorizontalPositionType:KTHorizontalPositionAbsolute];
+	else if ([key isEqualToString:kKTLayoutManagerVerticalPositionTypeKey])
+		[self setVerticalPositionType:KTVerticalPositionAbsolute];
+	else if ([key isEqualToString:kKTLayoutManagerMarginTopKey])
+		[self setMarginTop:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMarginRightKey])
+		[self setMarginRight:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMarginBottomKey])
+		[self setMarginBottom:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMarginLeftKey])
+		[self setMarginLeft:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerWidthPercentageKey])
+		[self setWidthPercentage:1.0];
+	else if ([key isEqualToString:kKTLayoutManagerHeightPercentageKey])
+		[self setHeightPercentage:1.0];
+	else if ([key isEqualToString:kKTLayoutManagerMinWidthKey])
+		[self setMinWidth:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMaxWidthKey])
+		[self setMaxWidth:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMinHeightKey])
+		[self setMinHeight:0.0];
+	else if ([key isEqualToString:kKTLayoutManagerMaxHeightKey])
+		[self setMaxHeight:0.0];
+	else
+		[super setNilValueForKey:key];
+}
+
+
 
 //=========================================================== 
 // - setView:
@@ -123,23 +188,23 @@
 	switch(mWidthType)
 	{
 		case KTSizeFill:
-			aCurrentViewFrame.size.width = aSuperviewFrame.size.width - (mMarginLeft + mMarginRight);
+			aCurrentViewFrame.size.width = NSWidth(aSuperviewFrame) - (mMarginLeft + mMarginRight);
 		break;
 		
 		case KTSizePercentage:
-			aCurrentViewFrame.size.width = aSuperviewFrame.size.width*mWidthPercentage - (mMarginLeft + mMarginRight);
+			aCurrentViewFrame.size.width = NSWidth(aSuperviewFrame)*mWidthPercentage - (mMarginLeft + mMarginRight);
 		break;
 	}
 	
 	// clip width
 	if(mMaxWidth > 0)
 	{
-		if(aCurrentViewFrame.size.width > mMaxWidth)
+		if(NSWidth(aCurrentViewFrame) > mMaxWidth)
 			aCurrentViewFrame.size.width = mMaxWidth;
 	}
 	if(mMinWidth > 0)
 	{
-		if(aCurrentViewFrame.size.width < mMinWidth)
+		if(NSWidth(aCurrentViewFrame) < mMinWidth)
 			aCurrentViewFrame.size.width = mMinWidth;
 	}
 	
@@ -149,23 +214,23 @@
 	switch(mHeightType)
 	{
 		case KTSizeFill:
-			aCurrentViewFrame.size.height = aSuperviewFrame.size.height - (mMarginTop + mMarginBottom);
+			aCurrentViewFrame.size.height = NSHeight(aSuperviewFrame) - (mMarginTop + mMarginBottom);
 		break;
 		
 		case KTSizePercentage:
-			aCurrentViewFrame.size.height = aSuperviewFrame.size.height*mHeightPercentage - (mMarginTop + mMarginBottom);
+			aCurrentViewFrame.size.height = NSHeight(aSuperviewFrame)*mHeightPercentage - (mMarginTop + mMarginBottom);
 		break;
 	}
 	
 	// clip height
 	if(mMaxHeight > 0)
 	{
-		if(aCurrentViewFrame.size.height > mMaxHeight)
+		if(NSHeight(aCurrentViewFrame) > mMaxHeight)
 			aCurrentViewFrame.size.height = mMaxHeight;
 	}
 	if(mMinHeight > 0)
 	{
-		if(aCurrentViewFrame.size.height < mMinHeight)
+		if(NSHeight(aCurrentViewFrame) < mMinHeight)
 			aCurrentViewFrame.size.height = mMinHeight;
 	}
 	
@@ -177,12 +242,12 @@
 	{
 		case KTHorizontalPositionAbsolute:
 			if(		mMarginLeft > 0
-				&&	aCurrentViewFrame.origin.x < mMarginLeft)
+				&&	NSMinX(aCurrentViewFrame) < mMarginLeft)
 				aCurrentViewFrame.origin.x = mMarginLeft;
 		break;
 		
 		case KTHorizontalPositionKeepCentered:
-			aCurrentViewFrame.origin.x = aSuperviewFrame.size.width*.5 - aCurrentViewFrame.size.width*.5;
+			aCurrentViewFrame.origin.x = NSWidth(aSuperviewFrame)*.5 - NSWidth(aCurrentViewFrame)*.5;
 		break;
 		
 		case KTHorizontalPositionStickLeft:
@@ -190,13 +255,13 @@
 		break;
 		
 		case KTHorizontalPositionStickRight:
-			aCurrentViewFrame.origin.x = aSuperviewFrame.size.width - aCurrentViewFrame.size.width - mMarginRight;
+			aCurrentViewFrame.origin.x = NSWidth(aSuperviewFrame) - NSWidth(aCurrentViewFrame) - mMarginRight;
 		break;
 		
 		case KTHorizontalPositionFloatRight:
 		{
 			// position ourself at the right of the superview
-			aCurrentViewFrame.origin.x = aSuperviewFrame.size.width - aCurrentViewFrame.size.width- mMarginRight;
+			aCurrentViewFrame.origin.x = NSWidth(aSuperviewFrame) - NSWidth(aCurrentViewFrame)- mMarginRight;
 				
 			NSArray * aSiblingList = [[wView parent] children];
 			int		  aCurrentViewIndex = [aSiblingList indexOfObject:wView];
@@ -215,14 +280,14 @@
 						&&	[[aSibling viewLayoutManager] horizontalPositionType] == KTHorizontalPositionFloatRight)
 					{
 						NSRect aSiblingFrame = [aSibling frame];
-						if(		aCurrentViewFrame.origin.y <= aSiblingFrame.origin.y+aSiblingFrame.size.height
-							&&	aCurrentViewFrame.origin.y+aCurrentViewFrame.size.height >= aSiblingFrame.origin.y )
+						if(		NSMinY(aCurrentViewFrame) <= NSMinY(aSiblingFrame) +NSHeight(aSiblingFrame)
+							&&	NSMinY(aCurrentViewFrame) +NSHeight(aCurrentViewFrame) >= NSMinY(aSiblingFrame) )
 						{
 							// if the width is being filled, we need to adjust it to account for the sibling's position in the superview
 							if(	mWidthType == KTSizeFill)
-								aCurrentViewFrame.size.width-=(aSiblingFrame.size.width+[[aSibling viewLayoutManager] marginLeft]+[[aSibling viewLayoutManager] marginRight]);
+								aCurrentViewFrame.size.width-=(NSWidth(aSiblingFrame)+[[aSibling viewLayoutManager] marginLeft]+[[aSibling viewLayoutManager] marginRight]);
 							
-							aCurrentViewFrame.origin.x = aSiblingFrame.origin.x - [[aSibling viewLayoutManager] marginLeft] - mMarginRight - aCurrentViewFrame.size.width;
+							aCurrentViewFrame.origin.x = NSMinX(aSiblingFrame) - [[aSibling viewLayoutManager] marginLeft] - mMarginRight - NSWidth(aCurrentViewFrame);
 							
 							break;
 						}
@@ -253,13 +318,13 @@
 						&&	[[aSibling viewLayoutManager] horizontalPositionType] == KTHorizontalPositionFloatLeft)
 					{
 						NSRect aSiblingFrame = [aSibling frame];
-						if(		aCurrentViewFrame.origin.y <= aSiblingFrame.origin.y+aSiblingFrame.size.height
-							&&	aCurrentViewFrame.origin.y+aCurrentViewFrame.size.height >= aSiblingFrame.origin.y )
+						if(		NSMinY(aCurrentViewFrame) <= NSMinY(aSiblingFrame)+NSHeight(aSiblingFrame)
+							&&	NSMinY(aCurrentViewFrame)+NSHeight(aCurrentViewFrame) >= NSMinY(aSiblingFrame) )
 						{
-							aCurrentViewFrame.origin.x = [aSibling frame].origin.x + [aSibling frame].size.width + [[aSibling viewLayoutManager] marginRight] + mMarginLeft;
+							aCurrentViewFrame.origin.x = NSMinX([aSibling frame]) + NSWidth([aSibling frame]) + [[aSibling viewLayoutManager] marginRight] + mMarginLeft;
 							// if the width if being filled, we need to adjust it to account for our position change
 							if(mWidthType == KTSizeFill)
-								aCurrentViewFrame.size.width-=(aCurrentViewFrame.origin.x - mMarginLeft);
+								aCurrentViewFrame.size.width-=(NSMinX(aCurrentViewFrame) - mMarginLeft);
 							break;
 						}
 					}
@@ -280,16 +345,16 @@
 	{
 		case KTHorizontalPositionAbsolute:
 			if(		mMarginBottom > 0
-				&&	aCurrentViewFrame.origin.y < mMarginBottom)
+				&&	NSMinY(aCurrentViewFrame) < mMarginBottom)
 				aCurrentViewFrame.origin.y = mMarginBottom;
 		break;
 		
 		case KTVerticalPositionKeepCentered:
-			aCurrentViewFrame.origin.y = aSuperviewFrame.size.height*.5 - aCurrentViewFrame.size.height*.5;
+			aCurrentViewFrame.origin.y = NSHeight(aSuperviewFrame)*.5 - NSHeight(aCurrentViewFrame)*.5;
 		break;
 		
 		case KTVerticalPositionStickTop:
-			aCurrentViewFrame.origin.y = aSuperviewFrame.size.height - aCurrentViewFrame.size.height - mMarginTop;
+			aCurrentViewFrame.origin.y = NSHeight(aSuperviewFrame) - NSHeight(aCurrentViewFrame) - mMarginTop;
 		break;
 		
 		case KTVerticalPositionStickBottom:
@@ -299,7 +364,7 @@
 		case KTVerticalPositionFloatUp:
 		{
 			// position ourself at the top of the superview
-			aCurrentViewFrame.origin.y = aSuperviewFrame.size.height - aCurrentViewFrame.size.height - mMarginTop;
+			aCurrentViewFrame.origin.y = NSHeight(aSuperviewFrame) - NSHeight(aCurrentViewFrame) - mMarginTop;
 				
 			NSArray * aSiblingList = [[wView parent] children];
 			int		  aCurrentViewIndex = [aSiblingList indexOfObject:wView];
@@ -318,14 +383,14 @@
 						&&	[[aSibling viewLayoutManager] verticalPositionType] == KTVerticalPositionFloatUp)
 					{
 						NSRect aSiblingFrame = [aSibling frame];
-						if(		aCurrentViewFrame.origin.x+aCurrentViewFrame.size.width >= aSiblingFrame.origin.x
-							&&	aCurrentViewFrame.origin.x <= aSiblingFrame.origin.x+aSiblingFrame.size.width )
+						if(		NSMinX(aCurrentViewFrame)+NSWidth(aCurrentViewFrame) >= NSMinX(aSiblingFrame)
+							&&	NSMinX(aCurrentViewFrame) <= NSMinX(aSiblingFrame)+NSWidth(aSiblingFrame) )
 						{							
 							// if the hieght if being filled, we need to adjust it to account for the sibling's position in the superview
 							if(	mHeightType == KTSizeFill)
-								aCurrentViewFrame.size.height-=aSuperviewFrame.size.height-aSiblingFrame.origin.y -[[aSibling viewLayoutManager] marginBottom];
+								aCurrentViewFrame.size.height-= NSHeight(aSuperviewFrame)-NSMinY(aSiblingFrame) -[[aSibling viewLayoutManager] marginBottom];
 								
-							aCurrentViewFrame.origin.y = aSiblingFrame.origin.y -[[aSibling viewLayoutManager] marginBottom] - aCurrentViewFrame.size.height - mMarginTop;
+							aCurrentViewFrame.origin.y = NSMinY(aSiblingFrame) -[[aSibling viewLayoutManager] marginBottom] - NSHeight(aCurrentViewFrame) - mMarginTop;
 							
 							break;
 						}
@@ -356,13 +421,13 @@
 						&&	[[aSibling viewLayoutManager] verticalPositionType] == KTVerticalPositionFloatDown)
 					{
 						NSRect aSiblingFrame = [aSibling frame];
-						if(		aCurrentViewFrame.origin.x <= aSiblingFrame.origin.x+aSiblingFrame.size.width
-							&&	aCurrentViewFrame.origin.x+aCurrentViewFrame.size.width >= aSiblingFrame.origin.x )
+						if(		NSMinX(aCurrentViewFrame) <= NSMinX(aSiblingFrame)+NSWidth(aSiblingFrame)
+							&&	NSMinX(aCurrentViewFrame)+NSWidth(aCurrentViewFrame) >= NSMinX(aSiblingFrame) )
 						{
-							aCurrentViewFrame.origin.y = [aSibling frame].origin.y +  [aSibling frame].size.height + mMarginBottom;
+							aCurrentViewFrame.origin.y = NSMinY([aSibling frame]) +  NSHeight([aSibling frame]) + mMarginBottom;
 							// if the hieght if being filled, we need to adjust it to account for our position change
 							if(	mHeightType == KTSizeFill)
-								aCurrentViewFrame.size.height-=aCurrentViewFrame.origin.y;
+								aCurrentViewFrame.size.height-=NSMinY(aCurrentViewFrame);
 							break;
 						}
 					}
@@ -383,80 +448,9 @@
 }
 
 #pragma mark -
-#pragma mark CONFIGURATION
-#pragma mark  
-
-#pragma mark Types
-
+#pragma mark EXTRA API FOR CONFIGURATION
 //=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setWidthType:(KTSizeType)theType
-{
-	mWidthType = theType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (KTSizeType)widthType
-{
-	return mWidthType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setHeightType:(KTSizeType)theType
-{
-	mHeightType = theType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (KTSizeType)heightType
-{
-	return mHeightType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setHorizontalPositionType:(KTHorizontalPositionType)thePositionType
-{
-	mHorizontalPositionType = thePositionType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (KTHorizontalPositionType)horizontalPositionType
-{
-	return mHorizontalPositionType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setVerticalPositionType:(KTVerticalPositionType)thePositionType
-{
-	mVerticalPositionType = thePositionType;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (KTVerticalPositionType)verticalPositionType
-{
-	return mVerticalPositionType;
-}
-
-
-#pragma mark  
-#pragma mark Values
-//=========================================================== 
-// - setWidthType:
+// - setMargin:
 //=========================================================== 
 - (void)setMargin:(float)theMargin
 {
@@ -467,7 +461,7 @@
 }
 
 //=========================================================== 
-// - setWidthType:
+// - setMarginTop:right:bottom:left:
 //=========================================================== 
 - (void)setMarginTop:(float)theTopMargin 
 				right:(float)theRightMargin 
@@ -480,164 +474,6 @@
 	mMarginLeft = theLeftMargin;
 }
 
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMarginTop:(float)theMargin
-{
-	mMarginTop = theMargin;
-}
 
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)marginTop
-{
-	return mMarginTop;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMarginRight:(float)theMargin
-{
-	mMarginRight = theMargin;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)marginRight
-{
-	return mMarginRight;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMarginBottom:(float)theMargin
-{
-	mMarginBottom = theMargin;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)marginBottom
-{
-	return mMarginBottom;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMarginLeft:(float)theMargin
-{
-	mMarginLeft = theMargin;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)marginLeft
-{
-	return mMarginLeft;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setHeightPercentage:(float)thePercentage
-{
-	mHeightPercentage = thePercentage;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)heightPercentage
-{
-	return mHeightPercentage;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setWidthPercentage:(float)thePercentage
-{
-	mWidthPercentage = thePercentage;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)widthPercentage
-{
-	return mWidthPercentage;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMinWidth:(float)theWidth
-{
-	mMinWidth = theWidth;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)minWidth
-{
-	return mMinWidth;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMaxWidth:(float)theWidth
-{
-	mMaxWidth = theWidth;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)maxWidth
-{
-	return mMaxWidth;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMinHeight:(float)theHeight
-{
-	mMinHeight = theHeight;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)minHeight
-{
-	return mMinHeight;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (void)setMaxHeight:(float)theHeight
-{
-	mMaxHeight = theHeight;
-}
-
-//=========================================================== 
-// - setWidthType:
-//=========================================================== 
-- (float)maxHeight
-{
-	return mMaxHeight;
-}
 
 @end

@@ -56,7 +56,7 @@
 			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = KTUIKitFramework;
 		};
-		4C5F00620E0AD62B00F9A03C /* PBXContainerItemProxy */ = {
+		4C94A8DB0EB48B98000FADE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
 			proxyType = 1;
@@ -313,7 +313,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4C5F00630E0AD62B00F9A03C /* PBXTargetDependency */,
+				4C94A8DC0EB48B98000FADE7 /* PBXTargetDependency */,
 			);
 			name = KTUIKit;
 			productInstallPath = "$(HOME)/Developer/Palettes";
@@ -334,8 +334,8 @@
 			projectRoot = "";
 			targets = (
 				53DF6901067E5B8E0090B5B0 /* All */,
-				8D1AC9600486D14A00FE50C9 /* KTUIKit */,
 				53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */,
+				8D1AC9600486D14A00FE50C9 /* KTUIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -393,10 +393,10 @@
 			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
 			targetProxy = 4C5F00590E0AD5B400F9A03C /* PBXContainerItemProxy */;
 		};
-		4C5F00630E0AD62B00F9A03C /* PBXTargetDependency */ = {
+		4C94A8DC0EB48B98000FADE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
-			targetProxy = 4C5F00620E0AD62B00F9A03C /* PBXContainerItemProxy */;
+			targetProxy = 4C94A8DB0EB48B98000FADE7 /* PBXContainerItemProxy */;
 		};
 		53DF6903067E5B930090B5B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -433,9 +433,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
-				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = KTUIKitFramework;
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -454,9 +455,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = KTUIKitFramework;
-				SKIP_INSTALL = NO;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

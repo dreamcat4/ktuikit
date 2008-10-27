@@ -65,9 +65,9 @@
 {	
 	[super encodeWithCoder:theCoder];
 	
-	[theCoder encodeObject:[self viewLayoutManager] forKey:@"sLayoutManager"];
-	[theCoder encodeObject:[self label] forKey:@"sLabel"];
-	[theCoder encodeObject:[self backgroundColor] forKey:@"sBackgroundColor"];
+	[theCoder encodeObject:[self viewLayoutManager] forKey:@"layoutManager"];
+	[theCoder encodeObject:[self label] forKey:@"label"];
+	[theCoder encodeObject:[self backgroundColor] forKey:@"backgroundColor"];
 }
 
 //=========================================================== 
@@ -79,11 +79,11 @@
 		return nil;
 		
 	[self setAutoresizesSubviews:NO];
-	KTLayoutManager * aLayoutManager = [theCoder decodeObjectForKey:@"sLayoutManager"];
+	KTLayoutManager * aLayoutManager = [theCoder decodeObjectForKey:@"layoutManager"];
 	[aLayoutManager setView:self];
 	[self setViewLayoutManager:aLayoutManager];
-	[self setLabel:[theCoder decodeObjectForKey:@"sLabel"]];
-	[self setBackgroundColor:[theCoder decodeObjectForKey:@"sBackgroundColor"]];
+	[self setLabel:[theCoder decodeObjectForKey:@"label"]];
+	[self setBackgroundColor:[theCoder decodeObjectForKey:@"backgroundColor"]];
 	[self setBorderColor:[NSColor clearColor]];
 	[self setAutoresizesSubviews:NO];
 	[self setAutoresizingMask:NSViewNotSizable];
@@ -91,7 +91,7 @@
 }
 
 //=========================================================== 
-// - dealloc:
+// - dealloc
 //=========================================================== 
 - (void)dealloc
 {	
@@ -121,7 +121,7 @@
 #pragma mark -
 #pragma mark Layout protocol
 //=========================================================== 
-// - drawRect:
+// - setViewLayoutManager:
 //===========================================================
 - (void)setViewLayoutManager:(KTLayoutManager*)theLayoutManager
 {
@@ -133,7 +133,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - viewLayoutManager
 //===========================================================
 - (KTLayoutManager*)viewLayoutManager
 {
@@ -141,7 +141,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - setFrame:
 //===========================================================
 - (void)setFrame:(NSRect)theFrame
 {
@@ -164,7 +164,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - frame
 //===========================================================
 - (NSRect)frame
 {
@@ -172,7 +172,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - parent
 //===========================================================
 - (id<KTViewLayout>)parent
 {
@@ -180,7 +180,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - children
 //===========================================================
 - (NSArray*)children
 {
@@ -188,7 +188,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - addSubview:
 //===========================================================
 - (void)addSubview:(NSView*)theView
 {
@@ -201,7 +201,7 @@
 #pragma mark -
 #pragma mark KTView protocol
 //=========================================================== 
-// - drawRect:
+// - setLabel:
 //===========================================================
 - (void)setLabel:(NSString*)theLabel
 {
@@ -213,7 +213,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - label
 //===========================================================
 - (NSString*)label
 {
@@ -226,7 +226,7 @@
 // to the layout manager
 
 //=========================================================== 
-// - drawRect:
+// - setBorderColor:
 //===========================================================
 - (void)setBorderColor:(NSColor*)theColor
 {
@@ -238,7 +238,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - borderColor
 //===========================================================
 - (NSColor *)borderColor
 {
@@ -246,7 +246,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - setBackgroundColor:
 //===========================================================
 - (void)setBackgroundColor:(NSColor*)theColor
 {
@@ -258,7 +258,7 @@
 }
 
 //=========================================================== 
-// - drawRect:
+// - backgroundColor
 //===========================================================
 - (NSColor *)backgroundColor
 {
