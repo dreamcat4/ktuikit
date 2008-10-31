@@ -86,7 +86,6 @@
 	[self setBackgroundColor:[theCoder decodeObjectForKey:@"backgroundColor"]];
 	[self setBorderColor:[NSColor clearColor]];
 	[self setAutoresizesSubviews:NO];
-	[self setAutoresizingMask:NSViewNotSizable];
 	return self;
 }
 
