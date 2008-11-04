@@ -10,9 +10,11 @@
 
 // Import your framework view and your inspector 
  #import <KTUIKitFramework/KTView.h>
+ #import "KTLayoutManagerInspector.h"
  #import "KTViewInspector.h"
-
-@implementation KTView ( KTView )
+ #import "KTStyleInspector.h"
+ 
+@implementation KTView ( KTViewIntegration )
 //=========================================================== 
 // - ibPopulateKeyPaths:
 //=========================================================== 
@@ -30,24 +32,21 @@
 - (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes 
 {
     [super ibPopulateAttributeInspectorClasses:classes];
-    [classes addObject:[KTViewInspector class]];
+	[classes addObject:[KTStyleInspector class]];
+    [classes addObject:[KTLayoutManagerInspector class]];
+	
 }
 
 //=========================================================== 
-// - drawRect:
+// - drawInContext:
 //=========================================================== 
-- (void)drawRect:(NSRect)theRect
+- (void)drawInContext:(CGContextRef)theContext
 {
-	if([self backgroundColor] == [NSColor clearColor])
-		[[NSColor colorWithDeviceWhite:.7 alpha:.5]set];
-	else
-		[[self backgroundColor] set];
-	[NSBezierPath fillRect:[self bounds]];
-	if([[self superview]class] == [KTView class])
+	if(		[[self styleManager] backgroundColor] == [NSColor clearColor] 
+		&&	[[self styleManager] backgroundGradient] == nil)
 	{
-		[[NSColor whiteColor] set];
-		[NSBezierPath setDefaultLineWidth:3];
-		[NSBezierPath strokeRect:[self bounds]];
+		[[NSColor colorWithDeviceRed:103.0/255.0 green:154.0/255.0 blue:255.0/255.0 alpha:.4] set];
+		[NSBezierPath fillRect:[self bounds]];
 	}
 }
 
