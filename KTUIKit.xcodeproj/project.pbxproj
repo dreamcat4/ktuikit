@@ -208,7 +208,7 @@
 		4C9A83710EBE270A00F8AA48 /* KTGradientPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTGradientPicker.h; sourceTree = "<group>"; };
 		4C9A83720EBE270A00F8AA48 /* KTGradientPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTGradientPicker.m; sourceTree = "<group>"; };
 		4C9A839F0EBE346B00F8AA48 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C9A83A10EBE346B00F8AA48 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TestApp-Info.plist"; path = "../../TestApp-Info.plist"; sourceTree = "<group>"; };
+		4C9A83A10EBE346B00F8AA48 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
 		4C9A83C90EBE350400F8AA48 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C9A83CA0EBE350400F8AA48 /* TestAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppController.h; sourceTree = "<group>"; };
 		4C9A83CB0EBE350400F8AA48 /* TestAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppController.m; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 			children = (
 				32DBCF9E0370C38000C91783 /* Plugin */,
 				54D33B2C06778E4400C9C163 /* Framework */,
-				4C9A83C60EBE350400F8AA48 /* Test App */,
+				4C9A83C60EBE350400F8AA48 /* TestApp */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
@@ -432,13 +432,13 @@
 			path = NSControlSubclasses;
 			sourceTree = "<group>";
 		};
-		4C9A83C60EBE350400F8AA48 /* Test App */ = {
+		4C9A83C60EBE350400F8AA48 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
 				4C9A83C80EBE350400F8AA48 /* Sources */,
 				4C9A83C70EBE350400F8AA48 /* Resources */,
 			);
-			path = "Test App";
+			path = TestApp;
 			sourceTree = "<group>";
 		};
 		4C9A83C70EBE350400F8AA48 /* Resources */ = {
@@ -448,7 +448,8 @@
 				4C9A83F70EBE357500F8AA48 /* MainMenu.xib */,
 				4C9A84200EBE36C000F8AA48 /* TestWindow.xib */,
 			);
-			path = Resources;
+			name = Resources;
+			path = ../TestApp/Resources;
 			sourceTree = "<group>";
 		};
 		4C9A83C80EBE350400F8AA48 /* Sources */ = {
@@ -459,7 +460,8 @@
 				4C9A83CB0EBE350400F8AA48 /* TestAppController.m */,
 				4C9A83CC0EBE350400F8AA48 /* TestWindow */,
 			);
-			path = Sources;
+			name = Sources;
+			path = ../TestApp/Sources;
 			sourceTree = "<group>";
 		};
 		4C9A83CC0EBE350400F8AA48 /* TestWindow */ = {
