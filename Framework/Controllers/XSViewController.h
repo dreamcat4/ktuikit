@@ -31,7 +31,7 @@
 // For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
 
 #import <Cocoa/Cocoa.h>
-
+#import "KTViewLayout.h"
 // XS for Xtra-Special!
 
 @class XSWindowController;
@@ -49,7 +49,8 @@
 
 + (id)viewControllerWithWindowController:(XSWindowController*)theWindowController;
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle windowController:(XSWindowController *)windowController;
-
+//- (NSView<KTViewLayout>*)view;
+//- (void)setView:(NSView<KTViewLayout>*)theView;
 - (NSUInteger)countOfChildren;
 - (XSViewController *)objectInChildrenAtIndex:(NSUInteger)index;
 

@@ -87,6 +87,7 @@
 	[aLayoutManager setView:self];
 	[self setViewLayoutManager:aLayoutManager];
 	[self setAutoresizesSubviews:NO];
+	[self setAutoresizingMask:NSViewNotSizable];
 	
 	KTStyleManager * aStyleManager = [theCoder decodeObjectForKey:@"styleManager"];
 	[aStyleManager setView:self];

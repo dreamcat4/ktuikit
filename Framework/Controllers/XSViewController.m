@@ -78,7 +78,14 @@
 @synthesize parent = _parent;
 @synthesize windowController = _windowController;
 @synthesize children = _children;
-
+//- (NSView<KTViewLayout>*)view
+//{
+//	return (NSView<KTViewLayout>*)[super view];
+//}
+//- (void)setView:(NSView<KTViewLayout>*)theView
+//{
+//	[super setView:theView];
+//}
 #pragma mark Designated Initialiser
 
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle windowController:(XSWindowController *)windowController;

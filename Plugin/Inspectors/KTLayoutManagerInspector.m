@@ -62,8 +62,8 @@
 		[oXPosition setFloatValue:aViewFrame.origin.x];
 		[oYPosition setFloatValue:aViewFrame.origin.y];
 		
-		if([anInspectedView parent]!=nil)
-		{
+//		if([anInspectedView parent]!=nil)
+//		{
 		
 			[oVPosType setEnabled:YES];
 			[oHPosType setEnabled:YES];
@@ -145,22 +145,22 @@
 				[oBottomMargin setFloatValue:aBottomMargin];
 				[self setVerticalSelection:2];
 			}
-		}
-		else
-		{
-			[self setVerticalSelection:0];
-			[oVPosType setEnabled:NO];
-			[self setHorizontalSelection:0];
-			[oHPosType setEnabled:NO];
-			[oTopMargin setStringValue:@"flexible"];
-			[oBottomMargin setFloatValue:0];
-			[oLeftMargin setFloatValue:0];
-			[oRightMargin setStringValue:@"flexible"];
-			[oWidth setEnabled:NO];
-			[oHeight setEnabled:NO];
-			[oXPosition setEnabled:NO];
-			[oYPosition setEnabled:NO];
-		}	
+//		}
+//		else
+//		{
+//			[self setVerticalSelection:0];
+//			[oVPosType setEnabled:NO];
+//			[self setHorizontalSelection:0];
+//			[oHPosType setEnabled:NO];
+//			[oTopMargin setStringValue:@"flexible"];
+//			[oBottomMargin setFloatValue:0];
+//			[oLeftMargin setFloatValue:0];
+//			[oRightMargin setStringValue:@"flexible"];
+//			[oWidth setEnabled:NO];
+//			[oHeight setEnabled:NO];
+//			[oXPosition setEnabled:NO];
+//			[oYPosition setEnabled:NO];
+//		}	
 	}
 	[super refresh];
 }
