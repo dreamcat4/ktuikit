@@ -30,6 +30,20 @@
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
 // For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
 
+
+/*
+	(Cathy 11/10/08) NOTE:
+	I've made the following changes that need to be documented:
+	• When a child is removed, its view is removed from its superview and it is sent a "removeObservations" message
+	• Added 'removeChild:(XSViewController*)theChild' method to remove specific subcontrollers
+	• Added 'loadNibNamed' and 'releaseNibObjects' to support loading more than one nib per view controller.  These take care
+	of releasing the top level nib objects for those nib files. Users have to unbind any bindings in those nibs in the view
+	controller's removeObservations method.
+	• Added class method, 'viewControllerWithWindowController'
+	• I'm considering overriding 'view' and 'setView:' so that the view controller only deals with KTViews.
+*/
+
+
 #import "XSViewController.h"
 #import "XSWindowController.h"
 
@@ -67,7 +81,6 @@
 #pragma mark Public API
 
 @implementation XSViewController
-
 + (id)viewControllerWithWindowController:(XSWindowController*)theWindowController
 {
 	return [[[self alloc] initWithNibName:nil bundle:nil windowController:theWindowController] autorelease];
