@@ -6,7 +6,9 @@
 #import <KTUIKitFramework/KTScrollView.h>
 #import <KTUIKitFramework/KTAppKitSplitView.h>
 #import <KTUIKitFramework/KTWebView.h>
+#import <KTUIKitFramework/KTImageKitBrowserView.h>
 #import <KTUIKitFramework/KTProgressIndicator.h>
+#import <KTUIKitFramework/KTLevelIndicator.h>
 #import <KTUIKitFramework/KTButton.h>
 #import <KTUIKitFramework/KTSegmentedControl.h>
 #import <KTUIKitFramework/KTSlider.h>
@@ -15,4 +17,3 @@
 #import <KTUIKitFramework/KTSearchField.h>
 #import <KTUIKitFramework/KTSecureTextField.h>
 #import <KTUIKitFramework/KTImageView.h>
-

@@ -137,12 +137,17 @@
 
 - (void)removeChild:(XSViewController *)viewController;
 {
+	[[viewController view] removeFromSuperview];
+	[viewController removeObservations];
 	[self.children removeObject:viewController];
 	[self.windowController patchResponderChain];
 }
 
 - (void)removeObjectFromChildrenAtIndex:(NSUInteger)index;
 {
+	XSViewController *	aChildToRemove = [self.children objectAtIndex:index];
+	[[aChildToRemove view] removeFromSuperview];
+	[aChildToRemove removeObservations];
 	[self.children removeObjectAtIndex:index];
 	[(XSWindowController *)self.windowController patchResponderChain]; // each time a controller is removed then the repsonder chain needs fixing
 }
