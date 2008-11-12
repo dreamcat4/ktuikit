@@ -72,14 +72,6 @@
 		4C9A81FD0EBDF30D00F8AA48 /* KTStyleInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A81FC0EBDF30D00F8AA48 /* KTStyleInspector.m */; };
 		4C9A83730EBE270A00F8AA48 /* KTGradientPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A83710EBE270A00F8AA48 /* KTGradientPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A83740EBE270A00F8AA48 /* KTGradientPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83720EBE270A00F8AA48 /* KTGradientPicker.m */; };
-		4C9A83CD0EBE350400F8AA48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83C90EBE350400F8AA48 /* main.m */; };
-		4C9A83CE0EBE350400F8AA48 /* TestAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83CB0EBE350400F8AA48 /* TestAppController.m */; };
-		4C9A83D10EBE353E00F8AA48 /* KTUIKitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
-		4C9A83F80EBE357500F8AA48 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A83F70EBE357500F8AA48 /* MainMenu.xib */; };
-		4C9A83FC0EBE35A700F8AA48 /* TestWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83FB0EBE35A700F8AA48 /* TestWindowController.m */; };
-		4C9A84210EBE36C000F8AA48 /* TestWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A84200EBE36C000F8AA48 /* TestWindow.xib */; };
-		4C9A84250EBE377200F8AA48 /* KTUIKitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
-		4C9A84270EBE378400F8AA48 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		4C9A877D0EBEF48700F8AA48 /* KTGradientPickerIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A877C0EBEF48700F8AA48 /* KTGradientPickerIntegration.m */; };
 		4C9A88A70EBF2E2D00F8AA48 /* KTViewControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A88A50EBF2E2D00F8AA48 /* KTViewControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A88A80EBF2E2D00F8AA48 /* KTViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A88A60EBF2E2D00F8AA48 /* KTViewControl.m */; };
@@ -126,13 +118,6 @@
 			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = KTUIKitFramework;
 		};
-		4C9A83A50EBE347200F8AA48 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
-			remoteInfo = KTUIKitFramework;
-		};
 		53DF6902067E5B930090B5B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
@@ -141,19 +126,6 @@
 			remoteInfo = KTUIKit;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4C9A83C50EBE34E600F8AA48 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 7;
-			files = (
-				4C9A83D10EBE353E00F8AA48 /* KTUIKitFramework.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0259C576FE90428111CA0C5A /* KTUIKit.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = KTUIKit.m; path = Plugin/KTUIKit.m; sourceTree = "<group>"; };
@@ -221,15 +193,6 @@
 		4C9A81FF0EBDF32E00F8AA48 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/KTStyleInspector.xib; sourceTree = "<group>"; };
 		4C9A83710EBE270A00F8AA48 /* KTGradientPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTGradientPicker.h; sourceTree = "<group>"; };
 		4C9A83720EBE270A00F8AA48 /* KTGradientPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTGradientPicker.m; sourceTree = "<group>"; };
-		4C9A839F0EBE346B00F8AA48 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C9A83A10EBE346B00F8AA48 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
-		4C9A83C90EBE350400F8AA48 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C9A83CA0EBE350400F8AA48 /* TestAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppController.h; sourceTree = "<group>"; };
-		4C9A83CB0EBE350400F8AA48 /* TestAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppController.m; sourceTree = "<group>"; };
-		4C9A83F70EBE357500F8AA48 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		4C9A83FA0EBE35A700F8AA48 /* TestWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindowController.h; sourceTree = "<group>"; };
-		4C9A83FB0EBE35A700F8AA48 /* TestWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWindowController.m; sourceTree = "<group>"; };
-		4C9A84200EBE36C000F8AA48 /* TestWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWindow.xib; sourceTree = "<group>"; };
 		4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTGradientPicker.classdescription; path = "Plugin/Class Descriptions/KTGradientPicker.classdescription"; sourceTree = "<group>"; };
 		4C9A877C0EBEF48700F8AA48 /* KTGradientPickerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTGradientPickerIntegration.m; sourceTree = "<group>"; };
 		4C9A88A50EBF2E2D00F8AA48 /* KTViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTViewControl.h; sourceTree = "<group>"; };
@@ -273,15 +236,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C9A839D0EBE346B00F8AA48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C9A84270EBE378400F8AA48 /* Cocoa.framework in Frameworks */,
-				4C9A84250EBE377200F8AA48 /* KTUIKitFramework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53DF68FB067E5B5A0090B5B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,7 +266,6 @@
 			children = (
 				32DBCF9E0370C38000C91783 /* Plugin */,
 				54D33B2C06778E4400C9C163 /* Framework */,
-				4C9A83C60EBE350400F8AA48 /* TestApp */,
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
@@ -360,7 +313,6 @@
 			children = (
 				8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */,
 				53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */,
-				4C9A839F0EBE346B00F8AA48 /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -452,47 +404,6 @@
 			);
 			name = CustomViewsAndControls;
 			path = NSControlSubclasses;
-			sourceTree = "<group>";
-		};
-		4C9A83C60EBE350400F8AA48 /* TestApp */ = {
-			isa = PBXGroup;
-			children = (
-				4C9A83C80EBE350400F8AA48 /* Sources */,
-				4C9A83C70EBE350400F8AA48 /* Resources */,
-			);
-			path = TestApp;
-			sourceTree = "<group>";
-		};
-		4C9A83C70EBE350400F8AA48 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4C9A83A10EBE346B00F8AA48 /* TestApp-Info.plist */,
-				4C9A83F70EBE357500F8AA48 /* MainMenu.xib */,
-				4C9A84200EBE36C000F8AA48 /* TestWindow.xib */,
-			);
-			name = Resources;
-			path = ../TestApp/Resources;
-			sourceTree = "<group>";
-		};
-		4C9A83C80EBE350400F8AA48 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				4C9A83C90EBE350400F8AA48 /* main.m */,
-				4C9A83CA0EBE350400F8AA48 /* TestAppController.h */,
-				4C9A83CB0EBE350400F8AA48 /* TestAppController.m */,
-				4C9A83CC0EBE350400F8AA48 /* TestWindow */,
-			);
-			name = Sources;
-			path = ../TestApp/Sources;
-			sourceTree = "<group>";
-		};
-		4C9A83CC0EBE350400F8AA48 /* TestWindow */ = {
-			isa = PBXGroup;
-			children = (
-				4C9A83FA0EBE35A700F8AA48 /* TestWindowController.h */,
-				4C9A83FB0EBE35A700F8AA48 /* TestWindowController.m */,
-			);
-			path = TestWindow;
 			sourceTree = "<group>";
 		};
 		4C9C5D860DE9F41800AE6913 /* Views */ = {
@@ -639,25 +550,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4C9A839E0EBE346B00F8AA48 /* TestApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C9A83A40EBE346C00F8AA48 /* Build configuration list for PBXNativeTarget "TestApp" */;
-			buildPhases = (
-				4C9A839B0EBE346B00F8AA48 /* Resources */,
-				4C9A83C50EBE34E600F8AA48 /* CopyFiles */,
-				4C9A839C0EBE346B00F8AA48 /* Sources */,
-				4C9A839D0EBE346B00F8AA48 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C9A83A60EBE347200F8AA48 /* PBXTargetDependency */,
-			);
-			name = TestApp;
-			productName = TestApp;
-			productReference = 4C9A839F0EBE346B00F8AA48 /* TestApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 		53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "KTUIKitFramework" */;
@@ -710,21 +602,11 @@
 				53DF6901067E5B8E0090B5B0 /* All */,
 				53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */,
 				8D1AC9600486D14A00FE50C9 /* KTUIKit */,
-				4C9A839E0EBE346B00F8AA48 /* TestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4C9A839B0EBE346B00F8AA48 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C9A83F80EBE357500F8AA48 /* MainMenu.xib in Resources */,
-				4C9A84210EBE36C000F8AA48 /* TestWindow.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53DF68F9067E5B5A0090B5B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -747,16 +629,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C9A839C0EBE346B00F8AA48 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C9A83CD0EBE350400F8AA48 /* main.m in Sources */,
-				4C9A83CE0EBE350400F8AA48 /* TestAppController.m in Sources */,
-				4C9A83FC0EBE35A700F8AA48 /* TestWindowController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53DF68FA067E5B5A0090B5B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,11 +697,6 @@
 			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
 			targetProxy = 4C94A8DB0EB48B98000FADE7 /* PBXContainerItemProxy */;
 		};
-		4C9A83A60EBE347200F8AA48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
-			targetProxy = 4C9A83A50EBE347200F8AA48 /* PBXContainerItemProxy */;
-		};
 		53DF6903067E5B930090B5B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D1AC9600486D14A00FE50C9 /* KTUIKit */;
@@ -865,54 +732,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C9A83A20EBE346B00F8AA48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestApp-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = TestApp;
-			};
-			name = Debug;
-		};
-		4C9A83A30EBE346B00F8AA48 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestApp-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = TestApp;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C056398008A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1076,15 +895,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C9A83A40EBE346C00F8AA48 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4C9A83A20EBE346B00F8AA48 /* Debug */,
-				4C9A83A30EBE346B00F8AA48 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "KTUIKitFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
