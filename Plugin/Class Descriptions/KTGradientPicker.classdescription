@@ -8,5 +8,5 @@
 		// myOutlet = NSView;
 	};
     ClassName = KTGradientPicker; 
-    SuperClass = KTView; 
+    SuperClass = KTViewControl; 
 }

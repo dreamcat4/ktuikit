@@ -32,9 +32,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "KTViewProtocol.h"
+#import "KTLayoutManager.h"
+#import "KTStyleManager.h"
 
-@class KTLayoutManager;
-@class KTStyleManager;
 
 @interface KTView : NSView <KTView>
 {

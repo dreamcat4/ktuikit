@@ -13,7 +13,6 @@
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<string>com.apple.InterfaceBuilderKit</string>
-			<string>com.KATI.KTUIKit</string>
 			<string>com.apple.AppKitPalettes</string>
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 		</object>
@@ -297,87 +296,6 @@
 							<bytes key="NSRGB">MC4wNTgxMzA0OTkgMC4wNTU1NDE4OTkgMSAwAA</bytes>
 						</object>
 					</object>
-					<object class="KTGradientPicker" id="99078903">
-						<reference key="NSNextResponder" ref="537708911"/>
-						<int key="NSvFlags">12</int>
-						<string key="NSFrame">{{79, 158}, {173, 42}}</string>
-						<reference key="NSSuperview" ref="537708911"/>
-						<object class="KTLayoutManager" key="layoutManager">
-							<reference key="widthType" ref="8"/>
-							<reference key="heightType" ref="8"/>
-							<reference key="horizontalPositionType" ref="8"/>
-							<reference key="verticalPositionType" ref="8"/>
-							<real value="0.000000e+00" key="marginTop"/>
-							<real value="0.000000e+00" key="marginRight"/>
-							<real value="0.000000e+00" key="marginBottom"/>
-							<real value="0.000000e+00" key="marginLeft"/>
-							<real value="1.000000e+00" key="widthPercentage"/>
-							<real value="1.000000e+00" key="heightPercentage"/>
-							<real value="0.000000e+00" key="minWidth"/>
-							<real value="0.000000e+00" key="maxWidth"/>
-							<real value="0.000000e+00" key="minHeight"/>
-							<real value="0.000000e+00" key="maxHeight"/>
-						</object>
-						<object class="KTStyleManager" key="styleManager">
-							<object class="NSColor" key="backgroundColor" id="832018881">
-								<int key="NSColorSpace">3</int>
-								<bytes key="NSWhite">MCAwAA</bytes>
-							</object>
-							<real value="0.000000e+00" key="gradientAngle"/>
-							<real value="0.000000e+00" key="gradientAngle"/>
-							<real value="0.000000e+00" key="borderWidthTop"/>
-							<real value="0.000000e+00" key="borderWidthRight"/>
-							<real value="0.000000e+00" key="borderWidthBottom"/>
-							<real value="0.000000e+00" key="borderWidthLeft"/>
-							<reference key="borderColorTop" ref="832018881"/>
-							<reference key="borderColorRight" ref="832018881"/>
-							<reference key="borderColorBottom" ref="832018881"/>
-							<reference key="borderColorLeft" ref="832018881"/>
-						</object>
-						<string key="label">KTView</string>
-						<object class="NSGradient" key="gradientValue">
-							<object class="NSMutableArray" key="NSGradientColorArray">
-								<bool key="EncodedWithXMLCoder">YES</bool>
-								<object class="NSMutableDictionary">
-									<bool key="EncodedWithXMLCoder">YES</bool>
-									<object class="NSMutableArray" key="dict.sortedKeys">
-										<bool key="EncodedWithXMLCoder">YES</bool>
-										<string>NSGradientColor</string>
-										<string>NSGradientPosition</string>
-									</object>
-									<object class="NSMutableArray" key="dict.values">
-										<bool key="EncodedWithXMLCoder">YES</bool>
-										<object class="NSColor">
-											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MSAxIDEAA</bytes>
-											<object class="NSColorSpace" key="NSCustomColorSpace" id="791425414">
-												<int key="NSID">1</int>
-											</object>
-										</object>
-										<reference ref="8"/>
-									</object>
-								</object>
-								<object class="NSMutableDictionary">
-									<bool key="EncodedWithXMLCoder">YES</bool>
-									<object class="NSMutableArray" key="dict.sortedKeys">
-										<bool key="EncodedWithXMLCoder">YES</bool>
-										<string>NSGradientColor</string>
-										<string>NSGradientPosition</string>
-									</object>
-									<object class="NSMutableArray" key="dict.values">
-										<bool key="EncodedWithXMLCoder">YES</bool>
-										<object class="NSColor">
-											<int key="NSColorSpace">1</int>
-											<bytes key="NSRGB">MCAwIDAAA</bytes>
-											<reference key="NSCustomColorSpace" ref="791425414"/>
-										</object>
-										<reference ref="9"/>
-									</object>
-								</object>
-							</object>
-							<reference key="NSGradientColorSpace" ref="791425414"/>
-						</object>
-					</object>
 					<object class="NSPopUpButton" id="881351150">
 						<reference key="NSNextResponder" ref="537708911"/>
 						<int key="NSvFlags">268</int>
@@ -632,7 +550,10 @@ QXBwbGUgQ29tcHV0ZXIsIEluYy4sIDIwMDUAAAAAA</bytes>
 											</object>
 										</object>
 									</object>
-									<reference key="NSColor" ref="832018881"/>
+									<object class="NSColor" key="NSColor" id="832018881">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MCAwAA</bytes>
+									</object>
 								</object>
 								<reference key="NSAlternateImage" ref="197661404"/>
 								<int key="NSPeriodicDelay">400</int>
@@ -749,6 +670,13 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<int key="NSPeriodicInterval">25</int>
 						</object>
 					</object>
+					<object class="NSCustomView" id="172227173">
+						<reference key="NSNextResponder" ref="537708911"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{85, 164}, {167, 35}}</string>
+						<reference key="NSSuperview" ref="537708911"/>
+						<string key="NSClassName">KTGradientPicker</string>
+					</object>
 				</object>
 				<string key="NSFrameSize">{272, 345}</string>
 				<reference key="NSSuperview"/>
@@ -773,14 +701,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 						<reference key="destination" ref="12963579"/>
 					</object>
 					<int key="connectionID">257</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">oBackgroundGradientPicker</string>
-						<reference key="source" ref="762632889"/>
-						<reference key="destination" ref="99078903"/>
-					</object>
-					<int key="connectionID">258</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -813,14 +733,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 						<reference key="destination" ref="423212919"/>
 					</object>
 					<int key="connectionID">262</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">inspectorView</string>
-						<reference key="source" ref="762632889"/>
-						<reference key="destination" ref="537708911"/>
-					</object>
-					<int key="connectionID">263</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -880,19 +792,19 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">setBackgroundGradient:</string>
-						<reference key="source" ref="762632889"/>
-						<reference key="destination" ref="99078903"/>
-					</object>
-					<int key="connectionID">271</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">setBackgroundColor:</string>
 						<reference key="source" ref="762632889"/>
 						<reference key="destination" ref="12963579"/>
 					</object>
 					<int key="connectionID">272</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">inspectorView</string>
+						<reference key="source" ref="762632889"/>
+						<reference key="destination" ref="537708911"/>
+					</object>
+					<int key="connectionID">291</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -932,7 +844,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<reference ref="412414057"/>
 							<reference ref="163978714"/>
 							<reference ref="12963579"/>
-							<reference ref="99078903"/>
 							<reference ref="157511468"/>
 							<reference ref="184954753"/>
 							<reference ref="1019218784"/>
@@ -945,6 +856,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<reference ref="33697939"/>
 							<reference ref="892303185"/>
 							<reference ref="1005475400"/>
+							<reference ref="172227173"/>
 						</object>
 						<reference key="parent" ref="485438096"/>
 						<string key="objectName">Inspector View</string>
@@ -1043,11 +955,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="IBObjectRecord">
 						<int key="objectID">192</int>
 						<reference key="object" ref="423212919"/>
-						<reference key="parent" ref="537708911"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">221</int>
-						<reference key="object" ref="99078903"/>
 						<reference key="parent" ref="537708911"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -1193,6 +1100,11 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 						<reference key="object" ref="467110022"/>
 						<reference key="parent" ref="1005475400"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">292</int>
+						<reference key="object" ref="172227173"/>
+						<reference key="parent" ref="537708911"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1224,7 +1136,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<string>174.IBPluginDependency</string>
 					<string>180.IBPluginDependency</string>
 					<string>192.IBPluginDependency</string>
-					<string>221.IBPluginDependency</string>
 					<string>224.IBPluginDependency</string>
 					<string>225.IBPluginDependency</string>
 					<string>226.IBEditorWindowLastContentRect</string>
@@ -1247,6 +1158,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<string>253.IBPluginDependency</string>
 					<string>254.IBPluginDependency</string>
 					<string>255.IBPluginDependency</string>
+					<string>292.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1277,10 +1189,10 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.KATI.KTUIKit</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{1635, 208}, {174, 88}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1322,18 +1234,14 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">289</int>
+			<int key="maxID">292</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
 					<string key="className">KTGradientPicker</string>
-					<string key="superclassName">KTView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">wTarget</string>
-						<string key="NS.object.0">id</string>
-					</object>
+					<string key="superclassName">KTViewControl</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Framework/Views/NSControlSubclasses/KTGradientPicker.h</string>
@@ -1401,6 +1309,22 @@ AAMAAAABAAEAAAFTAAMAAAAEAAAFwgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Framework/Views/NSViewSubclasses/KTView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">KTViewControl</string>
+					<string key="superclassName">KTView</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">setTarget:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">wTarget</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Framework/Views/NSControlSubclasses/KTViewControl.h</string>
 					</object>
 				</object>
 			</object>

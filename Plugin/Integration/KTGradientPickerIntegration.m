@@ -10,8 +10,8 @@
 
 // Import your framework view and your inspector 
  #import <KTUIKitFramework/KTGradientPicker.h>
- #import "KTStyleInspector.h"
-
+ #import "KTLayoutManagerInspector.h"
+	
 @implementation KTGradientPicker ( KTGradientPickerIntegration )
 
 - (void)ibPopulateKeyPaths:(NSMutableDictionary *)keyPaths {
@@ -24,18 +24,8 @@
 
 - (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes {
    
-//	// actually need to remove the KTView Styles Inspector for this one
-//	id aStyleClass = nil;
-//	for(id aClass in classes)
-//	{
-//		if([aClass isKindOfClass:[KTStyleInspector class]])
-//		{
-//			aStyleClass = aClass;
-//			break;
-//		}
-//	}
-//	[classes removeObject:aStyleClass];
-	 [super ibPopulateAttributeInspectorClasses:classes];
+	[super ibPopulateAttributeInspectorClasses:classes];
+	[classes addObject:[KTLayoutManagerInspector class]];
 }
 
 @end

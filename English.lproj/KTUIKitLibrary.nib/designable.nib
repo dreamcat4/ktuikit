@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="135"/>
+			<integer value="7"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -54,8 +54,8 @@
 						<string key="identifier">53C781D8-3B5C-4138-B642-034072DEADC0</string>
 						<string key="briefDescription">A basic view with custom layout support</string>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString">Use this view instead of NSView as your view class to use KTLayoutManager features.</string>
-							<object class="NSDictionary" key="NSAttributes">
+							<string key="NSString">NSView with KATI layout and styling features.</string>
+							<object class="NSDictionary" key="NSAttributes" id="809409909">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMutableArray" key="dict.sortedKeys">
 									<bool key="EncodedWithXMLCoder">YES</bool>
@@ -121,7 +121,8 @@
 						<string key="identifier">75EB251F-5C81-42B2-A6A1-BEF943AE4E5B</string>
 						<string key="briefDescription">A basic button with custom layout support</string>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSButton with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
@@ -176,7 +177,8 @@
 						<string key="identifier">9D856C4F-1756-4039-B7F5-E61418DAAE49</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSTextField with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Text</string>
 						<nil key="draggableView"/>
@@ -260,7 +262,8 @@
 						<string key="identifier">F90346F6-2542-4BFB-A103-5DCADE0B584D</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSScrollView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -462,7 +465,8 @@
 						<string key="identifier">181F7225-F2C9-4EBE-BCA3-DA1406220B4A</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSTableView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -637,7 +641,8 @@
 						<string key="identifier">CC437B76-9441-4583-905B-87884BF093CD</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSOutlineView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -675,7 +680,8 @@
 						<string key="identifier">D20A613A-0F24-4895-987E-1A97E45361AC</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSTextField with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Text</string>
 						<nil key="draggableView"/>
@@ -719,7 +725,8 @@
 						<string key="identifier">4BF871E5-D3CD-423A-BD4A-789553B0CE8D</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSlider with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
@@ -763,7 +770,8 @@
 						<string key="identifier">0EFFF7CC-34E6-4281-B70F-B255890EC394</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSlider with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
@@ -823,7 +831,8 @@
 						<string key="identifier">ADF72902-8B41-4F3F-AE0C-84D4E94F7D18</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSegmentedControl with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
@@ -877,7 +886,8 @@
 						<string key="identifier">A31D3349-43D6-4604-B293-5AC1BA6EBA2C</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSPopUpButton with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
@@ -923,7 +933,8 @@
 						<string key="identifier">1E89F0A2-C4FD-43E8-B59A-C5909DEA6664</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSplitView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -968,7 +979,8 @@
 						<string key="identifier">4A6BE170-8B5F-411F-BCA1-641EE726F034</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSplitView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -1018,7 +1030,8 @@
 						<string key="identifier">B064C973-282F-49B7-BFB0-FA70A75F34F3</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSImageView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -1088,7 +1101,8 @@
 						<string key="identifier">0C23A973-1632-4636-BAD5-5DCD074764D6</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">WebView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -1171,7 +1185,8 @@
 						<string key="identifier">0784C02D-03D0-40D3-B949-57B1F634EEE8</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSearchField with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Text</string>
 						<nil key="draggableView"/>
@@ -1214,7 +1229,8 @@
 						<string key="identifier">5B13A37C-806D-464D-B536-D58F5B2B7927</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSSecureTextField with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Text</string>
 						<nil key="draggableView"/>
@@ -1566,7 +1582,8 @@
 						<string key="identifier">070FF0CB-C3B6-4C31-A363-BD37B32360F6</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSTextView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Text</string>
 						<nil key="draggableView"/>
@@ -1598,7 +1615,8 @@
 						<string key="identifier">4A840633-4EA2-410C-9CB1-43671B208CE2</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSProgressIndicator with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
 						<nil key="draggableView"/>
@@ -1630,69 +1648,10 @@
 						<string key="identifier">DB157508-D1DA-4900-BC13-FCE317027579</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">NSProgressIndicator with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
-						<nil key="draggableView"/>
-						<nil key="draggedView"/>
-						<nil key="representedObject"/>
-						<nil key="filterableNames"/>
-						<nil key="subtitle"/>
-						<int key="animationScalingMode">0</int>
-					</object>
-					<object class="IBLibraryObjectTemplate" id="882130909">
-						<reference key="NSNextResponder" ref="1000"/>
-						<int key="NSvFlags">268</int>
-						<object class="NSMutableArray" key="NSSubviews">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="KTView" id="79995402">
-								<reference key="NSNextResponder" ref="882130909"/>
-								<string key="NSFrame">{{14, 6}, {53, 55}}</string>
-								<reference key="NSSuperview" ref="882130909"/>
-								<object class="KTLayoutManager" key="layoutManager">
-									<integer value="0" key="widthType" id="8"/>
-									<reference key="heightType" ref="8"/>
-									<reference key="horizontalPositionType" ref="8"/>
-									<reference key="verticalPositionType" ref="8"/>
-									<real value="0.000000e+00" key="marginTop"/>
-									<real value="0.000000e+00" key="marginRight"/>
-									<real value="0.000000e+00" key="marginBottom"/>
-									<real value="0.000000e+00" key="marginLeft"/>
-									<real value="1.000000e+00" key="widthPercentage"/>
-									<real value="1.000000e+00" key="heightPercentage"/>
-									<real value="0.000000e+00" key="minWidth"/>
-									<real value="0.000000e+00" key="maxWidth"/>
-									<real value="0.000000e+00" key="minHeight"/>
-									<real value="0.000000e+00" key="maxHeight"/>
-								</object>
-								<object class="KTStyleManager" key="styleManager">
-									<object class="NSColor" key="backgroundColor" id="340989622">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MCAwAA</bytes>
-									</object>
-									<nil key="backgroundGradient"/>
-									<real value="0.000000e+00" key="gradientAngle"/>
-									<real value="0.000000e+00" key="borderWidthTop"/>
-									<real value="0.000000e+00" key="borderWidthRight"/>
-									<real value="0.000000e+00" key="borderWidthBottom"/>
-									<real value="0.000000e+00" key="borderWidthLeft"/>
-									<reference key="borderColorTop" ref="340989622"/>
-									<reference key="borderColorRight" ref="340989622"/>
-									<reference key="borderColorBottom" ref="340989622"/>
-									<reference key="borderColorLeft" ref="340989622"/>
-								</object>
-								<string key="label">KTView</string>
-							</object>
-						</object>
-						<string key="NSFrame">{{320, 120}, {79, 66}}</string>
-						<reference key="NSSuperview" ref="1000"/>
-						<string key="label">Gradient Picker</string>
-						<string key="identifier">D6151027-1C66-451E-A42D-1A6FAE50F6F8</string>
-						<string key="briefDescription"/>
-						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
-						</object>
-						<string key="initialCategoryPath">Controls</string>
 						<nil key="draggableView"/>
 						<nil key="draggedView"/>
 						<nil key="representedObject"/>
@@ -1887,9 +1846,71 @@
 						<string key="identifier">13C353F2-2BB1-4E9A-8E7F-8ADF218B41A9</string>
 						<string key="briefDescription"/>
 						<object class="NSAttributedString" key="fullDescription">
-							<string key="NSString"/>
+							<string key="NSString">IKImageBrowserView with KATI layout support.</string>
+							<reference key="NSAttributes" ref="809409909"/>
 						</object>
 						<string key="initialCategoryPath">Views</string>
+						<nil key="draggableView"/>
+						<nil key="draggedView"/>
+						<nil key="representedObject"/>
+						<nil key="filterableNames"/>
+						<nil key="subtitle"/>
+						<int key="animationScalingMode">0</int>
+					</object>
+					<object class="IBLibraryObjectTemplate" id="761581216">
+						<reference key="NSNextResponder" ref="1000"/>
+						<int key="NSvFlags">268</int>
+						<object class="NSMutableArray" key="NSSubviews">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="KTView" id="198459344">
+								<reference key="NSNextResponder" ref="761581216"/>
+								<string key="NSFrame">{{13, 13}, {42, 40}}</string>
+								<reference key="NSSuperview" ref="761581216"/>
+								<object class="KTLayoutManager" key="layoutManager">
+									<integer value="0" key="widthType" id="8"/>
+									<reference key="heightType" ref="8"/>
+									<reference key="horizontalPositionType" ref="8"/>
+									<reference key="verticalPositionType" ref="8"/>
+									<real value="0.000000e+00" key="marginTop"/>
+									<real value="0.000000e+00" key="marginRight"/>
+									<real value="2.900000e+01" key="marginBottom"/>
+									<real value="1.300000e+01" key="marginLeft"/>
+									<real value="1.000000e+00" key="widthPercentage"/>
+									<real value="1.000000e+00" key="heightPercentage"/>
+									<real value="0.000000e+00" key="minWidth"/>
+									<real value="0.000000e+00" key="maxWidth"/>
+									<real value="0.000000e+00" key="minHeight"/>
+									<real value="0.000000e+00" key="maxHeight"/>
+								</object>
+								<object class="KTStyleManager" key="styleManager">
+									<object class="NSColor" key="backgroundColor" id="443308161">
+										<int key="NSColorSpace">3</int>
+										<bytes key="NSWhite">MCAwAA</bytes>
+									</object>
+									<nil key="backgroundGradient"/>
+									<real value="0.000000e+00" key="gradientAngle"/>
+									<real value="0.000000e+00" key="borderWidthTop"/>
+									<real value="0.000000e+00" key="borderWidthRight"/>
+									<real value="0.000000e+00" key="borderWidthBottom"/>
+									<real value="0.000000e+00" key="borderWidthLeft"/>
+									<reference key="borderColorTop" ref="443308161"/>
+									<reference key="borderColorRight" ref="443308161"/>
+									<reference key="borderColorBottom" ref="443308161"/>
+									<reference key="borderColorLeft" ref="443308161"/>
+								</object>
+								<string key="label">KTView</string>
+							</object>
+						</object>
+						<string key="NSFrame">{{316, 113}, {69, 65}}</string>
+						<reference key="NSSuperview" ref="1000"/>
+						<string key="label">Gradient Picker</string>
+						<string key="identifier">1CCE8DE4-CE79-43B0-AA90-B48A060EE7F2</string>
+						<string key="briefDescription"/>
+						<object class="NSAttributedString" key="fullDescription">
+							<string key="NSString">A gradient picker!  This is still super buggy !</string>
+							<reference key="NSAttributes" ref="809409909"/>
+						</object>
+						<nil key="initialCategoryPath"/>
 						<nil key="draggableView"/>
 						<nil key="draggedView"/>
 						<nil key="representedObject"/>
@@ -1942,7 +1963,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1001"/>
-							<reference ref="105543444"/>
 							<reference ref="743481581"/>
 							<reference ref="419545795"/>
 							<reference ref="571290815"/>
@@ -1961,9 +1981,10 @@
 							<reference ref="693220581"/>
 							<reference ref="371987805"/>
 							<reference ref="271788494"/>
-							<reference ref="882130909"/>
 							<reference ref="627218746"/>
 							<reference ref="253619360"/>
+							<reference ref="761581216"/>
+							<reference ref="105543444"/>
 						</object>
 						<reference key="parent" ref="1014"/>
 						<string key="objectName">Library Objects</string>
@@ -2543,20 +2564,6 @@
 						<reference key="parent" ref="271788494"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">125</int>
-						<reference key="object" ref="882130909"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="79995402"/>
-						</object>
-						<reference key="parent" ref="1000"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">131</int>
-						<reference key="object" ref="79995402"/>
-						<reference key="parent" ref="882130909"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">132</int>
 						<reference key="object" ref="627218746"/>
 						<object class="NSMutableArray" key="children">
@@ -2592,6 +2599,20 @@
 						<int key="objectID">136</int>
 						<reference key="object" ref="227112633"/>
 						<reference key="parent" ref="253619360"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">139</int>
+						<reference key="object" ref="761581216"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="198459344"/>
+						</object>
+						<reference key="parent" ref="1000"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">140</int>
+						<reference key="object" ref="198459344"/>
+						<reference key="parent" ref="761581216"/>
 					</object>
 				</object>
 			</object>
@@ -2631,9 +2652,6 @@
 					<string>120.IBPluginDependency</string>
 					<string>122.CustomClassName</string>
 					<string>122.IBPluginDependency</string>
-					<string>125.IBPluginDependency</string>
-					<string>131.CustomClassName</string>
-					<string>131.IBPluginDependency</string>
 					<string>132.IBPluginDependency</string>
 					<string>133.CustomClassName</string>
 					<string>133.IBPluginDependency</string>
@@ -2641,9 +2659,12 @@
 					<string>135.IBPluginDependency</string>
 					<string>136.CustomClassName</string>
 					<string>136.IBPluginDependency</string>
+					<string>139.IBPluginDependency</string>
 					<string>14.IBPluginDependency</string>
 					<string>14.notes</string>
 					<string>14.showNotes</string>
+					<string>140.CustomClassName</string>
+					<string>140.IBPluginDependency</string>
 					<string>18.IBPluginDependency</string>
 					<string>18.notes</string>
 					<string>18.showNotes</string>
@@ -2756,15 +2777,13 @@
 					<string>KTProgressIndicator</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBSDKPlugin</string>
-					<string>KTGradientPicker</string>
-					<string>com.KATI.KTUIKit</string>
-					<string>com.apple.InterfaceBuilder.IBSDKPlugin</string>
 					<string>KTLevelIndicator</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBSDKPlugin</string>
 					<string>KTImageKitBrowserView</string>
 					<string>com.apple.imagekit.ibplugin</string>
+					<string>com.apple.InterfaceBuilder.IBSDKPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAttributedString">
 						<string type="base64-UTF8" key="NSString">VXNlIHRoZSBpbnNwZWN0b3IgdG8gc2V0IHRoZSBjdXN0b20gY2xhc3Mgb2YgdGhpcyB2aWV3IHRvIHRo
@@ -2781,6 +2800,8 @@ dyB3aWxsIHNob3cgdXAgaW4gcGxhY2Ugb2YgdGhpcyB2aWV3Lg</string>
 						</object>
 					</object>
 					<reference ref="9"/>
+					<string>KTGradientPicker</string>
+					<string>com.KATI.KTUIKit</string>
 					<string>com.apple.InterfaceBuilderKit</string>
 					<object class="NSAttributedString">
 						<string type="base64-UTF8" key="NSString">SWYgeW91IHdvdWxkIGxpa2UgeW91ciB2aWV3IHRvIGFuaW1hdGUgZnJvbSBhIHNtYWxsLCBpY29uaWMg
@@ -2890,7 +2911,7 @@ b2JqZWN0IHRvIGRlcG9zaXQuA</string>
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">136</int>
+			<int key="maxID">140</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

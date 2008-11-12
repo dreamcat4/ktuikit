@@ -11,9 +11,9 @@
 // Import your framework view and your inspector 
  #import <KTUIKitFramework/KTView.h>
  #import "KTLayoutManagerInspector.h"
- #import "KTViewInspector.h"
+// #import "KTViewInspector.h"
  #import "KTStyleInspector.h"
- 
+ #import "KTGradientPicker.h"
 @implementation KTView ( KTViewIntegration )
 //=========================================================== 
 // - ibPopulateKeyPaths:
@@ -34,7 +34,6 @@
     [super ibPopulateAttributeInspectorClasses:classes];
 	[classes addObject:[KTStyleInspector class]];
     [classes addObject:[KTLayoutManagerInspector class]];
-	
 }
 
 //=========================================================== 

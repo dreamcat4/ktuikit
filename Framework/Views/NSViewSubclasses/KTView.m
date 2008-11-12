@@ -31,8 +31,6 @@
 // For example, "Contains "KTUIKit" by Cathy Shive" will do.
 
 #import "KTView.h"
-#import "KTLayoutManager.h"
-#import "KTStyleManager.h"
 
 @interface KTView (Private)
 @end

@@ -31,7 +31,6 @@
 		4C14A3380EC85FEF00E94D88 /* KTImageKitBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C14A3360EC85FEF00E94D88 /* KTImageKitBrowserView.m */; };
 		4C14A33B0EC8606600E94D88 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C14A3300EC85FC200E94D88 /* Quartz.framework */; };
 		4C14A38A0EC860EC00E94D88 /* KTImageKitBrowserViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C14A3890EC860EC00E94D88 /* KTImageKitBrowserViewIntegration.m */; };
-		4C959DEE0DE974D200980C3C /* KTView.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4CC1F4060DE940160035CE00 /* KTView.classdescription */; };
 		4C9A7E5E0EBDB6D200F8AA48 /* KTSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A7E5C0EBDB6D200F8AA48 /* KTSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A7E5F0EBDB6D200F8AA48 /* KTSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A7E5D0EBDB6D200F8AA48 /* KTSegmentedControl.m */; };
 		4C9A7E620EBDB76300F8AA48 /* KTSegmentedControlIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A7E610EBDB76300F8AA48 /* KTSegmentedControlIntegration.m */; };
@@ -71,7 +70,6 @@
 		4C9A81830EBDDA9300F8AA48 /* KTStyleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A81810EBDDA9300F8AA48 /* KTStyleManager.m */; };
 		4C9A81AB0EBDDD8400F8AA48 /* KTStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A81AA0EBDDD8400F8AA48 /* KTStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A81FD0EBDF30D00F8AA48 /* KTStyleInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A81FC0EBDF30D00F8AA48 /* KTStyleInspector.m */; };
-		4C9A82000EBDF32E00F8AA48 /* KTStyleInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A81FE0EBDF32E00F8AA48 /* KTStyleInspector.xib */; };
 		4C9A83730EBE270A00F8AA48 /* KTGradientPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A83710EBE270A00F8AA48 /* KTGradientPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A83740EBE270A00F8AA48 /* KTGradientPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83720EBE270A00F8AA48 /* KTGradientPicker.m */; };
 		4C9A83CD0EBE350400F8AA48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A83C90EBE350400F8AA48 /* main.m */; };
@@ -91,8 +89,6 @@
 		4C9C5D9E0DE9F49E00AE6913 /* XSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8F0DE9F43400AE6913 /* XSViewController.m */; };
 		4C9C5D9F0DE9F49E00AE6913 /* XSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D910DE9F43400AE6913 /* XSWindowController.m */; };
 		4C9C5DA10DE9F49E00AE6913 /* KTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8A0DE9F41800AE6913 /* KTView.m */; };
-		4C9C5DD00DE9F5EE00AE6913 /* XSViewController.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C5DCF0DE9F5D300AE6913 /* XSViewController.classdescription */; };
-		4C9C5DDC0DE9F69300AE6913 /* XSWindowController.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */; };
 		4C9C5E260DE9FAB100AE6913 /* KTUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CC1F40E0DE940F70035CE00 /* KTViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1F40D0DE940F70035CE00 /* KTViewIntegration.m */; };
 		4CC1F41D0DE9418F0035CE00 /* KTLayoutManagerInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1F41C0DE9418F0035CE00 /* KTLayoutManagerInspector.m */; };
@@ -106,6 +102,7 @@
 		4CD98F9B0EBC7BBB008BD0EA /* KTScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD98F990EBC7BBB008BD0EA /* KTScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CD98F9C0EBC7BBB008BD0EA /* KTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD98F9A0EBC7BBB008BD0EA /* KTScrollView.m */; };
 		4CD98F9F0EBC7C45008BD0EA /* KTScrollViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD98F9E0EBC7C45008BD0EA /* KTScrollViewIntegration.m */; };
+		4CE2FCD40EC8BD6500002A64 /* KTStyleInspector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A81FE0EBDF32E00F8AA48 /* KTStyleInspector.xib */; };
 		546DEAF3067F632A0098DCC4 /* KTUIKitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1AC97F0486D23B00FE50C9 /* InfoPlist.strings */; };
@@ -166,12 +163,12 @@
 		13F8B88A07B434F6008AE28D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4C14A2B60EC856E200E94D88 /* KTLevelIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTLevelIndicator.h; sourceTree = "<group>"; };
 		4C14A2B70EC856E200E94D88 /* KTLevelIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTLevelIndicator.m; sourceTree = "<group>"; };
-		4C14A2BB0EC8573400E94D88 /* KTLevelIndicator.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KTLevelIndicator.classdescription; sourceTree = "<group>"; };
+		4C14A2BB0EC8573400E94D88 /* KTLevelIndicator.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTLevelIndicator.classdescription; path = "Plugin/Class Descriptions/KTLevelIndicator.classdescription"; sourceTree = "<group>"; };
 		4C14A2BC0EC8577E00E94D88 /* KTLevelIndicatorIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTLevelIndicatorIntegration.m; sourceTree = "<group>"; };
 		4C14A3300EC85FC200E94D88 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 		4C14A3350EC85FEF00E94D88 /* KTImageKitBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTImageKitBrowserView.h; sourceTree = "<group>"; };
 		4C14A3360EC85FEF00E94D88 /* KTImageKitBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTImageKitBrowserView.m; sourceTree = "<group>"; };
-		4C14A3870EC860BA00E94D88 /* KTImageKitBrowserView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KTImageKitBrowserView.classdescription; sourceTree = "<group>"; };
+		4C14A3870EC860BA00E94D88 /* KTImageKitBrowserView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTImageKitBrowserView.classdescription; path = "Plugin/Class Descriptions/KTImageKitBrowserView.classdescription"; sourceTree = "<group>"; };
 		4C14A3890EC860EC00E94D88 /* KTImageKitBrowserViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTImageKitBrowserViewIntegration.m; sourceTree = "<group>"; };
 		4C9A7E5C0EBDB6D200F8AA48 /* KTSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSegmentedControl.h; sourceTree = "<group>"; };
 		4C9A7E5D0EBDB6D200F8AA48 /* KTSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSegmentedControl.m; sourceTree = "<group>"; };
@@ -233,7 +230,7 @@
 		4C9A83FA0EBE35A700F8AA48 /* TestWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindowController.h; sourceTree = "<group>"; };
 		4C9A83FB0EBE35A700F8AA48 /* TestWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWindowController.m; sourceTree = "<group>"; };
 		4C9A84200EBE36C000F8AA48 /* TestWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestWindow.xib; sourceTree = "<group>"; };
-		4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KTGradientPicker.classdescription; sourceTree = "<group>"; };
+		4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTGradientPicker.classdescription; path = "Plugin/Class Descriptions/KTGradientPicker.classdescription"; sourceTree = "<group>"; };
 		4C9A877C0EBEF48700F8AA48 /* KTGradientPickerIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTGradientPickerIntegration.m; sourceTree = "<group>"; };
 		4C9A88A50EBF2E2D00F8AA48 /* KTViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTViewControl.h; sourceTree = "<group>"; };
 		4C9A88A60EBF2E2D00F8AA48 /* KTViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewControl.m; sourceTree = "<group>"; };
@@ -264,6 +261,7 @@
 		4CD98F9A0EBC7BBB008BD0EA /* KTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTScrollView.m; path = NSViewSubclasses/KTScrollView.m; sourceTree = "<group>"; };
 		4CD98F9D0EBC7C2A008BD0EA /* KTScrollView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTScrollView.classdescription; path = "Plugin/Class Descriptions/KTScrollView.classdescription"; sourceTree = "<group>"; };
 		4CD98F9E0EBC7C45008BD0EA /* KTScrollViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTScrollViewIntegration.m; sourceTree = "<group>"; };
+		4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTViewControl.classdescription; path = "Plugin/Class Descriptions/KTViewControl.classdescription"; sourceTree = "<group>"; };
 		53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKitFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; wrapsLines = 0; };
 		53DF68FE067E5B5A0090B5B0 /* KTUIKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KTUIKitFramework-Info.plist"; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -587,6 +585,7 @@
 				4C14A3870EC860BA00E94D88 /* KTImageKitBrowserView.classdescription */,
 				4C9A7EFE0EBDC3EC00F8AA48 /* KTImageView.classdescription */,
 				4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */,
+				4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */,
 				4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */,
 			);
 			name = "Class Descriptions";
@@ -737,14 +736,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9C5DDC0DE9F69300AE6913 /* XSWindowController.classdescription in Resources */,
-				4C9C5DD00DE9F5EE00AE6913 /* XSViewController.classdescription in Resources */,
-				4C959DEE0DE974D200980C3C /* KTView.classdescription in Resources */,
 				8D1AC9800486D23B00FE50C9 /* InfoPlist.strings in Resources */,
 				D1AEDE470A6C289C0010C343 /* KTUIKitLibrary.nib in Resources */,
 				4CC1F41F0DE941AC0035CE00 /* KTLayoutManagerInspector.nib in Resources */,
+				4CE2FCD40EC8BD6500002A64 /* KTStyleInspector.xib in Resources */,
 				4CD8FDD80EBCA9B800B4DA52 /* KTViewInspector.xib in Resources */,
-				4C9A82000EBDF32E00F8AA48 /* KTStyleInspector.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
