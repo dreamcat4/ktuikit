@@ -33,7 +33,8 @@
  (CS 11/12/08) This is a very basic implementation of the style manager
  you can configure it and it will draw. The plan is to eventually
  create a 'style sheet' object that can be used with bindings
- so that users can bind specific elements to the style sheet in IB. All for the future...
+ so that users can bind specific elements to the style sheet in IB. 
+ Also the style manager should deal with color changes for different key states of views and their windows All for the future...
 */
 
 
