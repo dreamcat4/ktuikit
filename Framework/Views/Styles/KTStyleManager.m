@@ -133,27 +133,27 @@
 
 - (void)drawStylesInRect:(NSRect)theRect context:(CGContextRef)theContext view:(id<KTStyle>)theView
 {
-	// either gradient or color fill, if gradient is set, it'll draw instead of color fill....
+	CGFloat r, g, b, a;
+	
+	// Background
+	
+	// Either draw a background gradient of solid color fill
 	 if(mBackgroundGradient != nil)
-	 {
 		[mBackgroundGradient drawInRect:theRect angle:mGradientAngle];
-	 }
 	 else if(mBackgroundColor != [NSColor clearColor])
 	{
-		NSColor * aColor = [mBackgroundColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		CGContextSetRGBFillColor(theContext, [aColor redComponent], [aColor greenComponent], [aColor blueComponent], [aColor alphaComponent]);
-		CGRect aCGViewBounds = CGRectMake(theRect.origin.x, theRect.origin.y, theRect.size.width, theRect.size.height);
-		CGContextFillRect(theContext, aCGViewBounds);
+		[[mBackgroundColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:&a];
+		CGContextSetRGBFillColor(theContext, r, g, b, a);
+		CGContextFillRect(theContext, NSRectToCGRect(theRect));
 	}
 	
-	// Stroke - we can control color & line thickness of individual
-	// sides of the rectangle
+	// Stroke - we can control color & line thickness of individual sides of the rectangle
 
 	CGContextSetLineWidth(theContext, 1);
 	NSPoint	aStrokePoint = theRect.origin;
 	
-	// move the point to the top left corner to begin, .5 for pixelCracks
-	aStrokePoint.y = theRect.size.height - .5;
+	// move the point to the top left corner to begin
+	aStrokePoint.y = theRect.size.height-.5;
 	
 	// Top
 	if(		mBorderWidthTop > 0 
@@ -161,23 +161,16 @@
 	{
 		CGContextBeginPath(theContext);
 		CGContextMoveToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		aStrokePoint.x += theRect.size.width - .5;
+		aStrokePoint.x+=theRect.size.width-.5;
 		CGContextAddLineToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		
 		CGContextSetLineWidth(theContext, mBorderWidthTop);
-		NSColor * aConvertedColor = [mBorderColorTop colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		CGContextSetRGBStrokeColor(theContext,	
-								   [aConvertedColor redComponent], 
-								   [aConvertedColor greenComponent], 
-								   [aConvertedColor blueComponent], 
-								   [aConvertedColor alphaComponent]								   
-		);
+		[[mBorderColorTop colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:&a];
+		CGContextSetRGBStrokeColor(theContext, r, g, b, a);
 		CGContextStrokePath(theContext);
 	}
 	else
 	{
 		aStrokePoint.x += theRect.size.width - .5;
-		//CGPathMoveToPoint(aMutablePath, NULL, aStrokePoint.x,  aStrokePoint.y);
 	}
 	
 	// Right
@@ -186,18 +179,11 @@
 	{
 		CGContextBeginPath(theContext);
 		CGContextMoveToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		aStrokePoint.y -= theRect.size.height - 1;  
+		aStrokePoint.y-=theRect.size.height-1;  
 		CGContextAddLineToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		
 		CGContextSetLineWidth(theContext, mBorderWidthRight);
-		NSColor * aConvertedColor = [mBorderColorRight colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		CGContextSetRGBStrokeColor(theContext,	
-								   [aConvertedColor redComponent], 
-								   [aConvertedColor greenComponent], 
-								   [aConvertedColor blueComponent], 
-								   [aConvertedColor alphaComponent]								   
-		);
-		
+		[[mBorderColorRight colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:&a];
+		CGContextSetRGBStrokeColor(theContext, r, g, b, a);
 		CGContextStrokePath(theContext);
 	}
 	else
@@ -211,17 +197,11 @@
 	{
 		CGContextBeginPath(theContext);
 		CGContextMoveToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		aStrokePoint.x -= theRect.size.width - 1;     
+		aStrokePoint.x-=theRect.size.width-1;     
 		CGContextAddLineToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		
 		CGContextSetLineWidth(theContext, mBorderWidthBottom);
-		NSColor * aConvertedColor = [mBorderColorBottom colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		CGContextSetRGBStrokeColor(theContext,	
-								   [aConvertedColor redComponent], 
-								   [aConvertedColor greenComponent], 
-								   [aConvertedColor blueComponent], 
-								   [aConvertedColor alphaComponent]								   
-		);
+		[[mBorderColorBottom colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:&a];
+		CGContextSetRGBStrokeColor(theContext, r, g, b, a);							   
 		CGContextStrokePath(theContext);
 	}
 	else
@@ -235,26 +215,13 @@
 	{
 		CGContextBeginPath(theContext);
 		CGContextMoveToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		aStrokePoint.y += theRect.size.height; 
+		aStrokePoint.y+=theRect.size.height; 
 		CGContextAddLineToPoint(theContext, aStrokePoint.x,  aStrokePoint.y);
-		
 		CGContextSetLineWidth(theContext, mBorderWidthLeft);
-		NSColor * aConvertedColor = [mBorderColorLeft colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		CGContextSetRGBStrokeColor(theContext,	
-								   [aConvertedColor redComponent], 
-								   [aConvertedColor greenComponent], 
-								   [aConvertedColor blueComponent], 
-								   [aConvertedColor alphaComponent]								   
-		);
+		[[mBorderColorLeft colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&r green:&g blue:&b alpha:&a];
+		CGContextSetRGBStrokeColor(theContext, r, g, b, a);
 		CGContextStrokePath(theContext);
 	}
-	
-	// let subclasses do their custom drawing
-	CGRect aRect;
-	aRect.origin.x = theRect.origin.x;
-	aRect.origin.y = theRect.origin.y;
-	aRect.size.width = theRect.size.width;
-	aRect.size.height = theRect.size.height;
 }
 
 - (void)setBorderColor:(NSColor*)theColor
@@ -285,6 +252,30 @@
 
 - (void)setBackgroundImage:(NSImage*)theBackgroundImage tile:(BOOL)theBool
 {
+	// nothing yet
+}
+
+// either save a gradient or a fill color
+- (void)setBackgroundColor:(NSColor*)theColor
+{
+	if(mBackgroundColor!=theColor)
+	{
+		[mBackgroundColor release];
+		mBackgroundColor = [theColor retain];
+		if(mBackgroundColor!=nil)
+			[self setBackgroundGradient:nil];
+	}
+}
+
+- (void)setBackgroundGradient:(NSGradient*)theGradient
+{
+	if(mBackgroundGradient!=theGradient)
+	{
+		[mBackgroundGradient release];
+		mBackgroundGradient = [theGradient retain];
+		if(mBackgroundGradient!=nil)
+			[self setBackgroundColor:nil];
+	}
 }
 
 - (void)setBackgroundGradient:(NSGradient*)theGradient angle:(CGFloat)theAngle
@@ -292,7 +283,5 @@
 	[self setBackgroundGradient:theGradient];
 	[self setGradientAngle:theAngle];
 }
-
-
 
 @end
