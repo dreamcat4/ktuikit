@@ -2,9 +2,40 @@
 //  KTStyleManager.m
 //  KTUIKit
 //
-//  Created by Cathy Shive on 11/2/08.
-//  Copyright 2008 __MyCompanyName__. All rights reserved.
+//  Created by Cathy Shive on 05/20/2008.
 //
+// Copyright (c) Cathy Shive
+//
+// Permission is hereby granted, free of charge, to any person
+// obtaining a copy of this software and associated documentation
+// files (the "Software"), to deal in the Software without
+// restriction, including without limitation the rights to use,
+// copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following
+// conditions:
+//
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+// OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+// NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+// HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+// WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+// OTHER DEALINGS IN THE SOFTWARE.
+//
+// If you use it, acknowledgement in an About Page or other appropriate place would be nice.
+// For example, "Contains "KTUIKit" by Cathy Shive" will do.
+/*
+ (CS 11/12/08) This is a very basic implementation of the style manager
+ you can configure it and it will draw. The plan is to eventually
+ create a 'style sheet' object that can be used with bindings
+ so that users can bind specific elements to the style sheet in IB. All for the future...
+*/
+
 
 #import "KTStyleManager.h"
 
@@ -55,7 +86,9 @@
 	return self;
 }
 
-
+//=========================================================== 
+// - dealloc:
+//=========================================================== 
 - (void)dealloc
 {
 	[mBackgroundColor release];
@@ -125,12 +158,18 @@
 		[super setNilValueForKey:key];
 }
 
-
+//=========================================================== 
+// - setView:
+//=========================================================== 
 - (void)setView:(id<KTStyle>)theView
 {
 	wView = theView;
 }
 
+
+//=========================================================== 
+// - drawStylesInRect:
+//=========================================================== 
 - (void)drawStylesInRect:(NSRect)theRect context:(CGContextRef)theContext view:(id<KTStyle>)theView
 {
 	CGFloat r, g, b, a;
@@ -224,24 +263,18 @@
 	}
 }
 
-- (void)setBorderColor:(NSColor*)theColor
-{
-	[self setBorderColorTop:theColor right:theColor bottom:theColor left:theColor];
-}
 
-- (void)setBorderColorTop:(NSColor*)theTopColor right:(NSColor*)theRightColor bottom:(NSColor*)theBottomColor left:(NSColor*)theLeftColor
-{
-	[self setBorderColorTop:theTopColor];
-	[self setBorderColorRight:theRightColor];
-	[self setBorderColorBottom:theBottomColor];
-	[self setBorderColorLeft:theLeftColor];
-}
-
+//=========================================================== 
+// - setBorderWidth:
+//=========================================================== 
 - (void)setBorderWidth:(CGFloat)theWidth
 {
 	[self setBorderWidthTop:theWidth right:theWidth bottom:theWidth left:theWidth];
 }
 
+//=========================================================== 
+// - setBorderWidthTop:right:bottom:left
+//=========================================================== 
 - (void)setBorderWidthTop:(CGFloat)theTopWidth right:(CGFloat)theRightWidth bottom:(CGFloat)theBottomWidth left:(CGFloat)theLeftWidth
 {
 	[self setBorderWidthTop:theTopWidth];
@@ -250,12 +283,21 @@
 	[self setBorderWidthLeft:theLeftWidth];
 }
 
+
+
+//=========================================================== 
+// - setBackgroundImage:
+//=========================================================== 
 - (void)setBackgroundImage:(NSImage*)theBackgroundImage tile:(BOOL)theBool
 {
 	// nothing yet
 }
 
+
 // either save a gradient or a fill color
+//=========================================================== 
+// - setBackgroundColor:
+//=========================================================== 
 - (void)setBackgroundColor:(NSColor*)theColor
 {
 	if(mBackgroundColor!=theColor)
@@ -267,6 +309,9 @@
 	}
 }
 
+//=========================================================== 
+// - setBackgroundGradient:
+//=========================================================== 
 - (void)setBackgroundGradient:(NSGradient*)theGradient
 {
 	if(mBackgroundGradient!=theGradient)
@@ -278,10 +323,32 @@
 	}
 }
 
+//=========================================================== 
+// - setBackgroundGradient:angle
+//=========================================================== 
 - (void)setBackgroundGradient:(NSGradient*)theGradient angle:(CGFloat)theAngle
 {
 	[self setBackgroundGradient:theGradient];
 	[self setGradientAngle:theAngle];
+}
+
+//=========================================================== 
+// - setBorderColor:
+//=========================================================== 
+- (void)setBorderColor:(NSColor*)theColor
+{
+	[self setBorderColorTop:theColor right:theColor bottom:theColor left:theColor];
+}
+
+//=========================================================== 
+// - setBorderColor:
+//=========================================================== 
+- (void)setBorderColorTop:(NSColor*)theTopColor right:(NSColor*)theRightColor bottom:(NSColor*)theBottomColor left:(NSColor*)theLeftColor
+{
+	[self setBorderColorTop:theTopColor];
+	[self setBorderColorRight:theRightColor];
+	[self setBorderColorBottom:theBottomColor];
+	[self setBorderColorLeft:theLeftColor];
 }
 
 @end
