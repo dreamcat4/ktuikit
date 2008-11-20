@@ -61,6 +61,9 @@
 	[theCoder encodeObject:[self gradientValue] forKey:@"gradientValue"];
 }
 
+//=========================================================== 
+// - dealloc
+//=========================================================== 
 - (void)dealloc
 {
 	[mGradientValue release];
@@ -320,7 +323,7 @@
 			NSColor *	aStopColor = nil;	
 			CGFloat		aLocation = 0;
 			[mGradientValue getColor:&aStopColor location:&aLocation atIndex:i];
-			NSLog(@"adding color:%@ location:%f to new index j:%d from old index i:%d",aStopColor, aLocation, j, i);
+			//NSLog(@"adding color:%@ location:%f to new index j:%d from old index i:%d",aStopColor, aLocation, j, i);
 			[aColorList addObject:aStopColor];
 			aLocationList[j]=aLocation;
 			j++;
@@ -360,8 +363,20 @@
 	[self setGradientValue:aGradient];
 }
 
+- (void)setGradientValue:(NSGradient*)theGradient
+{
+	if(mGradientValue!=theGradient)
+	{
+		[mGradientValue release];
+		mGradientValue = [theGradient retain];
+		[self performAction];
+		[self setNeedsDisplay:YES];
+	}
+}
+
+
 #pragma mark -
-#pragma mark Rects
+#pragma mark Drawing/HitTest Rects
 - (NSRect)gradientRect
 {
 	NSRect aViewRect = [self bounds];
@@ -390,15 +405,5 @@
 }
 
 
-- (void)setGradientValue:(NSGradient*)theGradient
-{
-	if(mGradientValue!=theGradient)
-	{
-		[mGradientValue release];
-		mGradientValue = [theGradient retain];
-		[self performAction];
-		[self setNeedsDisplay:YES];
-	}
-}
 
 @end

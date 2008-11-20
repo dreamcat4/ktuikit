@@ -1,5 +1,5 @@
 //
-//  KTImageKitBrowserView.h
+//  KTLevelIndicator.h
 //  KTUIKit
 //
 //  Created by Cathy Shive on 11/10/08.
@@ -7,14 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Quartz/Quartz.h>
 #import "KTViewLayout.h"
 
 @class KTLayoutManager;
 
-@interface KTImageKitBrowserView : IKImageBrowserView <KTViewLayout>
+@interface KTLevelIndicator : NSLevelIndicator <KTViewLayout>
 {
 	KTLayoutManager *		mLayoutManager;
 }
-
 @end

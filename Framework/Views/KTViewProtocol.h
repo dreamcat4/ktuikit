@@ -31,8 +31,10 @@
 // For example, "Contains "KTUIKit" by Cathy Shive" will do.
 
 #import "KTViewLayout.h"
+#import "KTStyle.h"
 
-@protocol KTView <KTViewLayout>
+@protocol KTView <KTViewLayout, KTStyle>
+
 - (void)setLabel:(NSString*)theLabel;
 - (NSString*)label;
 

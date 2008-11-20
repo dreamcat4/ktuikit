@@ -15,6 +15,4 @@
 {
 	KTLayoutManager *		mLayoutManager;
 }
-
-
 @end

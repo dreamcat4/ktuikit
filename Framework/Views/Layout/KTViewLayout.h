@@ -43,5 +43,4 @@
 - (id<KTViewLayout>)parent;
 - (NSArray*)children;
 
-
 @end
