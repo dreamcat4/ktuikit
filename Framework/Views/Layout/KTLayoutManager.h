@@ -46,7 +46,8 @@ typedef enum
 	KTHorizontalPositionStickRight,
 	KTHorizontalPositionKeepCentered,
 	KTHorizontalPositionFloatLeft,
-	KTHorizontalPositionFloatRight
+	KTHorizontalPositionFloatRight,
+	KTHorizontalPositionProportional
 	
 }KTHorizontalPositionType;
 
@@ -59,7 +60,8 @@ typedef enum
 	KTVerticalPositionStickBottom,
 	KTVerticalPositionKeepCentered,
 	KTVerticalPositionFloatUp,
-	KTVerticalPositionFloatDown
+	KTVerticalPositionFloatDown,
+	KTVerticalPositionProportional
 	
 }KTVerticalPositionType;
 
@@ -80,6 +82,8 @@ typedef enum
 	
 	CGFloat						mWidthPercentage;
 	CGFloat						mHeightPercentage;
+	CGFloat						mHorizontalPositionPercentage;
+	CGFloat						mVerticalPositionPercentage;
 	
 	CGFloat						mMarginLeft;
 	CGFloat						mMarginRight;
@@ -102,6 +106,8 @@ typedef enum
 @property(readwrite,assign) CGFloat marginRight;
 @property(readwrite,assign) CGFloat heightPercentage;
 @property(readwrite,assign) CGFloat widthPercentage;
+@property(readwrite,assign) CGFloat horizontalPositionPercentage;
+@property(readwrite,assign) CGFloat verticalPositionPercentage;
 @property(readwrite,assign) CGFloat minWidth;
 @property(readwrite,assign) CGFloat maxWidth;
 @property(readwrite,assign) CGFloat minHeight;

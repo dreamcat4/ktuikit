@@ -29,5 +29,9 @@
 - (IBAction)setWidth:(id)theSender;
 - (IBAction)setHeight:(id)theSender;
 
+- (IBAction)fillCurrentWidth:(id)theSender;
+- (IBAction)fillCurrentHeight:(id)theSender;
+- (IBAction)setKeepCenteredHorizontally:(id)theSender;
+- (IBAction)setKeepCenteredVertically:(id)theSender;
 
 @end

@@ -42,6 +42,8 @@
 #define kKTLayoutManagerMarginLeftKey @"marginLeft"
 #define kKTLayoutManagerWidthPercentageKey @"widthPercentage"
 #define kKTLayoutManagerHeightPercentageKey @"heightPercentage"
+#define kKTLayoutManagerHorizontalPercentageKey @"horizontalPositionPercentage"
+#define kKTLayoutManagerVerticalPercentageKey @"verticalPositionPercentage"
 #define kKTLayoutManagerMinWidthKey @"minWidth"
 #define kKTLayoutManagerMaxWidthKey @"maxWidth"
 #define kKTLayoutManagerMinHeightKey @"minHeight"
@@ -63,6 +65,8 @@
 @synthesize marginLeft = mMarginLeft;
 @synthesize widthPercentage = mWidthPercentage;
 @synthesize heightPercentage = mHeightPercentage;
+@synthesize horizontalPositionPercentage = mHorizontalPositionPercentage;
+@synthesize verticalPositionPercentage = mVerticalPositionPercentage;
 @synthesize minWidth = mMinWidth;
 @synthesize maxWidth = mMaxWidth;
 @synthesize minHeight = mMinHeight;
@@ -121,7 +125,7 @@
 //=========================================================== 
 - (NSArray *)keysForCoding
 {
-	return [NSArray arrayWithObjects:kKTLayoutManagerWidthTypeKey,kKTLayoutManagerHeightTypeKey,kKTLayoutManagerHorizontalPositionTypeKey,kKTLayoutManagerVerticalPositionTypeKey,kKTLayoutManagerMarginTopKey,kKTLayoutManagerMarginRightKey,kKTLayoutManagerMarginBottomKey,kKTLayoutManagerMarginLeftKey,kKTLayoutManagerWidthPercentageKey,kKTLayoutManagerHeightPercentageKey,kKTLayoutManagerMinWidthKey,kKTLayoutManagerMaxWidthKey,kKTLayoutManagerMinHeightKey,kKTLayoutManagerMaxHeightKey,nil];
+	return [NSArray arrayWithObjects:kKTLayoutManagerWidthTypeKey,kKTLayoutManagerHeightTypeKey,kKTLayoutManagerHorizontalPositionTypeKey,kKTLayoutManagerVerticalPositionTypeKey,kKTLayoutManagerMarginTopKey,kKTLayoutManagerMarginRightKey,kKTLayoutManagerMarginBottomKey,kKTLayoutManagerMarginLeftKey,kKTLayoutManagerWidthPercentageKey,kKTLayoutManagerHeightPercentageKey,kKTLayoutManagerHorizontalPercentageKey, kKTLayoutManagerVerticalPercentageKey, kKTLayoutManagerMinWidthKey,kKTLayoutManagerMaxWidthKey,kKTLayoutManagerMinHeightKey,kKTLayoutManagerMaxHeightKey,nil];
 }
 
 //=========================================================== 
@@ -149,6 +153,10 @@
 		[self setWidthPercentage:1.0];
 	else if ([key isEqualToString:kKTLayoutManagerHeightPercentageKey])
 		[self setHeightPercentage:1.0];
+	else if([key isEqualToString:kKTLayoutManagerHorizontalPercentageKey])
+		[self setHorizontalPositionPercentage:0.0];
+	else if([key isEqualToString:kKTLayoutManagerVerticalPercentageKey])
+		[self setVerticalPositionPercentage:0.0];
 	else if ([key isEqualToString:kKTLayoutManagerMinWidthKey])
 		[self setMinWidth:0.0];
 	else if ([key isEqualToString:kKTLayoutManagerMaxWidthKey])
@@ -256,6 +264,10 @@
 			aCurrentViewFrame.origin.x = NSWidth(aSuperviewFrame) - NSWidth(aCurrentViewFrame) - mMarginRight;
 		break;
 		
+		case KTHorizontalPositionProportional:
+			aCurrentViewFrame.origin.x = (NSWidth(aSuperviewFrame)-NSWidth(aCurrentViewFrame))*mHorizontalPositionPercentage;
+		break;
+		
 		case KTHorizontalPositionFloatRight:
 		{
 			// position ourself at the right of the superview
@@ -357,6 +369,10 @@
 		
 		case KTVerticalPositionStickBottom:
 			aCurrentViewFrame.origin.y = mMarginBottom;
+		break;
+		
+		case KTVerticalPositionProportional:
+			aCurrentViewFrame.origin.y = (NSHeight(aSuperviewFrame)-NSHeight(aCurrentViewFrame))*mVerticalPositionPercentage;
 		break;
 		
 		case KTVerticalPositionFloatUp:

@@ -383,12 +383,12 @@
 		32DBCF9F0370C38200C91783 /* Inspectors */ = {
 			isa = PBXGroup;
 			children = (
-				4CC1F41B0DE9418F0035CE00 /* KTLayoutManagerInspector.h */,
-				4CC1F41C0DE9418F0035CE00 /* KTLayoutManagerInspector.m */,
 				4CD8FDDB0EBCAAF100B4DA52 /* KTViewInspector.h */,
 				4CD8FDDC0EBCAAF100B4DA52 /* KTViewInspector.m */,
 				4C9A81FB0EBDF30D00F8AA48 /* KTStyleInspector.h */,
 				4C9A81FC0EBDF30D00F8AA48 /* KTStyleInspector.m */,
+				4CC1F41B0DE9418F0035CE00 /* KTLayoutManagerInspector.h */,
+				4CC1F41C0DE9418F0035CE00 /* KTLayoutManagerInspector.m */,
 				4CD4638E0ED04121009725B9 /* KTLayoutManagerControl.h */,
 				4CD4638F0ED04121009725B9 /* KTLayoutManagerControl.m */,
 			);

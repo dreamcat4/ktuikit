@@ -16,6 +16,7 @@
 @interface KTLayoutManagerControl : KTView 
 {
 	id							wDelegate;
+	BOOL						mIsEnabled;
 	
 	NSTextField *				wTopMarginTextField;
 	NSTextField *				wRightMarginTextField;
@@ -40,6 +41,8 @@
 	KTSizeType					mWidthType;
 	KTSizeType					mHeightType;
 }
+
 @property (readwrite,assign) id delegate;
+@property (readwrite,assign) BOOL isEnabled;
 
 @end
