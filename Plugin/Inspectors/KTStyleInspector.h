@@ -9,6 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 @class KTGradientPicker;
+@class KTColorWell;
 
 @interface KTStyleInspector : IBInspector 
 {
@@ -20,18 +21,29 @@
 	
 	// Borders
 	IBOutlet NSButton *				oDrawBordersCheckBox;
-	IBOutlet NSPopUpButton *		oTargetBorderPopUpButton;
-	IBOutlet NSTextField *			oBorderWithTextField;
-	IBOutlet NSStepper *			oBorderWidthStepper;
-	IBOutlet NSColorWell *			oBorderColorWell;
+	IBOutlet NSButton *				oEditAllBordersCheckBox;
+	// top
+	IBOutlet NSTextField *			oTopBorderWidthTextField;
+	IBOutlet KTColorWell*			oTopBorderColorWell;
+	// right
+	IBOutlet NSTextField *			oRightBorderWidthTextField;
+	IBOutlet KTColorWell*			oRightBorderColorWell;
+	// bottom
+	IBOutlet NSTextField *			oBottomBorderWidthTextField;
+	IBOutlet KTColorWell*			oBottomBorderColorWell;
+	// left
+	IBOutlet NSTextField *			oLeftBorderWidthTextField;
+	IBOutlet KTColorWell*			oLeftBorderColorWell;
 }
 
 - (IBAction)setDrawsBackground:(id)theSender;
+- (IBAction)setBackgroundOption:(id)theSender;
 - (IBAction)setBackgroundColor:(id)theSender;
 - (IBAction)setBackgroundGradient:(id)theSender;
 
 - (IBAction)setDrawsBorders:(id)theSender;
 - (IBAction)setBorderWidth:(id)theSender;
 - (IBAction)setBorderColor:(id)theSender;
+- (IBAction)setEditAllBorders:(id)theSender;
 
 @end

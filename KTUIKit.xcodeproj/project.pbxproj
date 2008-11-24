@@ -36,6 +36,15 @@
 		4C3EAA4A0ECF5843004492C4 /* KTStyleInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA3F0ECF5843004492C4 /* KTStyleInspector.nib */; };
 		4C3EAA4B0ECF5843004492C4 /* KTUIKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA410ECF5843004492C4 /* KTUIKitLibrary.nib */; };
 		4C3EAA4C0ECF5843004492C4 /* KTViewInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA430ECF5843004492C4 /* KTViewInspector.nib */; };
+		4C6471DA0ED9617F00CE9208 /* KTUIKitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		4C64720C0ED962BA00CE9208 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		4C6472190ED962DA00CE9208 /* KTUIKitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		4C6472640ED963F100CE9208 /* TestApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6472620ED963F100CE9208 /* TestApp-Info.plist */; };
+		4C6472680ED9642600CE9208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472670ED9642600CE9208 /* main.m */; };
+		4C64726C0ED9648F00CE9208 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C64726B0ED9648F00CE9208 /* MainMenu.nib */; };
+		4C6472820ED965A700CE9208 /* TestAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472810ED965A700CE9208 /* TestAppController.m */; };
+		4C6472890ED9664F00CE9208 /* TestAppWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472880ED9664F00CE9208 /* TestAppWindowController.m */; };
+		4C64728C0ED966AC00CE9208 /* TestAppWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C64728B0ED966AC00CE9208 /* TestAppWindow.nib */; };
 		4C7AE9FA0ECF9DCE00F79A75 /* TextView.tif in Resources */ = {isa = PBXBuildFile; fileRef = 4C7AE9F90ECF9DCE00F79A75 /* TextView.tif */; };
 		4C7AEA080ECFA3F500F79A75 /* WebKit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C7AEA070ECFA3F500F79A75 /* WebKit.png */; };
 		4C9A7E5E0EBDB6D200F8AA48 /* KTSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A7E5C0EBDB6D200F8AA48 /* KTSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,6 +98,13 @@
 		4C9C5D9F0DE9F49E00AE6913 /* XSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D910DE9F43400AE6913 /* XSWindowController.m */; };
 		4C9C5DA10DE9F49E00AE6913 /* KTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8A0DE9F41800AE6913 /* KTView.m */; };
 		4C9C5E260DE9FAB100AE6913 /* KTUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CB23D0D0ED9695100486F39 /* GradientPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB23D0C0ED9695100486F39 /* GradientPickerViewController.m */; };
+		4CB23D210ED96AF200486F39 /* GradientPickerTestView.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB23D200ED96AF200486F39 /* GradientPickerTestView.nib */; };
+		4CB23EFD0ED989E800486F39 /* poof_item.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4CB23EFC0ED989E800486F39 /* poof_item.aif */; };
+		4CB23FA70ED9A13F00486F39 /* KTColorWell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB23FA50ED9A13F00486F39 /* KTColorWell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CB23FA80ED9A13F00486F39 /* KTColorWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB23FA60ED9A13F00486F39 /* KTColorWell.m */; };
+		4CB23FE80ED9A40300486F39 /* KTColorWellIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB23FE70ED9A40300486F39 /* KTColorWellIntegration.m */; };
+		4CB240910ED9AA9300486F39 /* KTColorWell.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4CB23FE60ED9A3DD00486F39 /* KTColorWell.classdescription */; };
 		4CC1F40E0DE940F70035CE00 /* KTViewIntegration.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1F40D0DE940F70035CE00 /* KTViewIntegration.m */; };
 		4CC1F41D0DE9418F0035CE00 /* KTLayoutManagerInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC1F41C0DE9418F0035CE00 /* KTLayoutManagerInspector.m */; };
 		4CCA96180EBC4FD200CF9A03 /* KTButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CCA96160EBC4FD200CF9A03 /* KTButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -135,6 +151,20 @@
 			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
 			remoteInfo = KTUIKitFramework;
 		};
+		4C6471D40ED9613B00CE9208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DF68FC067E5B5A0090B5B0;
+			remoteInfo = KTUIKitFramework;
+		};
+		4C6471D60ED9613B00CE9208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1AC9600486D14A00FE50C9;
+			remoteInfo = KTUIKit;
+		};
 		4C94A8DB0EB48B98000FADE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0259C573FE90428111CA0C5A /* Project object */;
@@ -152,12 +182,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4CC1978D0ED1A42B00052010 /* CopyFiles */ = {
+		4C64724B0ED962F600CE9208 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4C6472190ED962DA00CE9208 /* KTUIKitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +216,15 @@
 		4C3EAA400ECF5843004492C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/KTStyleInspector.nib; sourceTree = "<group>"; };
 		4C3EAA420ECF5843004492C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/KTUIKitLibrary.nib; sourceTree = "<group>"; };
 		4C3EAA440ECF5843004492C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/KTViewInspector.nib; sourceTree = "<group>"; };
+		4C6471C20ED9612400CE9208 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6472620ED963F100CE9208 /* TestApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TestApp-Info.plist"; path = "../../TestApp-Info.plist"; sourceTree = "<group>"; };
+		4C6472670ED9642600CE9208 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C64726B0ED9648F00CE9208 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		4C6472800ED965A700CE9208 /* TestAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppController.h; sourceTree = "<group>"; };
+		4C6472810ED965A700CE9208 /* TestAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppController.m; sourceTree = "<group>"; };
+		4C6472870ED9664F00CE9208 /* TestAppWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppWindowController.h; sourceTree = "<group>"; };
+		4C6472880ED9664F00CE9208 /* TestAppWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAppWindowController.m; sourceTree = "<group>"; };
+		4C64728B0ED966AC00CE9208 /* TestAppWindow.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = TestAppWindow.nib; sourceTree = "<group>"; };
 		4C7AE9F90ECF9DCE00F79A75 /* TextView.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = TextView.tif; sourceTree = "<group>"; };
 		4C7AEA070ECFA3F500F79A75 /* WebKit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebKit.png; sourceTree = "<group>"; };
 		4C9A7E5C0EBDB6D200F8AA48 /* KTSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSegmentedControl.h; sourceTree = "<group>"; };
@@ -250,6 +290,14 @@
 		4C9C5DCF0DE9F5D300AE6913 /* XSViewController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSViewController.classdescription; path = "Plugin/Class Descriptions/XSViewController.classdescription"; sourceTree = "<group>"; };
 		4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSWindowController.classdescription; path = "Plugin/Class Descriptions/XSWindowController.classdescription"; sourceTree = "<group>"; };
 		4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTUIKit.h; sourceTree = "<group>"; };
+		4CB23D0B0ED9695100486F39 /* GradientPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientPickerViewController.h; sourceTree = "<group>"; };
+		4CB23D0C0ED9695100486F39 /* GradientPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientPickerViewController.m; sourceTree = "<group>"; };
+		4CB23D200ED96AF200486F39 /* GradientPickerTestView.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = GradientPickerTestView.nib; sourceTree = "<group>"; };
+		4CB23EFC0ED989E800486F39 /* poof_item.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = poof_item.aif; sourceTree = "<group>"; };
+		4CB23FA50ED9A13F00486F39 /* KTColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTColorWell.h; sourceTree = "<group>"; };
+		4CB23FA60ED9A13F00486F39 /* KTColorWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTColorWell.m; sourceTree = "<group>"; };
+		4CB23FE60ED9A3DD00486F39 /* KTColorWell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KTColorWell.classdescription; sourceTree = "<group>"; };
+		4CB23FE70ED9A40300486F39 /* KTColorWellIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTColorWellIntegration.m; sourceTree = "<group>"; };
 		4CC1F4060DE940160035CE00 /* KTView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTView.classdescription; path = "Plugin/Class Descriptions/KTView.classdescription"; sourceTree = "<group>"; };
 		4CC1F40D0DE940F70035CE00 /* KTViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewIntegration.m; sourceTree = "<group>"; };
 		4CC1F41B0DE9418F0035CE00 /* KTLayoutManagerInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTLayoutManagerInspector.h; sourceTree = "<group>"; };
@@ -281,6 +329,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C6471C00ED9612400CE9208 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C64720C0ED962BA00CE9208 /* Cocoa.framework in Frameworks */,
+				4C6471DA0ED9617F00CE9208 /* KTUIKitFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53DF68FB067E5B5A0090B5B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +371,7 @@
 				0259C582FE90428111CA0C5A /* Resources */,
 				1ED78706FE9D4A0611CA0C5A /* Products */,
 				2E58F364FFB232C311CA0CBA /* Frameworks */,
+				4C6472600ED963F100CE9208 /* TestApp */,
 			);
 			name = KTUIKit;
 			sourceTree = "<group>";
@@ -354,6 +412,7 @@
 			children = (
 				8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */,
 				53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */,
+				4C6471C20ED9612400CE9208 /* TestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -432,8 +491,51 @@
 		4C3EAA4F0ECF590E004492C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4CB23EFB0ED989E800486F39 /* Sounds */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C6472600ED963F100CE9208 /* TestApp */ = {
+			isa = PBXGroup;
+			children = (
+				4C6472610ED963F100CE9208 /* Resources */,
+				4C6472630ED963F100CE9208 /* Source */,
+			);
+			path = TestApp;
+			sourceTree = "<group>";
+		};
+		4C6472610ED963F100CE9208 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C64726B0ED9648F00CE9208 /* MainMenu.nib */,
+				4C64728B0ED966AC00CE9208 /* TestAppWindow.nib */,
+				4CB23D200ED96AF200486F39 /* GradientPickerTestView.nib */,
+				4C6472620ED963F100CE9208 /* TestApp-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C6472630ED963F100CE9208 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4C6472670ED9642600CE9208 /* main.m */,
+				4C6472800ED965A700CE9208 /* TestAppController.h */,
+				4C6472810ED965A700CE9208 /* TestAppController.m */,
+				4C6472840ED9663700CE9208 /* Window */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4C6472840ED9663700CE9208 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				4C6472870ED9664F00CE9208 /* TestAppWindowController.h */,
+				4C6472880ED9664F00CE9208 /* TestAppWindowController.m */,
+				4CB23D0B0ED9695100486F39 /* GradientPickerViewController.h */,
+				4CB23D0C0ED9695100486F39 /* GradientPickerViewController.m */,
+			);
+			path = Window;
 			sourceTree = "<group>";
 		};
 		4C9A80FD0EBDD77700F8AA48 /* Layout */ = {
@@ -534,9 +636,18 @@
 				4C9A80020EBDC5E000F8AA48 /* KTWebViewIntegration.m */,
 				4C14A3890EC860EC00E94D88 /* KTImageKitBrowserViewIntegration.m */,
 				4C9A877C0EBEF48700F8AA48 /* KTGradientPickerIntegration.m */,
+				4CB23FE70ED9A40300486F39 /* KTColorWellIntegration.m */,
 			);
 			name = Integration;
 			path = Plugin/Integration;
+			sourceTree = "<group>";
+		};
+		4CB23EFB0ED989E800486F39 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4CB23EFC0ED989E800486F39 /* poof_item.aif */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		4CCA96150EBC4FD200CF9A03 /* NSControlSubclasses */ = {
@@ -558,6 +669,8 @@
 				4C9A807B0EBDD02100F8AA48 /* KTSecureTextField.m */,
 				4C9A7EF80EBDC39500F8AA48 /* KTImageView.h */,
 				4C9A7EF90EBDC39500F8AA48 /* KTImageView.m */,
+				4CB23FA50ED9A13F00486F39 /* KTColorWell.h */,
+				4CB23FA60ED9A13F00486F39 /* KTColorWell.m */,
 			);
 			path = NSControlSubclasses;
 			sourceTree = "<group>";
@@ -593,6 +706,7 @@
 				4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */,
 				4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */,
 				4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */,
+				4CB23FE60ED9A3DD00486F39 /* KTColorWell.classdescription */,
 			);
 			name = "Class Descriptions";
 			sourceTree = "<group>";
@@ -641,12 +755,33 @@
 				4C14A2B80EC856E200E94D88 /* KTLevelIndicator.h in Headers */,
 				4C14A3370EC85FEF00E94D88 /* KTImageKitBrowserView.h in Headers */,
 				4CD4637E0ED03594009725B9 /* KTWindow.h in Headers */,
+				4CB23FA70ED9A13F00486F39 /* KTColorWell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4C6471C10ED9612400CE9208 /* TestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6471D30ED9612500CE9208 /* Build configuration list for PBXNativeTarget "TestApp" */;
+			buildPhases = (
+				4C6471BE0ED9612400CE9208 /* Resources */,
+				4C6471BF0ED9612400CE9208 /* Sources */,
+				4C6471C00ED9612400CE9208 /* Frameworks */,
+				4C64724B0ED962F600CE9208 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C6471D50ED9613B00CE9208 /* PBXTargetDependency */,
+				4C6471D70ED9613B00CE9208 /* PBXTargetDependency */,
+			);
+			name = TestApp;
+			productName = TestApp;
+			productReference = 4C6471C20ED9612400CE9208 /* TestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "KTUIKitFramework" */;
@@ -655,7 +790,6 @@
 				53DF68F9067E5B5A0090B5B0 /* Resources */,
 				53DF68FA067E5B5A0090B5B0 /* Sources */,
 				53DF68FB067E5B5A0090B5B0 /* Frameworks */,
-				4CC1978D0ED1A42B00052010 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -700,15 +834,28 @@
 				53DF6901067E5B8E0090B5B0 /* All */,
 				53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */,
 				8D1AC9600486D14A00FE50C9 /* KTUIKit */,
+				4C6471C10ED9612400CE9208 /* TestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C6471BE0ED9612400CE9208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6472640ED963F100CE9208 /* TestApp-Info.plist in Resources */,
+				4C64726C0ED9648F00CE9208 /* MainMenu.nib in Resources */,
+				4C64728C0ED966AC00CE9208 /* TestAppWindow.nib in Resources */,
+				4CB23D210ED96AF200486F39 /* GradientPickerTestView.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53DF68F9067E5B5A0090B5B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB23EFD0ED989E800486F39 /* poof_item.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,6 +882,7 @@
 				4CF9D4430ECF5B100063DBE0 /* XSWindowController.classdescription in Resources */,
 				4CF9D4440ECF5B100063DBE0 /* KTViewControl.classdescription in Resources */,
 				4CF9D4450ECF5B100063DBE0 /* KTGradientPicker.classdescription in Resources */,
+				4CB240910ED9AA9300486F39 /* KTColorWell.classdescription in Resources */,
 				4C3EAA490ECF5843004492C4 /* KTLayoutManagerInspector.nib in Resources */,
 				4C3EAA4A0ECF5843004492C4 /* KTStyleInspector.nib in Resources */,
 				4C3EAA4B0ECF5843004492C4 /* KTUIKitLibrary.nib in Resources */,
@@ -748,6 +896,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C6471BF0ED9612400CE9208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6472680ED9642600CE9208 /* main.m in Sources */,
+				4C6472820ED965A700CE9208 /* TestAppController.m in Sources */,
+				4C6472890ED9664F00CE9208 /* TestAppWindowController.m in Sources */,
+				4CB23D0D0ED9695100486F39 /* GradientPickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53DF68FA067E5B5A0090B5B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -774,6 +933,7 @@
 				4C14A2B90EC856E200E94D88 /* KTLevelIndicator.m in Sources */,
 				4C14A3380EC85FEF00E94D88 /* KTImageKitBrowserView.m in Sources */,
 				4CD4637F0ED03594009725B9 /* KTWindow.m in Sources */,
+				4CB23FA80ED9A13F00486F39 /* KTColorWell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +962,7 @@
 				4C14A2BD0EC8577E00E94D88 /* KTLevelIndicatorIntegration.m in Sources */,
 				4C14A38A0EC860EC00E94D88 /* KTImageKitBrowserViewIntegration.m in Sources */,
 				4CD463900ED04121009725B9 /* KTLayoutManagerControl.m in Sources */,
+				4CB23FE80ED9A40300486F39 /* KTColorWellIntegration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +973,16 @@
 			isa = PBXTargetDependency;
 			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
 			targetProxy = 4C5F00590E0AD5B400F9A03C /* PBXContainerItemProxy */;
+		};
+		4C6471D50ED9613B00CE9208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DF68FC067E5B5A0090B5B0 /* KTUIKitFramework */;
+			targetProxy = 4C6471D40ED9613B00CE9208 /* PBXContainerItemProxy */;
+		};
+		4C6471D70ED9613B00CE9208 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1AC9600486D14A00FE50C9 /* KTUIKit */;
+			targetProxy = 4C6471D60ED9613B00CE9208 /* PBXContainerItemProxy */;
 		};
 		4C94A8DC0EB48B98000FADE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -861,6 +1032,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C6471D10ED9612500CE9208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TestApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestApp;
+			};
+			name = Debug;
+		};
+		4C6471D20ED9612500CE9208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "TestApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TestApp;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C056398008A954F8003078D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1039,6 +1258,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C6471D30ED9612500CE9208 /* Build configuration list for PBXNativeTarget "TestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6471D10ED9612500CE9208 /* Debug */,
+				4C6471D20ED9612500CE9208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C056397F08A954F8003078D8 /* Build configuration list for PBXNativeTarget "KTUIKitFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

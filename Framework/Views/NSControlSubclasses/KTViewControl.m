@@ -9,9 +9,15 @@
 #import "KTViewControl.h"
 
 @interface KTViewControl (Private)
+
 @end
 
 @implementation KTViewControl
+
+@synthesize isEnabled = mIsEnabled;
+@synthesize target = wTarget;
+@synthesize action = wAction;
+
 //=========================================================== 
 // - initWithFrame:
 //=========================================================== 
@@ -43,21 +49,6 @@
 	[super encodeWithCoder:theCoder];
 }
 
-//=========================================================== 
-// - setTarget:
-//=========================================================== 
-- (IBAction)setTarget:(id)theTarget
-{
-	wTarget = theTarget;
-}
-
-//=========================================================== 
-// - setAction:
-//=========================================================== 
-- (IBAction)setAction:(SEL)theAction
-{
-	wAction = theAction;
-}
 
 //=========================================================== 
 // - performAction:
@@ -69,10 +60,13 @@
 }
 
 //=========================================================== 
-// - setEnabled:
+// - setIsEnabled:
 //=========================================================== 
-- (IBAction)setEnabled:(BOOL)theBool
+- (void)setIsEnabled:(BOOL)theBool
 {
 	mIsEnabled = theBool;
+	if(theBool==NO && [[self window] firstResponder]==self)
+		[[self window] makeFirstResponder:nil];
+	[self setNeedsDisplay:YES];
 }
 @end

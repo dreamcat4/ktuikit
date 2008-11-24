@@ -22,10 +22,24 @@
     [[keyPaths objectForKey:IBAttributeKeyPaths] addObjectsFromArray:[NSArray arrayWithObjects:/* @"MyFirstProperty", @"MySecondProperty",*/ nil]];
 }
 
-- (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes {
-   
+- (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes 
+{
 	[super ibPopulateAttributeInspectorClasses:classes];
-	[classes addObject:[KTLayoutManagerInspector class]];
+}
+
+- (NSSize)ibPreferredDesignSize
+{
+	return NSMakeSize(200, 36);
+}
+
+- (NSSize)ibMinimumSize
+{
+	return NSMakeSize(50, 36);
+}
+
+- (NSSize)ibMaximumSize
+{
+	return NSMakeSize(2000, 36);
 }
 
 @end

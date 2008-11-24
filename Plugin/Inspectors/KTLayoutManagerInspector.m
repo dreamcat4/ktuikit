@@ -23,6 +23,7 @@
 	return YES;
 }
 
+
 - (void)refresh 
 {
 	NSArray *	anInspectedObjectsList = [self inspectedObjects];
@@ -39,7 +40,8 @@
 		[oXPosition setFloatValue:aViewFrame.origin.x];
 		[oYPosition setFloatValue:aViewFrame.origin.y];
 		
-		if([anInspectedView parent]!=nil)
+		if(		[anInspectedView parent]!=nil
+			&&	[[anInspectedView parent] isKindOfClass:[NSSplitView class]]==NO)
 		{
 			[oWidth setEnabled:YES];
 			[oHeight setEnabled:YES];

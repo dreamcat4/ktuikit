@@ -7,6 +7,7 @@
 //
 
 #import "KTGradientPicker.h"
+#import "KTColorWell.h"
 
 #define kStopControlSize 12
 #define kGradientRectHeight 15
@@ -18,6 +19,7 @@
 - (void)moveStopAtIndex:(NSInteger)theIndex toLocation:(CGFloat)theLocation;
 - (NSRect)gradientRect;
 - (NSRect)rectForStopAtLocation:(CGFloat)theLocation;
+- (void)recursiveDeactivateColorWellsInViews:(NSArray*)theViews;
 @end
 
 @implementation KTGradientPicker
@@ -35,6 +37,8 @@
 		return nil;
 		
 	mGradientValue = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor] endingColor:[NSColor blackColor]];
+	mActiveColorStop = NSNotFound;
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleColorWellActivated:) name:KTColorWellDidActivateNotification object:nil];
 	return self;
 }
 
@@ -49,6 +53,8 @@
 	if(aGradientValue == nil)
 		aGradientValue = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor] endingColor:[NSColor blackColor]];
 	[self setGradientValue:aGradientValue];
+	mActiveColorStop = NSNotFound;
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleColorWellActivated:) name:KTColorWellDidActivateNotification object:nil];
 	return self;
 }
 
@@ -74,13 +80,19 @@
 
 #pragma mark -
 #pragma mark Drawing
+//=========================================================== 
+// - drawInContext:
+//=========================================================== 
 - (void)drawInContext:(CGContextRef)theContext
 {	
+	CGFloat anEnabledAlpha=1.0;
+	if([self isEnabled]==NO)
+		anEnabledAlpha = .4;
+	
 	NSRect aGradientRect = [self gradientRect];	
 	[mGradientValue drawInRect:aGradientRect angle:0];
-	[[NSColor colorWithDeviceWhite:.6 alpha:1] set];
+	[[NSColor colorWithDeviceWhite:.6 alpha:anEnabledAlpha] set];
 	[NSBezierPath strokeRect:aGradientRect];
-	
 	
 	// stops
 	NSInteger aNumberOfStops = [mGradientValue numberOfColorStops];
@@ -94,21 +106,22 @@
 		
 		[mGradientValue getColor:&aStopColor location:&aLocation atIndex:i];
 		aStopRect = [self rectForStopAtLocation:aLocation];
-		[[NSColor colorWithDeviceWhite:.4 alpha:1] set];
-		
-		
-		[aStopColor set];
-		[NSBezierPath fillRect:NSInsetRect(aStopRect, anInset, anInset)];
-		
 		
 		NSColor * aHighlightColor = nil;
 		if(i==mActiveColorStop)
 		{
-			aHighlightColor = [NSColor greenColor];
+			if([[NSColorPanel sharedColorPanel] isVisible])
+			{
+				[[NSColor colorWithDeviceWhite:.45 alpha:anEnabledAlpha] set];
+				[NSBezierPath fillRect:aStopRect];
+			}
+			aHighlightColor = [NSColor colorWithDeviceWhite:0 alpha:anEnabledAlpha];
 		}
 		else
-			aHighlightColor = [NSColor colorWithDeviceWhite:.4 alpha:1];
+			aHighlightColor = [NSColor colorWithDeviceWhite:.5 alpha:anEnabledAlpha];
 			
+		[[aStopColor colorWithAlphaComponent:anEnabledAlpha] set];
+		[NSBezierPath fillRect:NSInsetRect(aStopRect, anInset, anInset)];
 		
 		[aHighlightColor set];
 		[NSBezierPath strokeRect:aStopRect];
@@ -124,22 +137,43 @@
 
 #pragma mark -
 #pragma mark Events
+//=========================================================== 
+// - acceptsFirstResponder
+//=========================================================== 
 - (BOOL)acceptsFirstResponder
 {
+	return mIsEnabled;
+}
+
+- (BOOL)becomeFirstResponder
+{
+	mActiveColorStop = 0;
+	[self display];
+	return mIsEnabled;
+}
+
+- (BOOL)resignFirstResponder
+{
+	mActiveColorStop = NSNotFound;
+	[self display];
 	return YES;
 }
 
-
+- (BOOL)canBecomeKeyView
+{
+	return mIsEnabled;
+}
+//=========================================================== 
+// - mouseDown:
+//=========================================================== 
 - (void)mouseDown:(NSEvent*)theEvent
 {
 	if(mIsEnabled==NO)
 		return;
 		
 	NSPoint aMousePoint = [self convertPoint:[theEvent locationInWindow] fromView:nil]; 
-	
 	NSRect aGradientRect = [self gradientRect];
 
-	
 	// check gradient rect
 	if(NSPointInRect(aMousePoint, aGradientRect))
 	{
@@ -163,14 +197,15 @@
 		if(NSPointInRect(aMousePoint, aStopRect))
 		{
 			mActiveColorStop = i;
-			
+			[self recursiveDeactivateColorWellsInViews:[NSArray arrayWithObject:[[self window] contentView]]];
+
 			if([theEvent clickCount]==2)
 			{
 				// throw up a color panel
 				NSColorPanel * aColorPanel = [NSColorPanel sharedColorPanel];
 				[aColorPanel setColor:aStopColor];
-				// [aColorPanel setTarget:self];
 				[aColorPanel orderFront:self];
+				[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleColorPanelDidClose:) name:NSWindowWillCloseNotification object:aColorPanel];
 			}
 			[self setNeedsDisplay:YES];
 			return;
@@ -183,7 +218,9 @@
 }
 
 
-
+//=========================================================== 
+// - mouseDragged:
+//=========================================================== 
 - (void)mouseDragged:(NSEvent*)theEvent
 {
 	if(		mActiveColorStop!=NSNotFound 
@@ -208,29 +245,101 @@
 	}
 }
 
+//=========================================================== 
+// - mouseUp:
+//=========================================================== 
 - (void)mouseUp:(NSEvent*)theEvent
 {
 	if(mMouseDragState != kKTGradientPickerMouseDragState_NoDrag)
 	{
+		if(mRemoveActiveColorStop)
+		{
+			NSString * aSoundPath = [[NSBundle bundleForClass:[KTGradientPicker class]] pathForResource:@"poof_item" ofType:@"aif"];
+			if(aSoundPath)
+			{
+				NSSound *  aPoofSound = [[[NSSound alloc] initWithContentsOfFile:aSoundPath byReference:NO] autorelease];
+				[aPoofSound play];
+			}
+			[self removeStopAtIndex:mActiveColorStop];
+			[[NSCursor arrowCursor] set];
+		}
 		mMouseDragState = kKTGradientPickerMouseDragState_NoDrag;
-		mActiveColorStop = NSNotFound;
 	}
 	[self setNeedsDisplay:YES];
 }
 
+//=========================================================== 
+// - keyDown:
+//=========================================================== 
+- (void)keyDown:(NSEvent*)theEvent
+{
+	unichar aKey = [[theEvent characters] characterAtIndex:0];
 
+	switch(aKey)
+	{
+		case NSBackTabCharacter:
+		if(mActiveColorStop==NSNotFound)
+			mActiveColorStop=[mGradientValue numberOfColorStops]-1;
+		else
+		{
+			mActiveColorStop--;
+			if(mActiveColorStop<0)
+			{
+				mActiveColorStop=0;
+				[[self window] makeFirstResponder:[self previousKeyView]];
+			}
+		}
+		[self setNeedsDisplay:YES];
+		break;
+		
+		case NSTabCharacter:
+		if(mActiveColorStop==NSNotFound)
+			mActiveColorStop = 0;
+		else
+		{		
+			mActiveColorStop++;
+			if(mActiveColorStop>[mGradientValue numberOfColorStops]-1)
+			{
+				mActiveColorStop = [mGradientValue numberOfColorStops]-1;
+				[[self window] makeFirstResponder:[self nextValidKeyView]];
+			}
+		}
+		[self setNeedsDisplay:YES];
+		break;
+	}
+}
 
 #pragma mark -
 #pragma mark Manipulating the gradient
+//=========================================================== 
+// - moveStopAtIndex:toLocation
+//=========================================================== 
 - (void)moveStopAtIndex:(NSInteger)theIndex toLocation:(CGFloat)theLocation
 {
-	if(		theLocation<=0 
-		||	theLocation>=1)
+	// double check we aren't trying to move the first or last stop
+	if(		theIndex==0
+		||	theIndex==[mGradientValue numberOfColorStops]-1)
+		return;
+		
+	// check the location of the stop before and after this stop
+	// if they are on top of each other, remove the active stop
+	CGFloat aLocationOfPreviousStop, aLocationOfNextStop;
+	[mGradientValue getColor:nil location:&aLocationOfPreviousStop atIndex:mActiveColorStop-1];
+	[mGradientValue getColor:nil location:&aLocationOfNextStop atIndex:mActiveColorStop+1];
+	
+	if(		theLocation<=aLocationOfPreviousStop
+		||	theLocation>=aLocationOfNextStop )
 	{
-		[self removeStopAtIndex:theIndex];
+		// on mouse up remove this stop
+		mRemoveActiveColorStop = YES;
+		[[NSCursor disappearingItemCursor] set];
+		return;
 	}
-		
-		
+	else
+	{
+		mRemoveActiveColorStop = NO;
+		[[NSCursor arrowCursor] set];
+	}		
 	NSInteger			aNumberOfStops = [mGradientValue numberOfColorStops];
 	NSMutableArray *	aCurrentColorList = [[[NSMutableArray alloc] init] autorelease];
 	CGFloat				aCurrentLocationList[aNumberOfStops];
@@ -252,6 +361,9 @@
 	[self setGradientValue:aNewGradient];
 }
 
+//=========================================================== 
+// - makeNewStopAtLocation:
+//=========================================================== 
 - (void)makeNewStopAtLocation:(CGFloat)theLocation
 {
 	// we'll go through out color list
@@ -296,13 +408,13 @@
 	[self setGradientValue:aNewGradient];
 }
 
+//=========================================================== 
+// - removeStopAtIndex:
+//=========================================================== 
 - (void)removeStopAtIndex:(NSInteger)theIndex
 {
-	NSLog(@"want to remove index:%d", theIndex);
 	
 	NSInteger			aNumberOfStops = [mGradientValue numberOfColorStops];
-	
-	
 	if(		theIndex<=0
 		||	theIndex>=aNumberOfStops-1)
 		return;
@@ -316,14 +428,11 @@
 	NSInteger j = 0;
 	for(i = 0; i < aNumberOfStops; i++)
 	{
-		NSLog(@"j:%d", j);
 		if(i!=theIndex)
 		{
-			
 			NSColor *	aStopColor = nil;	
 			CGFloat		aLocation = 0;
 			[mGradientValue getColor:&aStopColor location:&aLocation atIndex:i];
-			//NSLog(@"adding color:%@ location:%f to new index j:%d from old index i:%d",aStopColor, aLocation, j, i);
 			[aColorList addObject:aStopColor];
 			aLocationList[j]=aLocation;
 			j++;
@@ -334,6 +443,32 @@
 	[self setGradientValue:aNewGradient];
 }
 
+
+//=========================================================== 
+// - setGradientValue:
+//=========================================================== 
+- (void)setGradientValue:(NSGradient*)theGradient
+{
+	if(mGradientValue!=theGradient)
+	{
+		[mGradientValue release];
+		if(theGradient==nil)
+			mGradientValue = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor] endingColor:[NSColor blackColor]];
+		else
+		{
+			mGradientValue = [theGradient retain];
+			[self performAction];
+		}
+		[self setNeedsDisplay:YES];
+	}
+}
+
+
+#pragma mark -
+#pragma mark NSColorPanel
+//=========================================================== 
+// - changeColor:
+//=========================================================== 
 - (IBAction)changeColor:(id)theSender
 {
 	if(mActiveColorStop == NSNotFound)
@@ -358,25 +493,50 @@
 		aLocationList[i]=aLocation;
 	}
 	
-	
 	NSGradient * aGradient = [[[NSGradient alloc] initWithColors:aColorList atLocations:aLocationList colorSpace:[NSColorSpace genericRGBColorSpace]]autorelease];
 	[self setGradientValue:aGradient];
 }
 
-- (void)setGradientValue:(NSGradient*)theGradient
+//=========================================================== 
+// - handleColorPanelDidClose:
+//=========================================================== 
+- (void)handleColorPanelDidClose:(NSNotification*)theNotification
 {
-	if(mGradientValue!=theGradient)
+	[self setNeedsDisplay:YES];
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowWillCloseNotification object:[NSColorPanel sharedColorPanel]];
+}
+
+#pragma mark -
+#pragma mark Dealing with NSColorWells
+//=========================================================== 
+// - handleColorWellActivated:
+//=========================================================== 
+- (void)handleColorWellActivated:(NSNotification*)theNotification
+{
+	mActiveColorStop = NSNotFound;
+	[self setNeedsDisplay:YES];
+}
+
+//=========================================================== 
+// - recursiveDeactivateColorWellsInViews:
+//=========================================================== 
+- (void)recursiveDeactivateColorWellsInViews:(NSArray*)theViews
+{
+	for(NSView * aView in theViews)
 	{
-		[mGradientValue release];
-		mGradientValue = [theGradient retain];
-		[self performAction];
-		[self setNeedsDisplay:YES];
+		if([[aView subviews] count] > 0)
+			[self recursiveDeactivateColorWellsInViews:[aView subviews]];
+		if([aView isKindOfClass:[NSColorWell class]])
+			[(NSColorWell*)aView deactivate];
 	}
 }
 
 
 #pragma mark -
 #pragma mark Drawing/HitTest Rects
+//=========================================================== 
+// - gradientRect
+//=========================================================== 
 - (NSRect)gradientRect
 {
 	NSRect aViewRect = [self bounds];
@@ -392,6 +552,9 @@
 	return aGradientRect;
 }
 
+//=========================================================== 
+// - rectForStopAtLocation:
+//=========================================================== 
 - (NSRect)rectForStopAtLocation:(CGFloat)theLocation
 {
 	NSRect aStopRect;

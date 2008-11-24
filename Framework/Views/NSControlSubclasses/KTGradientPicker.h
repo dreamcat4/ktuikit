@@ -19,10 +19,10 @@ typedef enum
 {	
 	NSGradient *						mGradientValue;
 	NSInteger							mActiveColorStop;
+	BOOL								mRemoveActiveColorStop;
 	KTGradientPickerMouseDragState		mMouseDragState;
 }
 
 @property(readwrite,retain) NSGradient * gradientValue;
-
 
 @end

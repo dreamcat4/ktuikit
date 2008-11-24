@@ -12,13 +12,16 @@
 @interface KTViewControl : KTView 
 {
 	BOOL					mIsEnabled;
-	id						wTarget;
+	
+	@private
+	NSObject *				wTarget;
 	SEL						wAction;
 }
 
-- (IBAction)setTarget:(id)theTarget;
-- (IBAction)setAction:(SEL)theAction;
-- (IBAction)setEnabled:(BOOL)theBool;
+
+@property (readwrite, assign) BOOL isEnabled;
+@property (readwrite, assign) id target;
+@property (readwrite, assign) SEL action;
 - (void)performAction;
 
 @end

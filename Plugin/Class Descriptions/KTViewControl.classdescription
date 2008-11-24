@@ -2,6 +2,7 @@
 	Actions = {
 		// Define action descriptions here, for example
 		// "myAction:" = id;
+		action: = id;
 	};
 	Outlets = {
 		// Define outlet descriptions here, for example

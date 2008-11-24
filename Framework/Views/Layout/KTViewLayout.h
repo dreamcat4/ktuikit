@@ -32,7 +32,7 @@
 
 @class KTLayoutManager;
 
-@protocol KTViewLayout
+@protocol KTViewLayout<NSObject>
 
 - (void)setViewLayoutManager:(KTLayoutManager*)theLayoutManager;
 - (KTLayoutManager*)viewLayoutManager;

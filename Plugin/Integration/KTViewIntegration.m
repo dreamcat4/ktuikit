@@ -32,7 +32,8 @@
 - (void)ibPopulateAttributeInspectorClasses:(NSMutableArray *)classes 
 {
     [super ibPopulateAttributeInspectorClasses:classes];
-	[classes addObject:[KTStyleInspector class]];
+	if([self isKindOfClass:[KTGradientPicker class]]==NO)
+		[classes addObject:[KTStyleInspector class]];
     [classes addObject:[KTLayoutManagerInspector class]];
 }
 

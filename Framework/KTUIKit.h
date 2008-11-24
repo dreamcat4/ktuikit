@@ -17,3 +17,5 @@
 #import <KTUIKitFramework/KTSearchField.h>
 #import <KTUIKitFramework/KTSecureTextField.h>
 #import <KTUIKitFramework/KTImageView.h>
+#import <KTUIKitFramework/KTGradientPicker.h>
+#import <KTUIKitFramework/KTColorWell.h>
