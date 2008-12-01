@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTSecureTextField.h>
+ #import <KTUIKit/KTSecureTextField.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTSecureTextField ( KTSecureTextFieldIntegration )

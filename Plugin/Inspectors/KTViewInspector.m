@@ -7,7 +7,7 @@
 //
 
 #import "KTViewInspector.h"
-#import <KTUIKitFramework/KTView.h>
+#import <KTUIKit/KTView.h>
 
 @implementation KTViewInspector
 

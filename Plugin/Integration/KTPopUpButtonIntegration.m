@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTPopUpButton.h>
+ #import <KTUIKit/KTPopUpButton.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTPopUpButton ( KTPopUpButtonIntegration )

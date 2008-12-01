@@ -8,8 +8,8 @@
 
 #import "KTLayoutManagerInspector.h"
 #import "KTLayoutManagerControl.h"
-#import <KTUIKitFramework/KTLayoutManager.h>
-#import <KTUIKitFramework/KTViewLayout.h>
+#import <KTUIKit/KTLayoutManager.h>
+#import <KTUIKit/KTViewLayout.h>
 
 @implementation KTLayoutManagerInspector
 

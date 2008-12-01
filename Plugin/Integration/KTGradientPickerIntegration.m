@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTGradientPicker.h>
+ #import <KTUIKit/KTGradientPicker.h>
  #import "KTLayoutManagerInspector.h"
 	
 @implementation KTGradientPicker ( KTGradientPickerIntegration )

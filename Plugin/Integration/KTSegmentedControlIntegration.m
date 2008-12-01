@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTSegmentedControl.h>
+ #import <KTUIKit/KTSegmentedControl.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTSegmentedControl ( KTSegmentedControlIntegration )

@@ -36,9 +36,9 @@
 		4C3EAA4A0ECF5843004492C4 /* KTStyleInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA3F0ECF5843004492C4 /* KTStyleInspector.nib */; };
 		4C3EAA4B0ECF5843004492C4 /* KTUIKitLibrary.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA410ECF5843004492C4 /* KTUIKitLibrary.nib */; };
 		4C3EAA4C0ECF5843004492C4 /* KTViewInspector.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3EAA430ECF5843004492C4 /* KTViewInspector.nib */; };
-		4C6471DA0ED9617F00CE9208 /* KTUIKitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		4C6471DA0ED9617F00CE9208 /* KTUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		4C64720C0ED962BA00CE9208 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		4C6472190ED962DA00CE9208 /* KTUIKitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		4C6472190ED962DA00CE9208 /* KTUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		4C6472640ED963F100CE9208 /* TestApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6472620ED963F100CE9208 /* TestApp-Info.plist */; };
 		4C6472680ED9642600CE9208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472670ED9642600CE9208 /* main.m */; };
 		4C64726C0ED9648F00CE9208 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C64726B0ED9648F00CE9208 /* MainMenu.nib */; };
@@ -137,9 +137,9 @@
 		4CF9D4430ECF5B100063DBE0 /* XSWindowController.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */; };
 		4CF9D4440ECF5B100063DBE0 /* KTViewControl.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */; };
 		4CF9D4450ECF5B100063DBE0 /* KTGradientPicker.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */; };
-		546DEAF3067F632A0098DCC4 /* KTUIKitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		546DEAF3067F632A0098DCC4 /* KTUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
-		AB68052C0EE41E090082FC43 /* KTUIKitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */; };
+		AB68052C0EE41E090082FC43 /* KTUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		C08787290A49DE9A00E9B151 /* KTUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* KTUIKit.m */; };
 		C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
 /* End PBXBuildFile section */
@@ -189,7 +189,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4C6472190ED962DA00CE9208 /* KTUIKitFramework.framework in CopyFiles */,
+				4C6472190ED962DA00CE9208 /* KTUIKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +199,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AB68052C0EE41E090082FC43 /* KTUIKitFramework.framework in CopyFiles */,
+				AB68052C0EE41E090082FC43 /* KTUIKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +331,7 @@
 		4CD98F9D0EBC7C2A008BD0EA /* KTScrollView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTScrollView.classdescription; path = "Plugin/Class Descriptions/KTScrollView.classdescription"; sourceTree = "<group>"; };
 		4CD98F9E0EBC7C45008BD0EA /* KTScrollViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTScrollViewIntegration.m; sourceTree = "<group>"; };
 		4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTViewControl.classdescription; path = "Plugin/Class Descriptions/KTViewControl.classdescription"; sourceTree = "<group>"; };
-		53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKitFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; wrapsLines = 0; };
+		53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; wrapsLines = 0; };
 		53DF68FE067E5B5A0090B5B0 /* KTUIKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KTUIKitFramework-Info.plist"; path = "../KTUIKitFramework-Info.plist"; sourceTree = "<group>"; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTUIKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C64720C0ED962BA00CE9208 /* Cocoa.framework in Frameworks */,
-				4C6471DA0ED9617F00CE9208 /* KTUIKitFramework.framework in Frameworks */,
+				4C6471DA0ED9617F00CE9208 /* KTUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +365,7 @@
 			files = (
 				4C9A80070EBDC62C00F8AA48 /* WebKit.framework in Frameworks */,
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				546DEAF3067F632A0098DCC4 /* KTUIKitFramework.framework in Frameworks */,
+				546DEAF3067F632A0098DCC4 /* KTUIKit.framework in Frameworks */,
 				C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */,
 				4C14A3310EC85FC200E94D88 /* Quartz.framework in Frameworks */,
 			);
@@ -422,7 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */,
-				53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */,
+				53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */,
 				4C6471C20ED9612400CE9208 /* TestApp.app */,
 			);
 			name = Products;
@@ -808,7 +808,7 @@
 			);
 			name = KTUIKitFramework;
 			productName = KTUIKitFramework;
-			productReference = 53DF68FD067E5B5A0090B5B0 /* KTUIKitFramework.framework */;
+			productReference = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8D1AC9600486D14A00FE50C9 /* KTUIKit */ = {
@@ -1115,7 +1115,7 @@
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
-				PRODUCT_NAME = KTUIKitFramework;
+				PRODUCT_NAME = KTUIKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1142,7 +1142,7 @@
 				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
-				PRODUCT_NAME = KTUIKitFramework;
+				PRODUCT_NAME = KTUIKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

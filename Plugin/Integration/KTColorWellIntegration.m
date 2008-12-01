@@ -11,7 +11,7 @@
 // Import your framework view and your inspector 
 // #import <MyFramework/MyView.h>
 // #import "MyInspector.h"
-#import <KTUIKitFramework/KTColorWell.h>
+#import <KTUIKit/KTColorWell.h>
  #import "KTLayoutManagerInspector.h"
 @implementation KTColorWell ( KTColorWellIntegration )
 

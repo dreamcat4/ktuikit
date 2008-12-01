@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTImageKitBrowserView.h>
+ #import <KTUIKit/KTImageKitBrowserView.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTImageKitBrowserView ( KTImageKitBrowserViewIntegration )

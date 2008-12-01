@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <KTUIKitFramework/KTUIKit.h>
+#import <KTUIKit/KTUIKit.h>
 
 @interface GradientPickerViewController : XSViewController 
 {

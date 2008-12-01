@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <KTUIKitFramework/KTViewControl.h>
+#import <KTUIKit/KTViewControl.h>
 
 @protocol KTLayoutManagerControlDelegate
 - (NSArray*)inspectedViews;	

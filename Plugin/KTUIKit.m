@@ -22,7 +22,7 @@
 - (NSArray *)requiredFrameworks
 {
 	return [NSArray arrayWithObjects:
-		[NSBundle bundleWithIdentifier:@"com.KATI.KTUIKitFramework"],
+		[NSBundle bundleWithIdentifier:@"com.KATI.KTUIKit"],
 		nil];
 }
 

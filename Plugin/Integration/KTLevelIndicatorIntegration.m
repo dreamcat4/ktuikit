@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTLevelIndicator.h>
+ #import <KTUIKit/KTLevelIndicator.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTLevelIndicator ( KTLevelIndicatorIntegration )
