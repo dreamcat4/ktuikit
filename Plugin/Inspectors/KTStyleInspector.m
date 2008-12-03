@@ -106,8 +106,8 @@
 		[oDrawBackgroundCheckBox setState:NSMixedState];
 	
 		// controls disabled in this case, i guess...
+		[oBackgroundOptionsRadioButton deselectAllCells];
 		[oBackgroundOptionsRadioButton setEnabled:NO];
-		[oBackgroundOptionsRadioButton selectCellAtRow:0 column:0];
 		[oBackgroundColorWell setColor:[NSColor clearColor]];
 		[oBackgroundGradientPicker setGradientValue:nil];
 		[oBackgroundColorWell setEnabled:NO];
@@ -118,8 +118,8 @@
 		[oDrawBackgroundCheckBox setState:aFirstViewDrawsBackground];
 		if(aFirstViewDrawsBackground==NO) // none of the selected views draw background, disable the controls
 		{
-			[oBackgroundOptionsRadioButton setEnabled:NO];
 			[oBackgroundOptionsRadioButton selectCellAtRow:0 column:0];
+			[oBackgroundOptionsRadioButton setEnabled:NO];
 			[oBackgroundColorWell setColor:[NSColor clearColor]];
 			[oBackgroundGradientPicker setGradientValue:nil];
 			[oBackgroundColorWell setEnabled:NO];

@@ -29,6 +29,8 @@
 //
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
 // For example, "Contains "KTUIKit" by Cathy Shive" will do.
+
+
 /*
  (CS 11/12/08) This is a very basic implementation of the style manager
  you can configure it and it will draw. The plan is to eventually
@@ -283,7 +285,6 @@
 	[self setBorderWidthBottom:theBottomWidth];
 	[self setBorderWidthLeft:theLeftWidth];
 }
-
 
 
 //=========================================================== 

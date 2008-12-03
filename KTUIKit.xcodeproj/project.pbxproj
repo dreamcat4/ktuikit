@@ -307,7 +307,7 @@
 		4CB23EFC0ED989E800486F39 /* poof_item.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = poof_item.aif; sourceTree = "<group>"; };
 		4CB23FA50ED9A13F00486F39 /* KTColorWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTColorWell.h; sourceTree = "<group>"; };
 		4CB23FA60ED9A13F00486F39 /* KTColorWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTColorWell.m; sourceTree = "<group>"; };
-		4CB23FE60ED9A3DD00486F39 /* KTColorWell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KTColorWell.classdescription; sourceTree = "<group>"; };
+		4CB23FE60ED9A3DD00486F39 /* KTColorWell.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTColorWell.classdescription; path = "Plugin/Class Descriptions/KTColorWell.classdescription"; sourceTree = "<group>"; };
 		4CB23FE70ED9A40300486F39 /* KTColorWellIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTColorWellIntegration.m; sourceTree = "<group>"; };
 		4CC1F4060DE940160035CE00 /* KTView.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTView.classdescription; path = "Plugin/Class Descriptions/KTView.classdescription"; sourceTree = "<group>"; };
 		4CC1F40D0DE940F70035CE00 /* KTViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewIntegration.m; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 		4CCA96170EBC4FD200CF9A03 /* KTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTButton.m; sourceTree = "<group>"; };
 		4CCA961B0EBC506C00CF9A03 /* KTButtonIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTButtonIntegration.m; sourceTree = "<group>"; };
 		4CCA961D0EBC511B00CF9A03 /* KTButton.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTButton.classdescription; path = "Plugin/Class Descriptions/KTButton.classdescription"; sourceTree = "<group>"; };
-		4CCF2AB50ECF615E005E3B8F /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		4CCF2AB50ECF615E005E3B8F /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		4CD4637C0ED03594009725B9 /* KTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTWindow.h; sourceTree = "<group>"; };
 		4CD4637D0ED03594009725B9 /* KTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTWindow.m; sourceTree = "<group>"; };
 		4CD4638E0ED04121009725B9 /* KTLayoutManagerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTLayoutManagerControl.h; sourceTree = "<group>"; };
@@ -332,8 +332,8 @@
 		4CD98F9E0EBC7C45008BD0EA /* KTScrollViewIntegration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTScrollViewIntegration.m; sourceTree = "<group>"; };
 		4CE2FCCF0EC8BCF300002A64 /* KTViewControl.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KTViewControl.classdescription; path = "Plugin/Class Descriptions/KTViewControl.classdescription"; sourceTree = "<group>"; };
 		53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KTUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; wrapsLines = 0; };
-		53DF68FE067E5B5A0090B5B0 /* KTUIKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KTUIKitFramework-Info.plist"; path = "../KTUIKitFramework-Info.plist"; sourceTree = "<group>"; };
-		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		53DF68FE067E5B5A0090B5B0 /* KTUIKitFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KTUIKitFramework-Info.plist"; path = "../Framework/Resources/KTUIKitFramework-Info.plist"; sourceTree = "<group>"; };
+		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* KTUIKit.ibplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KTUIKit.ibplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InterfaceBuilderKit.framework; path = /Developer/Library/Frameworks/InterfaceBuilderKit.framework; sourceTree = "<absolute>"; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -1112,7 +1112,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
+				INFOPLIST_FILE = "Resources/KTUIKitFramework-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = KTUIKit;
@@ -1139,7 +1139,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "KTUIKitFramework-Info.plist";
+				INFOPLIST_FILE = "Resources/KTUIKitFramework-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
 				PRODUCT_NAME = KTUIKit;
@@ -1160,7 +1160,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = KTUIKit_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = KTUIKit;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = ibplugin;
@@ -1178,7 +1178,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Plugin/KTUIKit_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				PRODUCT_NAME = KTUIKit;
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = ibplugin;

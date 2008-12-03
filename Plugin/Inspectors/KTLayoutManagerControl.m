@@ -39,6 +39,7 @@
 	[self setUpRects];							
 	[[self styleManager] setBorderColor:[NSColor colorWithDeviceWhite:.6 alpha:1]];
 	[[self styleManager] setBorderWidth:1];		
+	[[self styleManager] setBackgroundColor:[NSColor colorWithDeviceWhite:1 alpha:.8]];			
 	return self;
 }
 
@@ -52,8 +53,9 @@
 	
 	[self setDelegate:[theCoder decodeObjectForKey:@"delegate"]];
 	[self setUpRects];							
-	[[self styleManager] setBorderColor:[NSColor colorWithDeviceWhite:0 alpha:1]];
-	[[self styleManager] setBorderWidth:1];						 
+	[[self styleManager] setBorderColor:[NSColor colorWithDeviceWhite:.6 alpha:1]];
+	[[self styleManager] setBorderWidth:1];		
+	[[self styleManager] setBackgroundColor:[NSColor colorWithDeviceWhite:.9 alpha:.8]];				 
 	return self;
 }
 
@@ -81,16 +83,16 @@
 	aViewRect.origin.x+=.5;
 	aViewRect.origin.y+=.5;
 	
-	NSArray * anInspectedViewArray = nil;
-	if([wDelegate respondsToSelector:@selector(inspectedViews)])
-		anInspectedViewArray = [wDelegate inspectedViews];
-	
 	// center rect
 	[[NSColor colorWithDeviceWhite:.6 alpha:1*anEnabledAlpha] set];
 	[NSBezierPath strokeRect:mCenterRect];
 	[[NSColor colorWithDeviceRed:103.0/255.0 green:154.0/255.0 blue:255.0/255.0 alpha:.4*anEnabledAlpha] set];
 	[NSBezierPath fillRect:mCenterRect];
 	
+	NSArray * anInspectedViewArray = nil;
+	if([wDelegate respondsToSelector:@selector(inspectedViews)])
+		anInspectedViewArray = [wDelegate inspectedViews];
+		
 	BOOL	aFoundMultipleValueHPos = NO;
 	BOOL	aFoundMultipleValueVPos = NO;
 	BOOL	aFoundMultipleValueWidthType = NO;
@@ -328,7 +330,8 @@
 	NSPoint aMousePoint = [self convertPoint:[theEvent locationInWindow] fromView:nil];
 	
 	// Top Strut hit
-	if(NSPointInRect(aMousePoint, mTopMarginRect))
+	NSRect aTopStrutHitArea = NSMakeRect(NSMinX(mCenterRect), NSMaxY(mCenterRect), NSWidth(mCenterRect), NSHeight(mTopMarginRect));
+	if(NSPointInRect(aMousePoint, aTopStrutHitArea))
 	{
 		NSArray *	anInspectedViewArray = nil;
 		if([wDelegate respondsToSelector:@selector(inspectedViews)])
@@ -390,7 +393,8 @@
 		}
 	}
 	// Bottom strut hit
-	else if(NSPointInRect(aMousePoint, mBottomMarginRect))
+	NSRect aBottomStrutHitArea = NSMakeRect(NSMinX(mCenterRect), NSMinY([self bounds]), NSWidth(mCenterRect), NSMinY(mCenterRect));
+	if(NSPointInRect(aMousePoint, aBottomStrutHitArea))
 	{
 		NSArray *	anInspectedViewArray = nil;
 		if([wDelegate respondsToSelector:@selector(inspectedViews)])
@@ -459,7 +463,8 @@
 		
 	}
 	// Left strut hit
-	else if(NSPointInRect(aMousePoint, mLeftMarginRect))
+	NSRect aLeftStrutHitArea = NSMakeRect(NSMinX([self bounds]), NSMinY(mCenterRect), NSMinX(mCenterRect), NSHeight(mCenterRect));
+	if(NSPointInRect(aMousePoint, aLeftStrutHitArea))
 	{
 		NSArray *	anInspectedViewArray = nil;
 		if([wDelegate respondsToSelector:@selector(inspectedViews)])
@@ -530,7 +535,8 @@
 		}
 	}
 	// Right strut hit
-	else if(NSPointInRect(aMousePoint, mRightMarginRect))
+	NSRect aRighStrutHitArea = NSMakeRect(NSMaxX(mCenterRect), NSMinY(mCenterRect), NSWidth([self bounds])-NSMaxX(mCenterRect), NSHeight(mCenterRect));
+	if(NSPointInRect(aMousePoint, aRighStrutHitArea))
 	{
 		NSArray *	anInspectedViewArray = nil;
 		if([wDelegate respondsToSelector:@selector(inspectedViews)])

@@ -1,4 +1,0 @@
-
-NSWindow
-#_toolbarPillButtonClicked
-
