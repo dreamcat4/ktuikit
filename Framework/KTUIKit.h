@@ -1,5 +1,5 @@
-#import <KTUIKit/XSWindowController.h>
-#import <KTUIKit/XSViewController.h>
+#import <KTUIKit/KTWindowController.h>
+#import <KTUIKit/KTViewController.h>
 #import <KTUIKit/KTLayoutManager.h>
 #import <KTUIKit/KTStyleManager.h>
 #import <KTUIKit/KTView.h>

@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <KTUIKit/KTUIKit.h>
 
-@interface TestAppWindowController : XSWindowController 
+@interface TestAppWindowController : KTWindowController 
 {
 }
 

@@ -1,5 +1,5 @@
 //
-//  XSWindowController.m
+//  KTWindowController.m
 //  View Controllers
 //
 //  Created by Jonathan Dann and Cathy Shive on 14/04/2008.
@@ -28,21 +28,21 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 //
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
-// For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
+// For example, "Contains "View Controllers" by Jonathan Dann and Cathy Shive" will do.
 
 
 /* (Jon 6/12/08) NOTE:
 	• Udpated -dealloc to release the ivars themselves rather than calling the accessors. This should always be done incase the get accessor returns an autoreleased copy of the ivar. For example a class that stores stuff internally in a mutable array but returns an (immutable) autoreleased copy of said array. In -dealloc if one calls [self.array release], in this case the returned object would be overreleased and the ivar itself would leak.
  */
 
-#import "XSWindowController.h"
-#import "XSViewController.h"
+#import "KTWindowController.h"
+#import "KTViewController.h"
 
-@interface XSWindowController () // class continuation allows us to redeclare the property as readwrite to we can privately use the setter
+@interface KTWindowController () // class continuation allows us to redeclare the property as readwrite to we can privately use the setter
 @property(copy,readwrite) NSMutableArray *viewControllers;
 @end
 
-@implementation XSWindowController
+@implementation KTWindowController
 @synthesize viewControllers = _viewControllers; // using synthesize will make our getter, but we create our own setter to keep mutability of the array
 
 - (id)initWithWindowNibName:(NSString *)nibName;
@@ -78,18 +78,18 @@
 	return [self.viewControllers count];
 }
 
-- (XSViewController *)objectInViewControllersAtIndex:(NSUInteger)index;
+- (KTViewController *)objectInViewControllersAtIndex:(NSUInteger)index;
 {
 	return [self.viewControllers objectAtIndex:index];
 }
 
-- (void)addViewController:(XSViewController *)viewController;
+- (void)addViewController:(KTViewController *)viewController;
 {
 	[self.viewControllers insertObject:viewController atIndex:[self.viewControllers count]];
 	[self patchResponderChain];
 }
 
-- (void)insertObject:(XSViewController *)viewController inViewControllersAtIndex:(NSUInteger)index;
+- (void)insertObject:(KTViewController *)viewController inViewControllersAtIndex:(NSUInteger)index;
 {
 	[self.viewControllers insertObject:viewController atIndex:index];
 	[self patchResponderChain];
@@ -109,7 +109,7 @@
 // ------------------------------------------
 // It should be noted that if we remove an object from the view controllers array then the whole tree that descends from it will go too.
 // ------------------------------------------
-- (void)removeViewController:(XSViewController *)viewController;
+- (void)removeViewController:(KTViewController *)viewController;
 {
 	[self.viewControllers removeObject:viewController];
 	[self patchResponderChain];
@@ -129,7 +129,7 @@
 	if ([self.viewControllers count] == 0) // we're being called by view controllers at the beginning of creating the tree, most likely load time and the root of the tree hasn't been added to our list of controllers.
 		return;
 	NSMutableArray *flatViewControllers = [NSMutableArray array];
-	for (XSViewController *viewController in self.viewControllers) { // flatten the view controllers into an array
+	for (KTViewController *viewController in self.viewControllers) { // flatten the view controllers into an array
 		[flatViewControllers addObject:viewController];
 		[flatViewControllers addObjectsFromArray:[viewController descendants]];
 	}

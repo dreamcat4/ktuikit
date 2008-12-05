@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <KTUIKit/KTUIKit.h>
 
-@interface GradientPickerViewController : XSViewController 
+@interface GradientPickerViewController : KTViewController 
 {
 	IBOutlet KTGradientPicker *			oGradientPicker;
 	IBOutlet KTView *					oGradientView;

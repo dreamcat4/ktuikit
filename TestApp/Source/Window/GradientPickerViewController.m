@@ -10,7 +10,7 @@
 
 
 @implementation GradientPickerViewController
-+(GradientPickerViewController*)viewControllerWithWindowController:(XSWindowController*)theWindowController
++(GradientPickerViewController*)viewControllerWithWindowController:(KTWindowController*)theWindowController
 {
 	return [[[GradientPickerViewController alloc] initWithNibName:@"GradientPickerTestView" bundle:nil windowController:theWindowController] autorelease];
 }

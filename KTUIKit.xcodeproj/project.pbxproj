@@ -290,10 +290,10 @@
 		4C9A88A60EBF2E2D00F8AA48 /* KTViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewControl.m; sourceTree = "<group>"; };
 		4C9C5D890DE9F41800AE6913 /* KTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KTView.h; path = NSViewSubclasses/KTView.h; sourceTree = "<group>"; };
 		4C9C5D8A0DE9F41800AE6913 /* KTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KTView.m; path = NSViewSubclasses/KTView.m; sourceTree = "<group>"; };
-		4C9C5D8E0DE9F43400AE6913 /* XSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSViewController.h; sourceTree = "<group>"; };
-		4C9C5D8F0DE9F43400AE6913 /* XSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSViewController.m; sourceTree = "<group>"; };
-		4C9C5D900DE9F43400AE6913 /* XSWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSWindowController.h; sourceTree = "<group>"; };
-		4C9C5D910DE9F43400AE6913 /* XSWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSWindowController.m; sourceTree = "<group>"; };
+		4C9C5D8E0DE9F43400AE6913 /* KTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTViewController.h; sourceTree = "<group>"; };
+		4C9C5D8F0DE9F43400AE6913 /* KTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTViewController.m; sourceTree = "<group>"; };
+		4C9C5D900DE9F43400AE6913 /* KTWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTWindowController.h; sourceTree = "<group>"; };
+		4C9C5D910DE9F43400AE6913 /* KTWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTWindowController.m; sourceTree = "<group>"; };
 		4C9C5DCF0DE9F5D300AE6913 /* XSViewController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSViewController.classdescription; path = "Plugin/Class Descriptions/XSViewController.classdescription"; sourceTree = "<group>"; };
 		4C9C5DDA0DE9F66E00AE6913 /* XSWindowController.classdescription */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XSWindowController.classdescription; path = "Plugin/Class Descriptions/XSWindowController.classdescription"; sourceTree = "<group>"; };
 		4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTUIKit.h; sourceTree = "<group>"; };
@@ -616,10 +616,10 @@
 		4C9C5D8D0DE9F43400AE6913 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C9C5D8E0DE9F43400AE6913 /* XSViewController.h */,
-				4C9C5D8F0DE9F43400AE6913 /* XSViewController.m */,
-				4C9C5D900DE9F43400AE6913 /* XSWindowController.h */,
-				4C9C5D910DE9F43400AE6913 /* XSWindowController.m */,
+				4C9C5D8E0DE9F43400AE6913 /* KTViewController.h */,
+				4C9C5D8F0DE9F43400AE6913 /* KTViewController.m */,
+				4C9C5D900DE9F43400AE6913 /* KTWindowController.h */,
+				4C9C5D910DE9F43400AE6913 /* KTWindowController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

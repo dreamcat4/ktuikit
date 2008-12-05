@@ -1,5 +1,5 @@
 //
-//  XSViewController.h
+//  KTViewController.h
 //  View Controllers
 //
 //  Created by Jonathan Dann and Cathy Shive on 14/04/2008.
@@ -28,40 +28,40 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 //
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
-// For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
+// For example, "Contains "View Controllers" by Jonathan Dann and Cathy Shive" will do.
 
 #import <Cocoa/Cocoa.h>
 #import "KTViewLayout.h"
 // XS for Xtra-Special!
 
-@class XSWindowController;
-@interface XSViewController : NSViewController {
+@class KTWindowController;
+@interface KTViewController : NSViewController {
 @private
-	XSViewController *_parent;
-	XSWindowController *_windowController;
+	KTViewController *_parent;
+	KTWindowController *_windowController;
 	NSMutableArray *_children;
 	NSMutableArray * _topLevelNibObjects;
 }
 
-@property(assign) XSViewController *parent;
-@property(assign) XSWindowController *windowController;
+@property(assign) KTViewController *parent;
+@property(assign) KTWindowController *windowController;
 @property(readonly,copy) NSMutableArray *children; // there's no mutableCopy keyword so this will be @synthesized in the implementation to get the default getter, but we'll write our own setter, otherwise mutability is lost
 @property(readonly) NSArray *descendants;
-@property(readonly) XSViewController *rootController;
+@property(readonly) KTViewController *rootController;
 
-+ (id)viewControllerWithWindowController:(XSWindowController*)theWindowController;
-- (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle windowController:(XSWindowController *)windowController;
++ (id)viewControllerWithWindowController:(KTWindowController*)theWindowController;
+- (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle windowController:(KTWindowController *)windowController;
 //- (NSView<KTViewLayout>*)view;
 //- (void)setView:(NSView<KTViewLayout>*)theView;
 - (NSUInteger)countOfChildren;
-- (XSViewController *)objectInChildrenAtIndex:(NSUInteger)index;
+- (KTViewController *)objectInChildrenAtIndex:(NSUInteger)index;
 
-- (void)addChild:(XSViewController *)viewController;
-- (void)insertObject:(XSViewController *)viewController inChildrenAtIndex:(NSUInteger)index;
+- (void)addChild:(KTViewController *)viewController;
+- (void)insertObject:(KTViewController *)viewController inChildrenAtIndex:(NSUInteger)index;
 - (void)insertObjects:(NSArray *)viewControllers inChildrenAtIndexes:(NSIndexSet *)indexes;
 - (void)insertObjects:(NSArray *)viewControllers inChildrenAtIndex:(NSUInteger)index;
 
-- (void)removeChild:(XSViewController *)viewController;
+- (void)removeChild:(KTViewController *)viewController;
 - (void)removeObjectFromChildrenAtIndex:(NSUInteger)index;
 
 - (void)removeObservations;

@@ -1,5 +1,5 @@
 //
-//  XSWindowController.h
+//  KTWindowController.h
 //  View Controllers
 //
 //  Created by Jonathan Dann and Cathy Shive on 14/04/2008.
@@ -26,27 +26,27 @@
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 // OTHER DEALINGS IN THE SOFTWARE.
-//x
+//
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
-// For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
+// For example, "Contains "View Controllers" by Jonathan Dann and Cathy Shive" will do.
 
 #import <Cocoa/Cocoa.h>
 
-@class XSViewController;
-@interface XSWindowController : NSWindowController {
+@class KTViewController;
+@interface KTWindowController : NSWindowController {
 	NSMutableArray *_viewControllers;
 } 
 @property(copy,readonly)  NSMutableArray *viewControllers;
 
 - (NSUInteger)countOfViewControllers;
-- (XSViewController *)objectInViewControllersAtIndex:(NSUInteger)index;
+- (KTViewController *)objectInViewControllersAtIndex:(NSUInteger)index;
 
-- (void)addViewController:(XSViewController *)viewController;
-- (void)insertObject:(XSViewController *)viewController inViewControllersAtIndex:(NSUInteger)index;
+- (void)addViewController:(KTViewController *)viewController;
+- (void)insertObject:(KTViewController *)viewController inViewControllersAtIndex:(NSUInteger)index;
 - (void)insertObjects:(NSArray *)viewControllers inViewControllersAtIndexes:(NSIndexSet *)indexes;
 - (void)insertObjects:(NSArray *)viewControllers inViewControllersAtIndex:(NSUInteger)index;
 
-- (void)removeViewController:(XSViewController *)viewController;
+- (void)removeViewController:(KTViewController *)viewController;
 - (void)removeObjectFromViewControllersAtIndex:(NSUInteger)index;
 
 - (void)patchResponderChain;
