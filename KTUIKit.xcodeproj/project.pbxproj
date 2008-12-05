@@ -92,10 +92,6 @@
 		4C9A88A70EBF2E2D00F8AA48 /* KTViewControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9A88A50EBF2E2D00F8AA48 /* KTViewControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9A88A80EBF2E2D00F8AA48 /* KTViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A88A60EBF2E2D00F8AA48 /* KTViewControl.m */; };
 		4C9C5D990DE9F47000AE6913 /* KTView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5D890DE9F41800AE6913 /* KTView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C9C5D9C0DE9F48A00AE6913 /* XSViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5D8E0DE9F43400AE6913 /* XSViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C9C5D9D0DE9F48A00AE6913 /* XSWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5D900DE9F43400AE6913 /* XSWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C9C5D9E0DE9F49E00AE6913 /* XSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8F0DE9F43400AE6913 /* XSViewController.m */; };
-		4C9C5D9F0DE9F49E00AE6913 /* XSWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D910DE9F43400AE6913 /* XSWindowController.m */; };
 		4C9C5DA10DE9F49E00AE6913 /* KTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8A0DE9F41800AE6913 /* KTView.m */; };
 		4C9C5E260DE9FAB100AE6913 /* KTUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5E120DE9FA4400AE6913 /* KTUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CB23D0D0ED9695100486F39 /* GradientPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB23D0C0ED9695100486F39 /* GradientPickerViewController.m */; };
@@ -741,8 +737,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9C5D990DE9F47000AE6913 /* KTView.h in Headers */,
-				4C9C5D9C0DE9F48A00AE6913 /* XSViewController.h in Headers */,
-				4C9C5D9D0DE9F48A00AE6913 /* XSWindowController.h in Headers */,
 				4C9C5E260DE9FAB100AE6913 /* KTUIKit.h in Headers */,
 				4CCA96180EBC4FD200CF9A03 /* KTButton.h in Headers */,
 				4CD98F9B0EBC7BBB008BD0EA /* KTScrollView.h in Headers */,
@@ -923,8 +917,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C9C5D9E0DE9F49E00AE6913 /* XSViewController.m in Sources */,
-				4C9C5D9F0DE9F49E00AE6913 /* XSWindowController.m in Sources */,
 				4C9C5DA10DE9F49E00AE6913 /* KTView.m in Sources */,
 				4CCA96190EBC4FD200CF9A03 /* KTButton.m in Sources */,
 				4CD98F9C0EBC7BBB008BD0EA /* KTScrollView.m in Sources */,
