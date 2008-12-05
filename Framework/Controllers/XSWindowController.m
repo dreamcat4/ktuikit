@@ -30,6 +30,11 @@
 // If you use it, acknowledgement in an About Page or other appropriate place would be nice.
 // For example, "Contains "View Conrtollers" by Jonathan Dann and Cathy Shive" will do.
 
+
+/* (Jon 6/12/08) NOTE:
+	• Udpated -dealloc to release the ivars themselves rather than calling the accessors. This should always be done incase the get accessor returns an autoreleased copy of the ivar. For example a class that stores stuff internally in a mutable array but returns an (immutable) autoreleased copy of said array. In -dealloc if one calls [self.array release], in this case the returned object would be overreleased and the ivar itself would leak.
+ */
+
 #import "XSWindowController.h"
 #import "XSViewController.h"
 
@@ -59,7 +64,7 @@
 
 - (void)dealloc;
 {
-	[self.viewControllers release];
+	[_viewControllers release];
 	[super dealloc];
 }
 
