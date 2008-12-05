@@ -135,6 +135,10 @@
 		4CF9D4450ECF5B100063DBE0 /* KTGradientPicker.classdescription in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A87580EBEF1ED00F8AA48 /* KTGradientPicker.classdescription */; };
 		546DEAF3067F632A0098DCC4 /* KTUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
+		AB06FAC60EE9739B008A85C9 /* KTViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5D8E0DE9F43400AE6913 /* KTViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB06FAC70EE9739F008A85C9 /* KTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D8F0DE9F43400AE6913 /* KTViewController.m */; };
+		AB06FAC80EE973A5008A85C9 /* KTWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C5D900DE9F43400AE6913 /* KTWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB06FAC90EE973A5008A85C9 /* KTWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C5D910DE9F43400AE6913 /* KTWindowController.m */; };
 		AB68052C0EE41E090082FC43 /* KTUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		C08787290A49DE9A00E9B151 /* KTUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259C576FE90428111CA0C5A /* KTUIKit.m */; };
 		C0D069560A49DF9100C95564 /* InterfaceBuilderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D069550A49DF9100C95564 /* InterfaceBuilderKit.framework */; };
@@ -224,7 +228,7 @@
 		4C3EAA420ECF5843004492C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/KTUIKitLibrary.nib; sourceTree = "<group>"; };
 		4C3EAA440ECF5843004492C4 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/KTViewInspector.nib; sourceTree = "<group>"; };
 		4C6471C20ED9612400CE9208 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6472620ED963F100CE9208 /* TestApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TestApp-Info.plist"; path = "../../TestApp-Info.plist"; sourceTree = "<group>"; };
+		4C6472620ED963F100CE9208 /* TestApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
 		4C6472670ED9642600CE9208 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C64726B0ED9648F00CE9208 /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
 		4C6472800ED965A700CE9208 /* TestAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAppController.h; sourceTree = "<group>"; };
@@ -736,6 +740,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB06FAC60EE9739B008A85C9 /* KTViewController.h in Headers */,
+				AB06FAC80EE973A5008A85C9 /* KTWindowController.h in Headers */,
 				4C9C5D990DE9F47000AE6913 /* KTView.h in Headers */,
 				4C9C5E260DE9FAB100AE6913 /* KTUIKit.h in Headers */,
 				4CCA96180EBC4FD200CF9A03 /* KTButton.h in Headers */,
@@ -938,6 +944,8 @@
 				4C14A3380EC85FEF00E94D88 /* KTImageKitBrowserView.m in Sources */,
 				4CD4637F0ED03594009725B9 /* KTWindow.m in Sources */,
 				4CB23FA80ED9A13F00486F39 /* KTColorWell.m in Sources */,
+				AB06FAC70EE9739F008A85C9 /* KTViewController.m in Sources */,
+				AB06FAC90EE973A5008A85C9 /* KTWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,6 +1051,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1067,6 +1076,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -1100,6 +1110,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1128,6 +1139,7 @@
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
 				);
 				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_GC = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -1148,6 +1160,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_DIR)/Library/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1167,6 +1180,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_DIR)/Library/Frameworks\"";
+				GCC_ENABLE_OBJC_GC = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Plugin/KTUIKit_Prefix.pch;
