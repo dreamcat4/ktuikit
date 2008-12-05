@@ -43,11 +43,19 @@
 	• I'm considering overriding 'view' and 'setView:' so that the view controller only deals with KTViews.
 */
 
+/* (Jon 6/12/08) NOTE:
+	• Udpated -dealloc to release the ivars themselves rather than calling the accessors. This should always be done incase the get accessor returns an autoreleased copy of the ivar. For example a class that stores stuff internally in a mutable array but returns an (immutable) autoreleased copy of said array. In -dealloc if one calls [self.array release], in this case the returned object would be overreleased and the ivar itself would leak.
+	• Changed the (private) setChildren method to update the responder chain and declared the writability of the property in a class continuation.
+*/ 
 
 #import "XSViewController.h"
 #import "XSWindowController.h"
 
 #pragma mark Private API
+
+@interface XSViewController ()
+@property(readwrite,copy) NSMutableArray *children;
+@end
 
 @interface XSViewController (Private)
 // This method is made private so users of the class can't (easily) set the children array whenever they want, they must use the indexed accessors provided. If this was public then our methods that mantain the responder chain and pass the represented object and window controller to the children would be subverted. Alternatively the setter could set all the required variables on the objects in the newChildren array, but the API then becomes a little clunkier.
@@ -63,6 +71,7 @@
 	NSMutableArray *newChildrenCopy = [newChildren mutableCopy];
 	[_children release];
 	_children = newChildrenCopy;
+	[self.windowController patchResponderChain];
 }
 
 - (void)releaseNibObjects
@@ -91,6 +100,9 @@
 @synthesize parent = _parent;
 @synthesize windowController = _windowController;
 @synthesize children = _children;
+@dynamic rootController;
+@dynamic descendants;
+
 //- (NSView<KTViewLayout>*)view
 //{
 //	return (NSView<KTViewLayout>*)[super view];
@@ -124,7 +136,7 @@
 {
 	// NSLog(@"%@ dealloc", self);
 	[self releaseNibObjects];
-	[self.children release];
+	[_children release];
 	[super dealloc];
 }
 
@@ -162,7 +174,7 @@
 	[[aChildToRemove view] removeFromSuperview];
 	[aChildToRemove removeObservations];
 	[self.children removeObjectAtIndex:index];
-	[(XSWindowController *)self.windowController patchResponderChain]; // each time a controller is removed then the repsonder chain needs fixing
+	[self.windowController patchResponderChain]; // each time a controller is removed then the repsonder chain needs fixing
 }
 
 - (void)insertObject:(XSViewController *)viewController inChildrenAtIndex:(NSUInteger)index;

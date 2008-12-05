@@ -46,6 +46,8 @@
 @property(assign) XSViewController *parent;
 @property(assign) XSWindowController *windowController;
 @property(readonly,copy) NSMutableArray *children; // there's no mutableCopy keyword so this will be @synthesized in the implementation to get the default getter, but we'll write our own setter, otherwise mutability is lost
+@property(readonly) NSArray *descendants;
+@property(readonly) XSViewController *rootController;
 
 + (id)viewControllerWithWindowController:(XSWindowController*)theWindowController;
 - (id)initWithNibName:(NSString *)name bundle:(NSBundle *)bundle windowController:(XSWindowController *)windowController;
@@ -62,8 +64,6 @@
 - (void)removeChild:(XSViewController *)viewController;
 - (void)removeObjectFromChildrenAtIndex:(NSUInteger)index;
 
-- (XSViewController *)rootController;
-- (NSArray *)descendants;
 - (void)removeObservations;
 
 @end
