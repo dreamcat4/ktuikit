@@ -140,6 +140,12 @@
 	[super dealloc];
 }
 
+- (void)setWindowController:(KTWindowController*)theWindowController
+{
+	[[self children] makeObjectsPerformSelector:@selector(setWindowController:) withObject:theWindowController];
+	[[self windowController] patchResponderChain];
+}
+
 #pragma mark Indexed Accessors
 
 - (NSUInteger)countOfChildren;

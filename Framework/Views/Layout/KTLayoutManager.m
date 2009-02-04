@@ -220,11 +220,11 @@
 	switch(mHeightType)
 	{
 		case KTSizeFill:
-			aCurrentViewFrame.size.height = NSHeight(aSuperviewFrame) - (mMarginTop + mMarginBottom);
+			aCurrentViewFrame.size.height = aSuperviewFrame.size.height - (mMarginTop + mMarginBottom);
 		break;
 		
 		case KTSizePercentage:
-			aCurrentViewFrame.size.height = NSHeight(aSuperviewFrame)*mHeightPercentage - (mMarginTop + mMarginBottom);
+			aCurrentViewFrame.size.height = aSuperviewFrame.size.height*mHeightPercentage - (mMarginTop + mMarginBottom);
 		break;
 	}
 	

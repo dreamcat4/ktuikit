@@ -98,7 +98,8 @@
 	BOOL	aFoundMultipleValueWidthType = NO;
 	BOOL	aFoundMultipleValueHeightType = NO;
 
-	if([anInspectedViewArray count] > 0)
+	if(		mIsEnabled
+		&&	[anInspectedViewArray count] > 0)
 	{
 		// get the first values
 		id<KTViewLayout>	aFirstView = [anInspectedViewArray objectAtIndex:0];
@@ -137,6 +138,7 @@
 			}
 		}
 		
+
 		int i;
 		for(i = 1; i < [anInspectedViewArray count]; i++)
 		{
@@ -622,20 +624,40 @@
 	[self setNeedsDisplay:YES];
 }
 
+- (void)setIsEnabled:(BOOL)theBool
+{
+	mIsEnabled = theBool;
+	if(mIsEnabled==NO)
+	{
+		NSArray *	anInspectedViewArray = nil;
+		if([wDelegate respondsToSelector:@selector(inspectedViews)])
+			anInspectedViewArray = [wDelegate inspectedViews];
+		{
+			for(id<KTViewLayout> aView in anInspectedViewArray)
+			{
+				[[aView viewLayoutManager] setMargin:0];
+			}
+		}
+		
+	}
+	
+}
 
+
+// Not Finished Yet!
 
 - (IBAction)setTopMargin:(id)theSender
 {
-	NSArray *	anInspectedViewArray = nil;
-	if([wDelegate respondsToSelector:@selector(inspectedViews)])
-		anInspectedViewArray = [wDelegate inspectedViews];
-	if([anInspectedViewArray count] > 0)
-	{
-		for(id<KTViewLayout> aView in anInspectedViewArray)
-		{
-			[[aView viewLayoutManager] setMarginTop:[theSender floatValue]];
-		}
-	}
+//	NSArray *	anInspectedViewArray = nil;
+//	if([wDelegate respondsToSelector:@selector(inspectedViews)])
+//		anInspectedViewArray = [wDelegate inspectedViews];
+//	if([anInspectedViewArray count] > 0)
+//	{
+//		for(id<KTViewLayout> aView in anInspectedViewArray)
+//		{
+//			[[aView viewLayoutManager] setMarginTop:[theSender floatValue]];
+//		}
+//	}
 }
 
 - (IBAction)setRightMargin:(id)theSender
