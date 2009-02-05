@@ -55,7 +55,7 @@
 	[self setStyleManager:aStyleManager];
 	
 	// For Debugging
-	[self setLabel:@"KTView"];
+	[self setLabel:[self className]];
 	
 	return self;
 }
