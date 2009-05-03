@@ -39,7 +39,6 @@
 		4C6471DA0ED9617F00CE9208 /* KTUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
 		4C64720C0ED962BA00CE9208 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		4C6472190ED962DA00CE9208 /* KTUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53DF68FD067E5B5A0090B5B0 /* KTUIKit.framework */; };
-		4C6472640ED963F100CE9208 /* TestApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6472620ED963F100CE9208 /* TestApp-Info.plist */; };
 		4C6472680ED9642600CE9208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472670ED9642600CE9208 /* main.m */; };
 		4C64726C0ED9648F00CE9208 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4C64726B0ED9648F00CE9208 /* MainMenu.nib */; };
 		4C6472820ED965A700CE9208 /* TestAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6472810ED965A700CE9208 /* TestAppController.m */; };
@@ -856,7 +855,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C6472640ED963F100CE9208 /* TestApp-Info.plist in Resources */,
 				4C64726C0ED9648F00CE9208 /* MainMenu.nib in Resources */,
 				4C64728C0ED966AC00CE9208 /* TestAppWindow.nib in Resources */,
 				4CB23D210ED96AF200486F39 /* GradientPickerTestView.nib in Resources */,
@@ -1056,7 +1054,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestApp-Info.plist";
+				INFOPLIST_FILE = "TestApp/Resources/TestApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -1080,7 +1078,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "TestApp-Info.plist";
+				INFOPLIST_FILE = "TestApp/Resources/TestApp-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
 					"-framework",
