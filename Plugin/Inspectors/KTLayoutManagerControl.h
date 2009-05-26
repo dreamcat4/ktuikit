@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <KTUIKitFramework/KTViewControl.h>
+#import <KTUIKit/KTViewControl.h>
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 typedef enum

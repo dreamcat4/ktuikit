@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTTextField.h>
+ #import <KTUIKit/KTTextField.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTTextField ( KTTextFieldIntegration )

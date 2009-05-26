@@ -7,8 +7,8 @@
 //
 
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
-#import <KTUIKitFramework/KTUIKit.h>
-#import <KTUIKitFramework/KTSplitViewDivider.h>
+#import <KTUIKit/KTUIKit.h>
+#import <KTUIKit/KTSplitViewDivider.h>
 #import "KTSplitViewInspector.h"
 
 //[[[[NSDocumentController sharedDocumentController] documents] lastObject] editorManager]

@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTAppKitSplitView.h>
+ #import <KTUIKit/KTAppKitSplitView.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTAppKitSplitView ( KTAppKitSplitViewIntegration )

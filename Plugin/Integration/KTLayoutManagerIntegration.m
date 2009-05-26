@@ -7,7 +7,7 @@
 //
 
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
-#import <KTUIKitFramework/KTLayoutManager.h>
+#import <KTUIKit/KTLayoutManager.h>
 
 @implementation KTLayoutManager ( KTLayoutManagerIntegration )
 //

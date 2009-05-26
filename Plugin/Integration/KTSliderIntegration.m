@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTSlider.h>
+ #import <KTUIKit/KTSlider.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTSlider ( KTSliderIntegration )

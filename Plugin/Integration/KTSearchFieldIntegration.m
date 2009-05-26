@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTSearchField.h>
+ #import <KTUIKit/KTSearchField.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTSearchField ( KTSearchFieldIntegration )

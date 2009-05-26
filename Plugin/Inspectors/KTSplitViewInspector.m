@@ -7,7 +7,7 @@
 //
 
 #import "KTSplitViewInspector.h"
-#import <KTUIKitFramework/KTUIKit.h>
+#import <KTUIKit/KTUIKit.h>
 
 @interface KTSplitViewInspector (Private)
 - (KTSplitView*)inspectedSplitView;

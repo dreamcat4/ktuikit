@@ -8,7 +8,7 @@
 
 #import "KTLayoutManagerInspector.h"
 #import "KTLayoutManagerControl.h"
-#import <KTUIKitFramework/KTUIKit.h>
+#import <KTUIKit/KTUIKit.h>
 
 static BOOL gShouldDoLiveResizing = YES;
 

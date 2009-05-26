@@ -7,7 +7,7 @@
 //
 
 #import "KTLayoutManagerControl.h"
-#import <KTUIKitFramework/KTLayoutManager.h>
+#import <KTUIKit/KTLayoutManager.h>
 
 #define	kCenterRectSize 100
 #define kStrutMarkerSize 10

@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTProgressIndicator.h>
+ #import <KTUIKit/KTProgressIndicator.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTProgressIndicator ( KTProgressIndicatorIntegration )

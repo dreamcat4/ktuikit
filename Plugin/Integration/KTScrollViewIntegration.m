@@ -9,7 +9,7 @@
 #import <InterfaceBuilderKit/InterfaceBuilderKit.h>
 
 // Import your framework view and your inspector 
- #import <KTUIKitFramework/KTScrollView.h>
+ #import <KTUIKit/KTScrollView.h>
  #import "KTLayoutManagerInspector.h"
 
 @implementation KTScrollView ( KTScrollViewIntegration )
