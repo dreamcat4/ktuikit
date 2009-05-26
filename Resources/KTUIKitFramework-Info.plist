@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>KTUIKitFramework</string>
+	<string>KTUIKit</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.katidev.KTUIKitFramework</string>
+	<string>com.katidev.KTUIKit</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
