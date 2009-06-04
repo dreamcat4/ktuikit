@@ -477,7 +477,7 @@
 	// save the current color list and locations
 	// get the color from the color panel
 	NSInteger			aNumberOfStops = [mGradientValue numberOfColorStops];
-	NSMutableArray *	aColorList = [[NSMutableArray alloc] init];
+	NSMutableArray *	aColorList = [[[NSMutableArray alloc] init] autorelease];
 	CGFloat				aLocationList[aNumberOfStops];
 	
 	NSInteger i;
