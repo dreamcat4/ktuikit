@@ -90,7 +90,7 @@
 	[self addSubview:mFirstView];
 	[self addSubview:mSecondView];
 	[self addSubview:mDivider];
-	[self setDividerOrientation:[[theCoder decodeObjectForKey:@"dividerOrienation"] intValue]];	
+	[self setDividerOrientation:[[theCoder decodeObjectForKey:@"dividerOrientation"] intValue]];	
 	[self setUserInteractionEnabled:[[theCoder decodeObjectForKey:@"userInteractionEnabled"] boolValue]];
 	
 			
