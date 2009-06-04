@@ -22,7 +22,7 @@
 // - synthesize
 //===========================================================
 @synthesize tabItemArrayController = mTabItemArrayController;
-@synthesize releaseViewControllersWhenNotSeletcted = mReleaseViewControllersWhenNotSeletcted;
+@synthesize releaseViewControllersWhenNotSelectted = mReleaseViewControllersWhenNotSelectted;
 @synthesize delegate = wDelegate;
 
 //=========================================================== 

@@ -18,12 +18,12 @@
 	KTView *				wContentView;
 	NSArrayController *		mTabItemArrayController;
 	KTTabItem *				mCurrentSelectedTab;
-	BOOL					mReleaseViewControllersWhenNotSeletcted;
+	BOOL					mReleaseViewControllersWhenNotSelectted;
 	id						wDelegate;
 }
 
 @property (nonatomic, readonly) NSArrayController * tabItemArrayController;
-@property (nonatomic, readwrite, assign) BOOL releaseViewControllersWhenNotSeletcted;
+@property (nonatomic, readwrite, assign) BOOL releaseViewControllersWhenNotSelectted;
 @property (nonatomic, readwrite, assign) id delegate;
 
 // adding/removing/getting tabs

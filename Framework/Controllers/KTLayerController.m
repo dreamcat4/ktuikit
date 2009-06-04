@@ -38,6 +38,7 @@
 	if(self = [super init])
 	{
 		wViewController = theViewController;
+		mSubcontrollers = [[NSMutableArray alloc] init];
 	}
 	return self;
 }
