@@ -779,9 +779,10 @@
 //=========================================================== 
 // - becomeFirstResponder
 //=========================================================== 
-- (void)becomeFirstResponder
+- (BOOL)becomeFirstResponder
 {
 	[self setNeedsDisplay:YES];
+	return YES;
 }
 
 //=========================================================== 
