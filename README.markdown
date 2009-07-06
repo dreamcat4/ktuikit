@@ -4,9 +4,9 @@ KTUIKit is a third-party Cocoa framework providing subclassed NSView, and NSView
 
 ## Getting Started Guide
 
-http://katidev.com/blog/ktuikit/
+[http://katidev.com/blog/ktuikit/](http://katidev.com/blog/ktuikit/)
 
 ## GoogleCode Project
 
-http://code.google.com/p/ktuikit/
+[http://code.google.com/p/ktuikit/](http://code.google.com/p/ktuikit/)
 
